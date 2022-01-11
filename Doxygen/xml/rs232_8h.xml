@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="rs232_8h" kind="file" language="C++">
+    <compoundname>rs232.h</compoundname>
+    <includedby refid="main_8c" local="yes">//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="1">
+        <label>//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.h</label>
+        <link refid="rs232_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="rs232_8h_1ac4f75a43491c3913154e963f0f6c139e" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* ARRAY_PORT_PINCFG1</definition>
+        <argsstring></argsstring>
+        <name>ARRAY_PORT_PINCFG1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.h" line="33" column="15" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="rs232_8h_1a0b207695e4757928cb8a88c33c730b83" compoundref="rs232_8c" startline="56" endline="72">UART4_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="rs232_8h_1a110406da58c2c1af2631d0f545f3a244" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* ARRAY_PORT_PMUX1</definition>
+        <argsstring></argsstring>
+        <name>ARRAY_PORT_PMUX1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.h" line="34" column="15" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="rs232_8h_1a0b207695e4757928cb8a88c33c730b83" compoundref="rs232_8c" startline="56" endline="72">UART4_init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rs232_8h_1a0b207695e4757928cb8a88c33c730b83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UART4_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>UART4_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.h" line="30" column="6" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.c" bodystart="56" bodyend="72" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.h" declline="30" declcolumn="6"/>
+        <references refid="rs232_8c_1ac4f75a43491c3913154e963f0f6c139e" compoundref="rs232_8h" startline="33">ARRAY_PORT_PINCFG1</references>
+        <references refid="rs232_8c_1a110406da58c2c1af2631d0f545f3a244" compoundref="rs232_8h" startline="34">ARRAY_PORT_PMUX1</references>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="38" endline="108">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="rs232_8h_1af777cd39d3a6550da028f93826ddd1e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UART4_write</definition>
+        <argsstring>(char data)</argsstring>
+        <name>UART4_write</name>
+        <param>
+          <type>char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.h" line="31" column="6" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.c" bodystart="95" bodyend="99" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.h" declline="31" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rs232_8h_1a26d9afa5f354889c89a3f53dcfbccfb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char UART4_read</definition>
+        <argsstring>(void)</argsstring>
+        <name>UART4_read</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.h" line="32" column="6" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.c" bodystart="121" bodyend="126" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.h" declline="32" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>File<sp/>Name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>&quot;rs232.h<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Title<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>rs232.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>4/8/2020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>DOG<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Include<sp/>file<sp/>containing<sp/>function<sp/>proototypes<sp/>and<sp/>variable<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>used<sp/>to<sp/>initialize<sp/>the<sp/>MCU&apos;s<sp/>RS232<sp/>communication<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Functions<sp/>and<sp/>variables<sp/>defined<sp/>in<sp/>rs232.c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/><sp/><sp/><sp/><sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RS232_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RS232_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Functionn<sp/>and<sp/>variable<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rs232_8h_1a0b207695e4757928cb8a88c33c730b83" kindref="member">UART4_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rs232_8h_1af777cd39d3a6550da028f93826ddd1e2" kindref="member">UART4_write</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="rs232_8h_1a26d9afa5f354889c89a3f53dcfbccfb9" kindref="member">UART4_read</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33" refid="rs232_8h_1ac4f75a43491c3913154e963f0f6c139e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="rs232_8h_1ac4f75a43491c3913154e963f0f6c139e" kindref="member">ARRAY_PORT_PINCFG1</ref>;<sp/></highlight></codeline>
+<codeline lineno="34" refid="rs232_8h_1a110406da58c2c1af2631d0f545f3a244" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="rs232_8h_1a110406da58c2c1af2631d0f545f3a244" kindref="member">ARRAY_PORT_PMUX1</ref>;<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>RS232_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,40 @@
+\hypertarget{bme680_8c}{}\doxysection{//\+Mac/\+Home/\+Desktop/\+E\+SE 381/\+Labs/\+Lab 10/lab10\+\_\+task1/lab10\+\_\+task1/bme680.c File Reference}
+\label{bme680_8c}\index{//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10\_task1/lab10\_task1/bme680.c@{//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10\_task1/lab10\_task1/bme680.c}}
+
+
+Sensor driver for B\+M\+E680 sensor.  
+
+
+{\ttfamily \#include \char`\"{}bme680.\+h\char`\"{}}\newline
+Include dependency graph for bme680.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_gaee75ae524b7ca8f4a9b6dbb7f640c2e4}{bme680\+\_\+init}} (struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is the entry point. It reads the chip-\/id and calibration data from the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_gaf5548cbdbf327e2c77bdb0afb1dde9e4}{bme680\+\_\+get\+\_\+regs}} (uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t $\ast$reg\+\_\+data, uint16\+\_\+t len, struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI reads the data from the given register address of the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga5d1bad74f7ac28e75aca9d7de66fd2b4}{bme680\+\_\+set\+\_\+regs}} (const uint8\+\_\+t $\ast$reg\+\_\+addr, const uint8\+\_\+t $\ast$reg\+\_\+data, uint8\+\_\+t len, struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI writes the given data to the register address of the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga7f0f1a4378bc6cd0a34acf62509cdec7}{bme680\+\_\+soft\+\_\+reset}} (struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI performs the soft reset of the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga2fea1365b4fa1d33eef434769b16e811}{bme680\+\_\+set\+\_\+sensor\+\_\+settings}} (uint16\+\_\+t desired\+\_\+settings, struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is used to set the oversampling, filter and T,P,H, gas selection settings in the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga7826b058b8eddcf05ccbb117fd9d41b7}{bme680\+\_\+get\+\_\+sensor\+\_\+settings}} (uint16\+\_\+t desired\+\_\+settings, struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is used to get the oversampling, filter and T,P,H, gas selection settings in the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga5ca765226e758e71c862553c7cc0b371}{bme680\+\_\+set\+\_\+sensor\+\_\+mode}} (struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is used to set the power mode of the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga4e50492a1f4747868f7e9a826492f1e7}{bme680\+\_\+get\+\_\+sensor\+\_\+mode}} (struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is used to get the power mode of the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___b_m_e680_ga192f772bc9cb619e5855e93d6ebd6128}{bme680\+\_\+set\+\_\+profile\+\_\+dur}} (uint16\+\_\+t duration, struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is used to set the profile duration of the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___b_m_e680_gae49a6f126c136fb16a8557a67e39d07c}{bme680\+\_\+get\+\_\+profile\+\_\+dur}} (uint16\+\_\+t $\ast$duration, const struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is used to get the profile duration of the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga1025301e420e1e21911044bebb62f940}{bme680\+\_\+get\+\_\+sensor\+\_\+data}} (struct \mbox{\hyperlink{structbme680__field__data}{bme680\+\_\+field\+\_\+data}} $\ast$data, struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI reads the pressure, temperature and humidity and gas data from the sensor, compensates the data and store it in the bme680\+\_\+data structure instance passed by the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sensor driver for B\+M\+E680 sensor. 
+

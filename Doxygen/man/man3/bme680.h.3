@@ -1,0 +1,94 @@
+.TH "//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" 3 "Mon May 11 2020" "Lab10" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h \- Sensor driver for BME680 sensor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'bme680_defs\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int8_t \fBbme680_init\fP (struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is the entry point\&. It reads the chip-id and calibration data from the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_set_regs\fP (const uint8_t *reg_addr, const uint8_t *reg_data, uint8_t len, struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API writes the given data to the register address of the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_get_regs\fP (uint8_t reg_addr, uint8_t *reg_data, uint16_t len, struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API reads the data from the given register address of the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_soft_reset\fP (struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API performs the soft reset of the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_set_sensor_mode\fP (struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is used to set the power mode of the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_get_sensor_mode\fP (struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is used to get the power mode of the sensor\&. "
+.ti -1c
+.RI "void \fBbme680_set_profile_dur\fP (uint16_t duration, struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is used to set the profile duration of the sensor\&. "
+.ti -1c
+.RI "void \fBbme680_get_profile_dur\fP (uint16_t *duration, const struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is used to get the profile duration of the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_get_sensor_data\fP (struct \fBbme680_field_data\fP *data, struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API reads the pressure, temperature and humidity and gas data from the sensor, compensates the data and store it in the bme680_data structure instance passed by the user\&. "
+.ti -1c
+.RI "int8_t \fBbme680_set_sensor_settings\fP (uint16_t desired_settings, struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is used to set the oversampling, filter and T,P,H, gas selection settings in the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_get_sensor_settings\fP (uint16_t desired_settings, struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is used to get the oversampling, filter and T,P,H, gas selection settings in the sensor\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Sensor driver for BME680 sensor\&. 
+
+Copyright (C) 2017 - 2018 Bosch Sensortec GmbH
+.PP
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+.PP
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer\&.
+.PP
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution\&.
+.PP
+Neither the name of the copyright holder nor the names of the contributors may be used to endorse or promote products derived from this software without specific prior written permission\&.
+.PP
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED\&. IN NO EVENT SHALL COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
+.PP
+The information provided is believed to be accurate and reliable\&. The copyright holder assumes no responsibility for the consequences of use of such information nor for any infringement of patents or other rights of third parties which may result from its use\&. No license is granted by implication or otherwise under any patent or patent rights of the copyright holder\&.
+.PP
+\fBDate\fP
+.RS 4
+19 Jun 2018 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+3\&.5\&.9
+.RE
+.PP
+
+.PP
+Definition in file \fBbme680\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Lab10 from the source code\&.

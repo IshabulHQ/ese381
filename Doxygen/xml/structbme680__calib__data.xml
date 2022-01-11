@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structbme680__calib__data" kind="struct" language="C++" prot="public">
+    <compoundname>bme680_calib_data</compoundname>
+    <includes refid="bme680__defs_8h" local="no">bme680_defs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbme680__calib__data_1a24e095d8b94033d670a1b85694ed30f6" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t par_h1</definition>
+        <argsstring></argsstring>
+        <name>par_h1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated humidity data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="412" column="10" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a772cd868a4e39b9f494527d1cb35de02" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t par_h2</definition>
+        <argsstring></argsstring>
+        <name>par_h2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated humidity data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="414" column="10" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a2293002a3dae79a94bdb4e38ec1227f3" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t par_h3</definition>
+        <argsstring></argsstring>
+        <name>par_h3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated humidity data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="416" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a301faa3278cf28d50d64af944079a460" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t par_h4</definition>
+        <argsstring></argsstring>
+        <name>par_h4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated humidity data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="418" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a0bc2a31e5e092c869b552cdac0385b75" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t par_h5</definition>
+        <argsstring></argsstring>
+        <name>par_h5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated humidity data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="420" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1af5a80c7a7499ee563a7941c9eb4d94b5" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t par_h6</definition>
+        <argsstring></argsstring>
+        <name>par_h6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated humidity data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="422" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a6e7f2d3730bb568a913e343d36362884" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t par_h7</definition>
+        <argsstring></argsstring>
+        <name>par_h7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated humidity data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="424" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a290accdada6111f113c634c4044c4fa4" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t par_gh1</definition>
+        <argsstring></argsstring>
+        <name>par_gh1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated gas data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="426" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a5b78ce6d7c240043e18580ed4099aab4" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t par_gh2</definition>
+        <argsstring></argsstring>
+        <name>par_gh2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated gas data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="428" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a94fb11fa5782588916f5d81b8915ef9b" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t par_gh3</definition>
+        <argsstring></argsstring>
+        <name>par_gh3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated gas data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="430" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a97eb8ef2b026f56a7d6d695131d0c419" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t par_t1</definition>
+        <argsstring></argsstring>
+        <name>par_t1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated temperature data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="432" column="10" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1ac6256f94edc8be82afb326e36358745c" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t par_t2</definition>
+        <argsstring></argsstring>
+        <name>par_t2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated temperature data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="434" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1ae6854d49a6838706762ab15b928ccada" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t par_t3</definition>
+        <argsstring></argsstring>
+        <name>par_t3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated temperature data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="436" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a117968908269cd833ae78dc56c59f778" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t par_p1</definition>
+        <argsstring></argsstring>
+        <name>par_p1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated pressure data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="438" column="10" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a3e78958697167cc73b739398c72433fe" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t par_p2</definition>
+        <argsstring></argsstring>
+        <name>par_p2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated pressure data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="440" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a3f8392fa8c84cbaa8539b835ffc53a4a" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t par_p3</definition>
+        <argsstring></argsstring>
+        <name>par_p3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated pressure data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="442" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a0416df27f022b8c8a8517747a7aee33a" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t par_p4</definition>
+        <argsstring></argsstring>
+        <name>par_p4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated pressure data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="444" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1add809d9dc0f77cf8076c1a55ed928bc7" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t par_p5</definition>
+        <argsstring></argsstring>
+        <name>par_p5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated pressure data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="446" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a10b9eb6bf2b3f8f2f1cade0ee07f8f18" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t par_p6</definition>
+        <argsstring></argsstring>
+        <name>par_p6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated pressure data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="448" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1ad3c8ef5f4493ca649fa36c804052eae3" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t par_p7</definition>
+        <argsstring></argsstring>
+        <name>par_p7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated pressure data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="450" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a9727808e1c81b47e53333ca09891076b" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t par_p8</definition>
+        <argsstring></argsstring>
+        <name>par_p8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated pressure data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="452" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1ab650e9192f72d2d271b896b5c02cc588" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t par_p9</definition>
+        <argsstring></argsstring>
+        <name>par_p9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated pressure data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="454" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="454" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a57a098b477defc4c02eef2977c5309d4" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t par_p10</definition>
+        <argsstring></argsstring>
+        <name>par_p10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store calibrated pressure data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="456" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="456" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1ac1f0d71206317758c70cd96314b6fc02" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t t_fine</definition>
+        <argsstring></argsstring>
+        <name>t_fine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store t_fine size </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="460" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="460" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a69cc977f1f6fb4ccfb8d69712824a077" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t res_heat_range</definition>
+        <argsstring></argsstring>
+        <name>res_heat_range</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store heater resistance range </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="466" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="466" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1a91f85f7e4c634baf65262c8a31b7ba2b" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t res_heat_val</definition>
+        <argsstring></argsstring>
+        <name>res_heat_val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store heater resistance value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="468" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="468" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__calib__data_1aa4de966258d798da06adeb9442f2b65a" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t range_sw_err</definition>
+        <argsstring></argsstring>
+        <name>range_sw_err</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store error range </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="470" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="470" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure to hold the Calibration data. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="410" column="24" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="410" bodyend="471"/>
+    <listofallmembers>
+      <member refid="structbme680__calib__data_1a290accdada6111f113c634c4044c4fa4" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_gh1</name></member>
+      <member refid="structbme680__calib__data_1a5b78ce6d7c240043e18580ed4099aab4" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_gh2</name></member>
+      <member refid="structbme680__calib__data_1a94fb11fa5782588916f5d81b8915ef9b" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_gh3</name></member>
+      <member refid="structbme680__calib__data_1a24e095d8b94033d670a1b85694ed30f6" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_h1</name></member>
+      <member refid="structbme680__calib__data_1a772cd868a4e39b9f494527d1cb35de02" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_h2</name></member>
+      <member refid="structbme680__calib__data_1a2293002a3dae79a94bdb4e38ec1227f3" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_h3</name></member>
+      <member refid="structbme680__calib__data_1a301faa3278cf28d50d64af944079a460" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_h4</name></member>
+      <member refid="structbme680__calib__data_1a0bc2a31e5e092c869b552cdac0385b75" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_h5</name></member>
+      <member refid="structbme680__calib__data_1af5a80c7a7499ee563a7941c9eb4d94b5" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_h6</name></member>
+      <member refid="structbme680__calib__data_1a6e7f2d3730bb568a913e343d36362884" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_h7</name></member>
+      <member refid="structbme680__calib__data_1a117968908269cd833ae78dc56c59f778" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_p1</name></member>
+      <member refid="structbme680__calib__data_1a57a098b477defc4c02eef2977c5309d4" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_p10</name></member>
+      <member refid="structbme680__calib__data_1a3e78958697167cc73b739398c72433fe" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_p2</name></member>
+      <member refid="structbme680__calib__data_1a3f8392fa8c84cbaa8539b835ffc53a4a" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_p3</name></member>
+      <member refid="structbme680__calib__data_1a0416df27f022b8c8a8517747a7aee33a" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_p4</name></member>
+      <member refid="structbme680__calib__data_1add809d9dc0f77cf8076c1a55ed928bc7" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_p5</name></member>
+      <member refid="structbme680__calib__data_1a10b9eb6bf2b3f8f2f1cade0ee07f8f18" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_p6</name></member>
+      <member refid="structbme680__calib__data_1ad3c8ef5f4493ca649fa36c804052eae3" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_p7</name></member>
+      <member refid="structbme680__calib__data_1a9727808e1c81b47e53333ca09891076b" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_p8</name></member>
+      <member refid="structbme680__calib__data_1ab650e9192f72d2d271b896b5c02cc588" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_p9</name></member>
+      <member refid="structbme680__calib__data_1a97eb8ef2b026f56a7d6d695131d0c419" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_t1</name></member>
+      <member refid="structbme680__calib__data_1ac6256f94edc8be82afb326e36358745c" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_t2</name></member>
+      <member refid="structbme680__calib__data_1ae6854d49a6838706762ab15b928ccada" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>par_t3</name></member>
+      <member refid="structbme680__calib__data_1aa4de966258d798da06adeb9442f2b65a" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>range_sw_err</name></member>
+      <member refid="structbme680__calib__data_1a69cc977f1f6fb4ccfb8d69712824a077" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>res_heat_range</name></member>
+      <member refid="structbme680__calib__data_1a91f85f7e4c634baf65262c8a31b7ba2b" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>res_heat_val</name></member>
+      <member refid="structbme680__calib__data_1ac1f0d71206317758c70cd96314b6fc02" prot="public" virt="non-virtual"><scope>bme680_calib_data</scope><name>t_fine</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

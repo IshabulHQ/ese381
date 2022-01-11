@@ -1,0 +1,230 @@
+\hypertarget{lcd_8c}{}\doxysection{//\+Mac/\+Home/\+Desktop/\+E\+SE 381/\+Labs/\+Lab 10/lab10\+\_\+task1/lab10\+\_\+task1/lcd.c File Reference}
+\label{lcd_8c}\index{//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10\_task1/lab10\_task1/lcd.c@{//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10\_task1/lab10\_task1/lcd.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}saml21j18b.\+h\char`\"{}}\newline
+Include dependency graph for lcd.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lcd_8c_a5e3aaf347c3048fe225b1d4b2771cf04}{freq}}~2000000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lcd_8c_a945fcfddb2cd3089d44b3f0201f97519}{delay\+\_\+30us}} (void)
+\item 
+void \mbox{\hyperlink{lcd_8c_a6699ddda2fdbc83fcfda7cc61813eebb}{v\+\_\+delay}} (signed char inner, signed char outer)
+\item 
+void \mbox{\hyperlink{lcd_8c_a54dfe53179770995a964dd56ab7d1ad3}{delay\+\_\+40ms}} (void)
+\item 
+void \mbox{\hyperlink{lcd_8c_a0f268347583db61f04a11de5afafb08b}{init\+\_\+spi\+\_\+lcd}} (void)
+\item 
+void \mbox{\hyperlink{lcd_8c_a5a553c70392ad5ff03d55ea16c3d2c43}{lcd\+\_\+spi\+\_\+transmit\+\_\+\+C\+MD}} (char C\+MD)
+\item 
+void \mbox{\hyperlink{lcd_8c_a5545bb2f9b85842ca794d6009f767823}{lcd\+\_\+spi\+\_\+transmit\+\_\+\+D\+A\+TA}} (char data)
+\item 
+void \mbox{\hyperlink{lcd_8c_a4c0ca25c2b5e3649f7f1ba5e2af92746}{init\+\_\+lcd\+\_\+dog}} (void)
+\item 
+void \mbox{\hyperlink{lcd_8c_a130db492e8cd5bb6382659d6279ba4bb}{update\+\_\+lcd\+\_\+dog}} (void)
+\item 
+void \mbox{\hyperlink{lcd_8c_a6606d0f5a079141d7c98950307113330}{clr\+\_\+dsp\+\_\+buff}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{lcd_8c_aa759b80a05f4327c136abfd9f2ae8f40}{A\+R\+R\+A\+Y\+\_\+\+P\+O\+R\+T\+\_\+\+P\+I\+N\+C\+F\+G0}} = (unsigned char$\ast$)\&R\+E\+G\+\_\+\+P\+O\+R\+T\+\_\+\+P\+I\+N\+C\+F\+G0
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{lcd_8c_a14de3824643f8f9974adc8fa5a5ac3c3}{A\+R\+R\+A\+Y\+\_\+\+P\+O\+R\+T\+\_\+\+P\+M\+U\+X0}} = (unsigned char$\ast$)\&R\+E\+G\+\_\+\+P\+O\+R\+T\+\_\+\+P\+M\+U\+X0
+\item 
+char \mbox{\hyperlink{lcd_8c_ad72805206560d19c92ac03e9321abce6}{dsp\+\_\+buff\+\_\+1}} \mbox{[}17\mbox{]}
+\item 
+char \mbox{\hyperlink{lcd_8c_ae1aecd5f026fbc8a4e398fcedce4d541}{dsp\+\_\+buff\+\_\+2}} \mbox{[}17\mbox{]}
+\item 
+char \mbox{\hyperlink{lcd_8c_a3555625c7a3fc26b6c911d8f7f109012}{dsp\+\_\+buff\+\_\+3}} \mbox{[}17\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lcd_8c_a5e3aaf347c3048fe225b1d4b2771cf04}\label{lcd_8c_a5e3aaf347c3048fe225b1d4b2771cf04}} 
+\index{lcd.c@{lcd.c}!freq@{freq}}
+\index{freq@{freq}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{freq}{freq}}
+{\footnotesize\ttfamily \#define freq~2000000}
+
+
+
+Definition at line 31 of file lcd.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lcd_8c_a6606d0f5a079141d7c98950307113330}\label{lcd_8c_a6606d0f5a079141d7c98950307113330}} 
+\index{lcd.c@{lcd.c}!clr\_dsp\_buff@{clr\_dsp\_buff}}
+\index{clr\_dsp\_buff@{clr\_dsp\_buff}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{clr\_dsp\_buff()}{clr\_dsp\_buff()}}
+{\footnotesize\ttfamily void clr\+\_\+dsp\+\_\+buff (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 309 of file lcd.\+c.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{lcd_8c_a945fcfddb2cd3089d44b3f0201f97519}\label{lcd_8c_a945fcfddb2cd3089d44b3f0201f97519}} 
+\index{lcd.c@{lcd.c}!delay\_30us@{delay\_30us}}
+\index{delay\_30us@{delay\_30us}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{delay\_30us()}{delay\_30us()}}
+{\footnotesize\ttfamily void delay\+\_\+30us (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file lcd.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{lcd_8c_a54dfe53179770995a964dd56ab7d1ad3}\label{lcd_8c_a54dfe53179770995a964dd56ab7d1ad3}} 
+\index{lcd.c@{lcd.c}!delay\_40ms@{delay\_40ms}}
+\index{delay\_40ms@{delay\_40ms}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{delay\_40ms()}{delay\_40ms()}}
+{\footnotesize\ttfamily void delay\+\_\+40ms (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file lcd.\+c.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{lcd_8c_a4c0ca25c2b5e3649f7f1ba5e2af92746}\label{lcd_8c_a4c0ca25c2b5e3649f7f1ba5e2af92746}} 
+\index{lcd.c@{lcd.c}!init\_lcd\_dog@{init\_lcd\_dog}}
+\index{init\_lcd\_dog@{init\_lcd\_dog}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{init\_lcd\_dog()}{init\_lcd\_dog()}}
+{\footnotesize\ttfamily void init\+\_\+lcd\+\_\+dog (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 193 of file lcd.\+c.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{lcd_8c_a0f268347583db61f04a11de5afafb08b}\label{lcd_8c_a0f268347583db61f04a11de5afafb08b}} 
+\index{lcd.c@{lcd.c}!init\_spi\_lcd@{init\_spi\_lcd}}
+\index{init\_spi\_lcd@{init\_spi\_lcd}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{init\_spi\_lcd()}{init\_spi\_lcd()}}
+{\footnotesize\ttfamily void init\+\_\+spi\+\_\+lcd (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file lcd.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{lcd_8c_a5a553c70392ad5ff03d55ea16c3d2c43}\label{lcd_8c_a5a553c70392ad5ff03d55ea16c3d2c43}} 
+\index{lcd.c@{lcd.c}!lcd\_spi\_transmit\_CMD@{lcd\_spi\_transmit\_CMD}}
+\index{lcd\_spi\_transmit\_CMD@{lcd\_spi\_transmit\_CMD}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{lcd\_spi\_transmit\_CMD()}{lcd\_spi\_transmit\_CMD()}}
+{\footnotesize\ttfamily void lcd\+\_\+spi\+\_\+transmit\+\_\+\+C\+MD (\begin{DoxyParamCaption}\item[{char}]{C\+MD }\end{DoxyParamCaption})}
+
+
+
+Definition at line 137 of file lcd.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{lcd_8c_a5545bb2f9b85842ca794d6009f767823}\label{lcd_8c_a5545bb2f9b85842ca794d6009f767823}} 
+\index{lcd.c@{lcd.c}!lcd\_spi\_transmit\_DATA@{lcd\_spi\_transmit\_DATA}}
+\index{lcd\_spi\_transmit\_DATA@{lcd\_spi\_transmit\_DATA}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{lcd\_spi\_transmit\_DATA()}{lcd\_spi\_transmit\_DATA()}}
+{\footnotesize\ttfamily void lcd\+\_\+spi\+\_\+transmit\+\_\+\+D\+A\+TA (\begin{DoxyParamCaption}\item[{char}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 165 of file lcd.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{lcd_8c_a130db492e8cd5bb6382659d6279ba4bb}\label{lcd_8c_a130db492e8cd5bb6382659d6279ba4bb}} 
+\index{lcd.c@{lcd.c}!update\_lcd\_dog@{update\_lcd\_dog}}
+\index{update\_lcd\_dog@{update\_lcd\_dog}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{update\_lcd\_dog()}{update\_lcd\_dog()}}
+{\footnotesize\ttfamily void update\+\_\+lcd\+\_\+dog (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 256 of file lcd.\+c.
+
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{lcd_8c_a6699ddda2fdbc83fcfda7cc61813eebb}\label{lcd_8c_a6699ddda2fdbc83fcfda7cc61813eebb}} 
+\index{lcd.c@{lcd.c}!v\_delay@{v\_delay}}
+\index{v\_delay@{v\_delay}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{v\_delay()}{v\_delay()}}
+{\footnotesize\ttfamily void v\+\_\+delay (\begin{DoxyParamCaption}\item[{signed char}]{inner,  }\item[{signed char}]{outer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file lcd.\+c.
+
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{lcd_8c_aa759b80a05f4327c136abfd9f2ae8f40}\label{lcd_8c_aa759b80a05f4327c136abfd9f2ae8f40}} 
+\index{lcd.c@{lcd.c}!ARRAY\_PORT\_PINCFG0@{ARRAY\_PORT\_PINCFG0}}
+\index{ARRAY\_PORT\_PINCFG0@{ARRAY\_PORT\_PINCFG0}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{ARRAY\_PORT\_PINCFG0}{ARRAY\_PORT\_PINCFG0}}
+{\footnotesize\ttfamily unsigned char$\ast$ A\+R\+R\+A\+Y\+\_\+\+P\+O\+R\+T\+\_\+\+P\+I\+N\+C\+F\+G0 = (unsigned char$\ast$)\&R\+E\+G\+\_\+\+P\+O\+R\+T\+\_\+\+P\+I\+N\+C\+F\+G0}
+
+
+
+Definition at line 35 of file lcd.\+h.
+
+\mbox{\Hypertarget{lcd_8c_a14de3824643f8f9974adc8fa5a5ac3c3}\label{lcd_8c_a14de3824643f8f9974adc8fa5a5ac3c3}} 
+\index{lcd.c@{lcd.c}!ARRAY\_PORT\_PMUX0@{ARRAY\_PORT\_PMUX0}}
+\index{ARRAY\_PORT\_PMUX0@{ARRAY\_PORT\_PMUX0}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{ARRAY\_PORT\_PMUX0}{ARRAY\_PORT\_PMUX0}}
+{\footnotesize\ttfamily unsigned char$\ast$ A\+R\+R\+A\+Y\+\_\+\+P\+O\+R\+T\+\_\+\+P\+M\+U\+X0 = (unsigned char$\ast$)\&R\+E\+G\+\_\+\+P\+O\+R\+T\+\_\+\+P\+M\+U\+X0}
+
+
+
+Definition at line 36 of file lcd.\+h.
+
+\mbox{\Hypertarget{lcd_8c_ad72805206560d19c92ac03e9321abce6}\label{lcd_8c_ad72805206560d19c92ac03e9321abce6}} 
+\index{lcd.c@{lcd.c}!dsp\_buff\_1@{dsp\_buff\_1}}
+\index{dsp\_buff\_1@{dsp\_buff\_1}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{dsp\_buff\_1}{dsp\_buff\_1}}
+{\footnotesize\ttfamily char dsp\+\_\+buff\+\_\+1\mbox{[}17\mbox{]}}
+
+
+
+Definition at line 38 of file lcd.\+h.
+
+\mbox{\Hypertarget{lcd_8c_ae1aecd5f026fbc8a4e398fcedce4d541}\label{lcd_8c_ae1aecd5f026fbc8a4e398fcedce4d541}} 
+\index{lcd.c@{lcd.c}!dsp\_buff\_2@{dsp\_buff\_2}}
+\index{dsp\_buff\_2@{dsp\_buff\_2}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{dsp\_buff\_2}{dsp\_buff\_2}}
+{\footnotesize\ttfamily char dsp\+\_\+buff\+\_\+2\mbox{[}17\mbox{]}}
+
+
+
+Definition at line 36 of file lcd.\+c.
+
+\mbox{\Hypertarget{lcd_8c_a3555625c7a3fc26b6c911d8f7f109012}\label{lcd_8c_a3555625c7a3fc26b6c911d8f7f109012}} 
+\index{lcd.c@{lcd.c}!dsp\_buff\_3@{dsp\_buff\_3}}
+\index{dsp\_buff\_3@{dsp\_buff\_3}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{dsp\_buff\_3}{dsp\_buff\_3}}
+{\footnotesize\ttfamily char dsp\+\_\+buff\+\_\+3\mbox{[}17\mbox{]}}
+
+
+
+Definition at line 36 of file lcd.\+c.
+

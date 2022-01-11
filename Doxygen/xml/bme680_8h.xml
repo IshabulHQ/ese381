@@ -1,0 +1,715 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="bme680_8h" kind="file" language="C++">
+    <compoundname>bme680.h</compoundname>
+    <includes refid="bme680__defs_8h" local="yes">bme680_defs.h</includes>
+    <includedby refid="bme680_8c" local="yes">//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c</includedby>
+    <includedby refid="main_8c" local="yes">//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="1">
+        <label>//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h</label>
+        <link refid="bme680_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bme680_defs.h</label>
+        <link refid="bme680__defs_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="2">
+        <label>//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c</label>
+        <link refid="bme680_8c"/>
+      </node>
+      <node id="1">
+        <label>//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h</label>
+        <link refid="bme680_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___b_m_e680_1gaee75ae524b7ca8f4a9b6dbb7f640c2e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t bme680_init</definition>
+        <argsstring>(struct bme680_dev *dev)</argsstring>
+        <name>bme680_init</name>
+        <param>
+          <type>struct <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>This API is the entry point. It reads the chip-id and calibration data from the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>CPP guard</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Structure instance of <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of API execution status </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>zero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Success / +ve value -&gt; Warning / -ve value -&gt; Error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" line="75" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c" bodystart="287" bodyend="310" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" declline="75" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_e680_1ga5d1bad74f7ac28e75aca9d7de66fd2b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t bme680_set_regs</definition>
+        <argsstring>(const uint8_t *reg_addr, const uint8_t *reg_data, uint8_t len, struct bme680_dev *dev)</argsstring>
+        <name>bme680_set_regs</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>reg_data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>This API writes the given data to the register address of the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Register address from where the data to be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">reg_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Pointer to data buffer which is to be written in the sensor. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: No of bytes of data to write.. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Structure instance of <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of API execution status </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>zero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Success / +ve value -&gt; Warning / -ve value -&gt; Error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" line="90" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c" bodystart="340" bodyend="374" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" declline="90" declcolumn="8"/>
+        <references refid="group___b_m_e680_1ga9be3bfa321b5d7b421ae2b8900d49eff" compoundref="bme680__defs_8h" startline="225">BME680_TMP_BUFFER_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_e680_1gaf5548cbdbf327e2c77bdb0afb1dde9e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t bme680_get_regs</definition>
+        <argsstring>(uint8_t reg_addr, uint8_t *reg_data, uint16_t len, struct bme680_dev *dev)</argsstring>
+        <name>bme680_get_regs</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>reg_data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>This API reads the data from the given register address of the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Register address from where the data to be read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Pointer to data buffer to store the read data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: No of bytes of data to be read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Structure instance of <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of API execution status </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>zero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Success / +ve value -&gt; Warning / -ve value -&gt; Error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" line="103" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c" bodystart="315" bodyend="334" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" declline="103" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_e680_1ga7f0f1a4378bc6cd0a34acf62509cdec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t bme680_soft_reset</definition>
+        <argsstring>(struct bme680_dev *dev)</argsstring>
+        <name>bme680_soft_reset</name>
+        <param>
+          <type>struct <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>This API performs the soft reset of the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Structure instance of <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of API execution status </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>zero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Success / +ve value -&gt; Warning / -ve value -&gt; Error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" line="113" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c" bodystart="379" bodyend="407" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" declline="113" declcolumn="8"/>
+        <references refid="group___b_m_e680_1ga69bae1e3eba277068c1055e3028bbf41" compoundref="bme680__defs_8h" startline="178">BME680_SOFT_RESET_ADDR</references>
+        <references refid="group___b_m_e680_1ga6da379a1060ef5079d34ba88191c3488" compoundref="bme680__defs_8h" startline="129">BME680_SOFT_RESET_CMD</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_e680_1ga5ca765226e758e71c862553c7cc0b371" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t bme680_set_sensor_mode</definition>
+        <argsstring>(struct bme680_dev *dev)</argsstring>
+        <name>bme680_set_sensor_mode</name>
+        <param>
+          <type>struct <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to set the power mode of the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Structure instance of <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>: Pass the value to <ref refid="structbme680__dev_1a5d7bfe9503c1c86a8a5d245129749b07" kindref="member">bme680_dev.power_mode</ref> structure variable.</para>
+</simplesect>
+<table rows="3" cols="2"><row>
+<entry thead="yes"><para>value </para>
+</entry><entry thead="yes"><para>mode  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>0x00 </para>
+</entry><entry thead="no"><para>BME680_SLEEP_MODE  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>0x01 </para>
+</entry><entry thead="no"><para>BME680_FORCED_MODE  </para>
+</entry></row>
+</table>
+</para>
+<para><itemizedlist>
+<listitem><para><simplesect kind="return"><para>Result of API execution status </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>zero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Success / +ve value -&gt; Warning / -ve value -&gt; Error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" line="129" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c" bodystart="589" bodyend="623" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" declline="129" declcolumn="8"/>
+        <references refid="group___b_m_e680_1ga91607f3be92722408129f7dc4d9da94e" compoundref="bme680__defs_8h" startline="167">BME680_CONF_T_P_MODE_ADDR</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_e680_1ga4e50492a1f4747868f7e9a826492f1e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t bme680_get_sensor_mode</definition>
+        <argsstring>(struct bme680_dev *dev)</argsstring>
+        <name>bme680_get_sensor_mode</name>
+        <param>
+          <type>struct <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to get the power mode of the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Structure instance of <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>: <ref refid="structbme680__dev_1a5d7bfe9503c1c86a8a5d245129749b07" kindref="member">bme680_dev.power_mode</ref> structure variable hold the power mode.</para>
+</simplesect>
+<table rows="3" cols="2"><row>
+<entry thead="yes"><para>value </para>
+</entry><entry thead="yes"><para>mode  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>0x00 </para>
+</entry><entry thead="no"><para>BME680_SLEEP_MODE  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>0x01 </para>
+</entry><entry thead="no"><para>BME680_FORCED_MODE  </para>
+</entry></row>
+</table>
+</para>
+<para><simplesect kind="return"><para>Result of API execution status </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>zero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Success / +ve value -&gt; Warning / -ve value -&gt; Error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" line="145" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c" bodystart="628" bodyend="642" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" declline="145" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_e680_1ga192f772bc9cb619e5855e93d6ebd6128" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bme680_set_profile_dur</definition>
+        <argsstring>(uint16_t duration, struct bme680_dev *dev)</argsstring>
+        <name>bme680_set_profile_dur</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>duration</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to set the profile duration of the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Structure instance of <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">duration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Duration of the measurement in ms.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Nothing </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" line="155" column="6" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c" bodystart="647" bodyend="667" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" declline="155" declcolumn="6"/>
+        <references refid="structbme680__dev_1ac3b142354292c55afff31109e18bc0ee" compoundref="bme680__defs_8h" startline="524">bme680_dev::gas_sett</references>
+        <references refid="structbme680__gas__sett_1ab412f4a6feca7ae5340dafc536763cb3" compoundref="bme680__defs_8h" startline="502">bme680_gas_sett::heatr_dur</references>
+        <references refid="structbme680__tph__sett_1aa2b315a5e149e613b69a235f1cd799f4" compoundref="bme680__defs_8h" startline="479">bme680_tph_sett::os_hum</references>
+        <references refid="structbme680__tph__sett_1ad4d1e27669b8d9bbfce53c8eae258b27" compoundref="bme680__defs_8h" startline="483">bme680_tph_sett::os_pres</references>
+        <references refid="structbme680__tph__sett_1a83ac2b084c3e4162a70482ddf3f73a13" compoundref="bme680__defs_8h" startline="481">bme680_tph_sett::os_temp</references>
+        <references refid="structbme680__dev_1a838270a634e397d99b838192bf0f2664" compoundref="bme680__defs_8h" startline="522">bme680_dev::tph_sett</references>
+        <references refid="group___b_m_e680_1ga2451a7ede7ebd810357f1503e9898ea6" compoundref="bme680__defs_8h" startline="84">UINT32_C</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_e680_1gae49a6f126c136fb16a8557a67e39d07c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bme680_get_profile_dur</definition>
+        <argsstring>(uint16_t *duration, const struct bme680_dev *dev)</argsstring>
+        <name>bme680_get_profile_dur</name>
+        <param>
+          <type>uint16_t *</type>
+          <declname>duration</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to get the profile duration of the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Structure instance of <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">duration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Duration of the measurement in ms.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Nothing </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" line="165" column="6" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c" bodystart="672" bodyend="698" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" declline="165" declcolumn="6"/>
+        <references refid="structbme680__dev_1ac3b142354292c55afff31109e18bc0ee" compoundref="bme680__defs_8h" startline="524">bme680_dev::gas_sett</references>
+        <references refid="structbme680__gas__sett_1ab412f4a6feca7ae5340dafc536763cb3" compoundref="bme680__defs_8h" startline="502">bme680_gas_sett::heatr_dur</references>
+        <references refid="structbme680__tph__sett_1aa2b315a5e149e613b69a235f1cd799f4" compoundref="bme680__defs_8h" startline="479">bme680_tph_sett::os_hum</references>
+        <references refid="structbme680__tph__sett_1ad4d1e27669b8d9bbfce53c8eae258b27" compoundref="bme680__defs_8h" startline="483">bme680_tph_sett::os_pres</references>
+        <references refid="structbme680__tph__sett_1a83ac2b084c3e4162a70482ddf3f73a13" compoundref="bme680__defs_8h" startline="481">bme680_tph_sett::os_temp</references>
+        <references refid="structbme680__gas__sett_1a89128634f22f0c2309ab03346aa2b7ab" compoundref="bme680__defs_8h" startline="498">bme680_gas_sett::run_gas</references>
+        <references refid="structbme680__dev_1a838270a634e397d99b838192bf0f2664" compoundref="bme680__defs_8h" startline="522">bme680_dev::tph_sett</references>
+        <references refid="group___b_m_e680_1ga2451a7ede7ebd810357f1503e9898ea6" compoundref="bme680__defs_8h" startline="84">UINT32_C</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_e680_1ga1025301e420e1e21911044bebb62f940" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t bme680_get_sensor_data</definition>
+        <argsstring>(struct bme680_field_data *data, struct bme680_dev *dev)</argsstring>
+        <name>bme680_get_sensor_data</name>
+        <param>
+          <type>struct <ref refid="structbme680__field__data" kindref="compound">bme680_field_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>This API reads the pressure, temperature and humidity and gas data from the sensor, compensates the data and store it in the bme680_data structure instance passed by the user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Structure instance to hold the data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Structure instance of <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of API execution status </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>zero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Success / +ve value -&gt; Warning / -ve value -&gt; Error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" line="178" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c" bodystart="705" bodyend="723" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" declline="178" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_e680_1ga2fea1365b4fa1d33eef434769b16e811" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t bme680_set_sensor_settings</definition>
+        <argsstring>(uint16_t desired_settings, struct bme680_dev *dev)</argsstring>
+        <name>bme680_set_sensor_settings</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>desired_settings</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to set the oversampling, filter and T,P,H, gas selection settings in the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Structure instance of <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">desired_settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Variable used to select the settings which are to be set in the sensor. <verbatim>Macros                    |  Functionality
+</verbatim> ------------------------------<mdash/>|-------------------------------------------<mdash/> BME680_OST_SEL | To set temperature oversampling. BME680_OSP_SEL | To set pressure oversampling. BME680_OSH_SEL | To set humidity oversampling. BME680_GAS_MEAS_SEL | To set gas measurement setting. BME680_FILTER_SEL | To set filter setting. BME680_HCNTRL_SEL | To set humidity control setting. BME680_RUN_GAS_SEL | To set run gas setting. BME680_NBCONV_SEL | To set NB conversion setting. BME680_GAS_SENSOR_SEL | To set all gas sensor related settings</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>: Below are the macros to be used by the user for selecting the desired settings. User can do OR operation of these macros for configuring multiple settings.</para>
+</simplesect>
+<simplesect kind="return"><para>Result of API execution status </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>zero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Success / +ve value -&gt; Warning / -ve value -&gt; Error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" line="207" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c" bodystart="413" bodyend="531" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" declline="207" declcolumn="8"/>
+        <references refid="group___b_m_e680_1ga8bbf94a63af9425d361db02bf8855ba7" compoundref="bme680__defs_8h" startline="226">BME680_REG_BUFFER_LENGTH</references>
+        <references refid="structbme680__dev_1a5d7bfe9503c1c86a8a5d245129749b07" compoundref="bme680__defs_8h" startline="526">bme680_dev::power_mode</references>
+      </memberdef>
+      <memberdef kind="function" id="group___b_m_e680_1ga7826b058b8eddcf05ccbb117fd9d41b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t bme680_get_sensor_settings</definition>
+        <argsstring>(uint16_t desired_settings, struct bme680_dev *dev)</argsstring>
+        <name>bme680_get_sensor_settings</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>desired_settings</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>This API is used to get the oversampling, filter and T,P,H, gas selection settings in the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Structure instance of <ref refid="structbme680__dev" kindref="compound">bme680_dev</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">desired_settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Variable used to select the settings which are to be get from the sensor.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of API execution status </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>zero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Success / +ve value -&gt; Warning / -ve value -&gt; Error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" line="220" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c" bodystart="537" bodyend="584" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h" declline="220" declcolumn="8"/>
+        <references refid="group___b_m_e680_1ga995aae4506cba06c735bb2ff37fbca49" compoundref="bme680__defs_8h" startline="163">BME680_CONF_HEAT_CTRL_ADDR</references>
+        <references refid="group___b_m_e680_1ga8bbf94a63af9425d361db02bf8855ba7" compoundref="bme680__defs_8h" startline="226">BME680_REG_BUFFER_LENGTH</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Sensor driver for BME680 sensor. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2017 - 2018 Bosch Sensortec GmbH</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+<para>Neither the name of the copyright holder nor the names of the contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE</para>
+<para>The information provided is believed to be accurate and reliable. The copyright holder assumes no responsibility for the consequences of use of such information nor for any infringement of patents or other rights of third parties which may result from its use. No license is granted by implication or otherwise under any patent or patent rights of the copyright holder.</para>
+<para><simplesect kind="date"><para>19 Jun 2018 </para>
+</simplesect>
+<simplesect kind="version"><para>3.5.9</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="53"><highlight class="preprocessor">#ifndef<sp/>BME680_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BME680_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Header<sp/>includes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bme680__defs_8h" kindref="compound">bme680_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>function<sp/>prototype<sp/>declarations<sp/>*/</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">int8_t<sp/><ref refid="group___b_m_e680_1gaee75ae524b7ca8f4a9b6dbb7f640c2e4" kindref="member">bme680_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme680__dev" kindref="compound">bme680_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">int8_t<sp/><ref refid="group___b_m_e680_1ga5d1bad74f7ac28e75aca9d7de66fd2b4" kindref="member">bme680_set_regs</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*reg_addr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*reg_data,<sp/>uint8_t<sp/>len,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme680__dev" kindref="compound">bme680_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">int8_t<sp/><ref refid="group___b_m_e680_1gaf5548cbdbf327e2c77bdb0afb1dde9e4" kindref="member">bme680_get_regs</ref>(uint8_t<sp/>reg_addr,<sp/>uint8_t<sp/>*reg_data,<sp/>uint16_t<sp/>len,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme680__dev" kindref="compound">bme680_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">int8_t<sp/><ref refid="group___b_m_e680_1ga7f0f1a4378bc6cd0a34acf62509cdec7" kindref="member">bme680_soft_reset</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme680__dev" kindref="compound">bme680_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">int8_t<sp/><ref refid="group___b_m_e680_1ga5ca765226e758e71c862553c7cc0b371" kindref="member">bme680_set_sensor_mode</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme680__dev" kindref="compound">bme680_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">int8_t<sp/><ref refid="group___b_m_e680_1ga4e50492a1f4747868f7e9a826492f1e7" kindref="member">bme680_get_sensor_mode</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme680__dev" kindref="compound">bme680_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___b_m_e680_1ga192f772bc9cb619e5855e93d6ebd6128" kindref="member">bme680_set_profile_dur</ref>(uint16_t<sp/>duration,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme680__dev" kindref="compound">bme680_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___b_m_e680_1gae49a6f126c136fb16a8557a67e39d07c" kindref="member">bme680_get_profile_dur</ref>(uint16_t<sp/>*duration,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme680__dev" kindref="compound">bme680_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">int8_t<sp/><ref refid="group___b_m_e680_1ga1025301e420e1e21911044bebb62f940" kindref="member">bme680_get_sensor_data</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme680__field__data" kindref="compound">bme680_field_data</ref><sp/>*data,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme680__dev" kindref="compound">bme680_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal">int8_t<sp/><ref refid="group___b_m_e680_1ga2fea1365b4fa1d33eef434769b16e811" kindref="member">bme680_set_sensor_settings</ref>(uint16_t<sp/>desired_settings,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme680__dev" kindref="compound">bme680_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal">int8_t<sp/><ref refid="group___b_m_e680_1ga7826b058b8eddcf05ccbb117fd9d41b7" kindref="member">bme680_get_sensor_settings</ref>(uint16_t<sp/>desired_settings,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme680__dev" kindref="compound">bme680_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>CPP<sp/>guard<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BME680_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.h"/>
+  </compounddef>
+</doxygen>

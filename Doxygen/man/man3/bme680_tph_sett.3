@@ -1,0 +1,54 @@
+.TH "bme680_tph_sett" 3 "Mon May 11 2020" "Lab10" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+bme680_tph_sett \- BME680 sensor settings structure which comprises of ODR, over-sampling and filter settings\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <bme680_defs\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBos_hum\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBos_temp\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBos_pres\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBfilter\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+BME680 sensor settings structure which comprises of ODR, over-sampling and filter settings\&. 
+.PP
+Definition at line 477 of file bme680_defs\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "uint8_t filter"
+Filter coefficient 
+.PP
+Definition at line 485 of file bme680_defs\&.h\&.
+.SS "uint8_t os_hum"
+Humidity oversampling 
+.PP
+Definition at line 479 of file bme680_defs\&.h\&.
+.SS "uint8_t os_pres"
+Pressure oversampling 
+.PP
+Definition at line 483 of file bme680_defs\&.h\&.
+.SS "uint8_t os_temp"
+Temperature oversampling 
+.PP
+Definition at line 481 of file bme680_defs\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Lab10 from the source code\&.

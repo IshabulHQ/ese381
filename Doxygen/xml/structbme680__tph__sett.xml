@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structbme680__tph__sett" kind="struct" language="C++" prot="public">
+    <compoundname>bme680_tph_sett</compoundname>
+    <includes refid="bme680__defs_8h" local="no">bme680_defs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbme680__tph__sett_1aa2b315a5e149e613b69a235f1cd799f4" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t os_hum</definition>
+        <argsstring></argsstring>
+        <name>os_hum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Humidity oversampling </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="479" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="479" bodyend="-1"/>
+        <referencedby refid="group___b_m_e680_1ga192f772bc9cb619e5855e93d6ebd6128" compoundref="bme680_8c" startline="647" endline="667">bme680_set_profile_dur</referencedby>
+        <referencedby refid="group___b_m_e680_1gae49a6f126c136fb16a8557a67e39d07c" compoundref="bme680_8c" startline="672" endline="698">bme680_get_profile_dur</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__tph__sett_1a83ac2b084c3e4162a70482ddf3f73a13" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t os_temp</definition>
+        <argsstring></argsstring>
+        <name>os_temp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Temperature oversampling </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="481" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="481" bodyend="-1"/>
+        <referencedby refid="group___b_m_e680_1ga192f772bc9cb619e5855e93d6ebd6128" compoundref="bme680_8c" startline="647" endline="667">bme680_set_profile_dur</referencedby>
+        <referencedby refid="group___b_m_e680_1gae49a6f126c136fb16a8557a67e39d07c" compoundref="bme680_8c" startline="672" endline="698">bme680_get_profile_dur</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__tph__sett_1ad4d1e27669b8d9bbfce53c8eae258b27" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t os_pres</definition>
+        <argsstring></argsstring>
+        <name>os_pres</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pressure oversampling </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="483" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="483" bodyend="-1"/>
+        <referencedby refid="group___b_m_e680_1ga192f772bc9cb619e5855e93d6ebd6128" compoundref="bme680_8c" startline="647" endline="667">bme680_set_profile_dur</referencedby>
+        <referencedby refid="group___b_m_e680_1gae49a6f126c136fb16a8557a67e39d07c" compoundref="bme680_8c" startline="672" endline="698">bme680_get_profile_dur</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__tph__sett_1aa69d890d38e8a1abafc8697d1760bb04" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t filter</definition>
+        <argsstring></argsstring>
+        <name>filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Filter coefficient </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="485" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>BME680 sensor settings structure which comprises of ODR, over-sampling and filter settings. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="477" column="22" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="477" bodyend="486"/>
+    <listofallmembers>
+      <member refid="structbme680__tph__sett_1aa69d890d38e8a1abafc8697d1760bb04" prot="public" virt="non-virtual"><scope>bme680_tph_sett</scope><name>filter</name></member>
+      <member refid="structbme680__tph__sett_1aa2b315a5e149e613b69a235f1cd799f4" prot="public" virt="non-virtual"><scope>bme680_tph_sett</scope><name>os_hum</name></member>
+      <member refid="structbme680__tph__sett_1ad4d1e27669b8d9bbfce53c8eae258b27" prot="public" virt="non-virtual"><scope>bme680_tph_sett</scope><name>os_pres</name></member>
+      <member refid="structbme680__tph__sett_1a83ac2b084c3e4162a70482ddf3f73a13" prot="public" virt="non-virtual"><scope>bme680_tph_sett</scope><name>os_temp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

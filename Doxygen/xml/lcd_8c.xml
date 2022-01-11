@@ -1,0 +1,622 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="lcd_8c" kind="file" language="C++">
+    <compoundname>lcd.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="yes">saml21j18b.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>saml21j18b.h</label>
+      </node>
+      <node id="1">
+        <label>//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c</label>
+        <link refid="lcd_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lcd_8c_1a5e3aaf347c3048fe225b1d4b2771cf04" prot="public" static="no">
+        <name>freq</name>
+        <initializer>2000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="31" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="lcd_8c_1aa759b80a05f4327c136abfd9f2ae8f40" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* ARRAY_PORT_PINCFG0</definition>
+        <argsstring></argsstring>
+        <name>ARRAY_PORT_PINCFG0</name>
+        <initializer>= (unsigned char*)&amp;REG_PORT_PINCFG0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="33" column="22" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.h" bodystart="35" bodyend="-1" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" declline="33" declcolumn="22"/>
+        <referencedby refid="lcd_8h_1a0f268347583db61f04a11de5afafb08b" compoundref="lcd_8c" startline="95" endline="114">init_spi_lcd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="lcd_8c_1a14de3824643f8f9974adc8fa5a5ac3c3" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* ARRAY_PORT_PMUX0</definition>
+        <argsstring></argsstring>
+        <name>ARRAY_PORT_PMUX0</name>
+        <initializer>= (unsigned char*)&amp;REG_PORT_PMUX0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="34" column="22" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.h" bodystart="36" bodyend="-1" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" declline="34" declcolumn="22"/>
+        <referencedby refid="lcd_8h_1a0f268347583db61f04a11de5afafb08b" compoundref="lcd_8c" startline="95" endline="114">init_spi_lcd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="lcd_8c_1ad72805206560d19c92ac03e9321abce6" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsp_buff_1[17]</definition>
+        <argsstring>[17]</argsstring>
+        <name>dsp_buff_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="36" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.h" bodystart="38" bodyend="-1" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" declline="36" declcolumn="13"/>
+        <referencedby refid="lcd_8h_1a130db492e8cd5bb6382659d6279ba4bb" compoundref="lcd_8c" startline="256" endline="286">update_lcd_dog</referencedby>
+        <referencedby refid="lcd_8h_1a6606d0f5a079141d7c98950307113330" compoundref="lcd_8c" startline="309" endline="314">clr_dsp_buff</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="lcd_8c_1ae1aecd5f026fbc8a4e398fcedce4d541" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsp_buff_2[17]</definition>
+        <argsstring>[17]</argsstring>
+        <name>dsp_buff_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="36" column="24" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" bodystart="36" bodyend="-1"/>
+        <referencedby refid="lcd_8h_1a130db492e8cd5bb6382659d6279ba4bb" compoundref="lcd_8c" startline="256" endline="286">update_lcd_dog</referencedby>
+        <referencedby refid="lcd_8h_1a6606d0f5a079141d7c98950307113330" compoundref="lcd_8c" startline="309" endline="314">clr_dsp_buff</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="lcd_8c_1a3555625c7a3fc26b6c911d8f7f109012" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsp_buff_3[17]</definition>
+        <argsstring>[17]</argsstring>
+        <name>dsp_buff_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="36" column="35" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" bodystart="36" bodyend="-1"/>
+        <referencedby refid="lcd_8h_1a130db492e8cd5bb6382659d6279ba4bb" compoundref="lcd_8c" startline="256" endline="286">update_lcd_dog</referencedby>
+        <referencedby refid="lcd_8h_1a6606d0f5a079141d7c98950307113330" compoundref="lcd_8c" startline="309" endline="314">clr_dsp_buff</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void delay_30us</definition>
+        <argsstring>(void)</argsstring>
+        <name>delay_30us</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="42" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" bodystart="42" bodyend="47"/>
+        <references refid="lcd_8c_1a5e3aaf347c3048fe225b1d4b2771cf04" compoundref="lcd_8c" startline="31">freq</references>
+        <referencedby refid="lcd_8c_1a54dfe53179770995a964dd56ab7d1ad3" compoundref="lcd_8c" startline="61" endline="71">delay_40ms</referencedby>
+        <referencedby refid="lcd_8h_1a4c0ca25c2b5e3649f7f1ba5e2af92746" compoundref="lcd_8c" startline="193" endline="232">init_lcd_dog</referencedby>
+        <referencedby refid="lcd_8h_1a130db492e8cd5bb6382659d6279ba4bb" compoundref="lcd_8c" startline="256" endline="286">update_lcd_dog</referencedby>
+        <referencedby refid="lcd_8h_1a6699ddda2fdbc83fcfda7cc61813eebb" compoundref="lcd_8c" startline="49" endline="59">v_delay</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1a6699ddda2fdbc83fcfda7cc61813eebb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void v_delay</definition>
+        <argsstring>(signed char inner, signed char outer)</argsstring>
+        <name>v_delay</name>
+        <param>
+          <type>signed char</type>
+          <declname>inner</declname>
+        </param>
+        <param>
+          <type>signed char</type>
+          <declname>outer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="49" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" bodystart="49" bodyend="59"/>
+        <references refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" compoundref="lcd_8c" startline="42" endline="47">delay_30us</references>
+        <references refid="lcd_8c_1a6699ddda2fdbc83fcfda7cc61813eebb" compoundref="lcd_8c" startline="49" endline="59">v_delay</references>
+        <referencedby refid="lcd_8h_1a6699ddda2fdbc83fcfda7cc61813eebb" compoundref="lcd_8c" startline="49" endline="59">v_delay</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1a54dfe53179770995a964dd56ab7d1ad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void delay_40ms</definition>
+        <argsstring>(void)</argsstring>
+        <name>delay_40ms</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="61" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" bodystart="61" bodyend="71"/>
+        <references refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" compoundref="lcd_8c" startline="42" endline="47">delay_30us</references>
+        <referencedby refid="lcd_8h_1a4c0ca25c2b5e3649f7f1ba5e2af92746" compoundref="lcd_8c" startline="193" endline="232">init_lcd_dog</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1a0f268347583db61f04a11de5afafb08b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_spi_lcd</definition>
+        <argsstring>(void)</argsstring>
+        <name>init_spi_lcd</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="95" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" bodystart="95" bodyend="114"/>
+        <references refid="lcd_8c_1aa759b80a05f4327c136abfd9f2ae8f40" compoundref="lcd_8h" startline="35">ARRAY_PORT_PINCFG0</references>
+        <references refid="lcd_8c_1a14de3824643f8f9974adc8fa5a5ac3c3" compoundref="lcd_8h" startline="36">ARRAY_PORT_PMUX0</references>
+        <referencedby refid="lcd_8h_1a4c0ca25c2b5e3649f7f1ba5e2af92746" compoundref="lcd_8c" startline="193" endline="232">init_lcd_dog</referencedby>
+        <referencedby refid="lcd_8h_1a130db492e8cd5bb6382659d6279ba4bb" compoundref="lcd_8c" startline="256" endline="286">update_lcd_dog</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lcd_spi_transmit_CMD</definition>
+        <argsstring>(char CMD)</argsstring>
+        <name>lcd_spi_transmit_CMD</name>
+        <param>
+          <type>char</type>
+          <declname>CMD</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="137" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" bodystart="137" bodyend="142"/>
+        <referencedby refid="lcd_8h_1a4c0ca25c2b5e3649f7f1ba5e2af92746" compoundref="lcd_8c" startline="193" endline="232">init_lcd_dog</referencedby>
+        <referencedby refid="lcd_8h_1a130db492e8cd5bb6382659d6279ba4bb" compoundref="lcd_8c" startline="256" endline="286">update_lcd_dog</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1a5545bb2f9b85842ca794d6009f767823" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lcd_spi_transmit_DATA</definition>
+        <argsstring>(char data)</argsstring>
+        <name>lcd_spi_transmit_DATA</name>
+        <param>
+          <type>char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="165" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" bodystart="165" bodyend="171"/>
+        <referencedby refid="lcd_8h_1a130db492e8cd5bb6382659d6279ba4bb" compoundref="lcd_8c" startline="256" endline="286">update_lcd_dog</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1a4c0ca25c2b5e3649f7f1ba5e2af92746" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_lcd_dog</definition>
+        <argsstring>(void)</argsstring>
+        <name>init_lcd_dog</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="193" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" bodystart="193" bodyend="232"/>
+        <references refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" compoundref="lcd_8c" startline="42" endline="47">delay_30us</references>
+        <references refid="lcd_8c_1a54dfe53179770995a964dd56ab7d1ad3" compoundref="lcd_8c" startline="61" endline="71">delay_40ms</references>
+        <references refid="lcd_8c_1a0f268347583db61f04a11de5afafb08b" compoundref="lcd_8c" startline="95" endline="114">init_spi_lcd</references>
+        <references refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" compoundref="lcd_8c" startline="137" endline="142">lcd_spi_transmit_CMD</references>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="38" endline="108">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1a130db492e8cd5bb6382659d6279ba4bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void update_lcd_dog</definition>
+        <argsstring>(void)</argsstring>
+        <name>update_lcd_dog</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="256" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" bodystart="256" bodyend="286"/>
+        <references refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" compoundref="lcd_8c" startline="42" endline="47">delay_30us</references>
+        <references refid="lcd_8c_1ad72805206560d19c92ac03e9321abce6" compoundref="lcd_8h" startline="38">dsp_buff_1</references>
+        <references refid="lcd_8c_1ae1aecd5f026fbc8a4e398fcedce4d541" compoundref="lcd_8c" startline="36">dsp_buff_2</references>
+        <references refid="lcd_8c_1a3555625c7a3fc26b6c911d8f7f109012" compoundref="lcd_8c" startline="36">dsp_buff_3</references>
+        <references refid="lcd_8c_1a0f268347583db61f04a11de5afafb08b" compoundref="lcd_8c" startline="95" endline="114">init_spi_lcd</references>
+        <references refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" compoundref="lcd_8c" startline="137" endline="142">lcd_spi_transmit_CMD</references>
+        <references refid="lcd_8c_1a5545bb2f9b85842ca794d6009f767823" compoundref="lcd_8c" startline="165" endline="171">lcd_spi_transmit_DATA</references>
+        <referencedby refid="lcd_8h_1a6606d0f5a079141d7c98950307113330" compoundref="lcd_8c" startline="309" endline="314">clr_dsp_buff</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1a6606d0f5a079141d7c98950307113330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clr_dsp_buff</definition>
+        <argsstring>(void)</argsstring>
+        <name>clr_dsp_buff</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" line="309" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c" bodystart="309" bodyend="314"/>
+        <references refid="lcd_8c_1ad72805206560d19c92ac03e9321abce6" compoundref="lcd_8h" startline="38">dsp_buff_1</references>
+        <references refid="lcd_8c_1ae1aecd5f026fbc8a4e398fcedce4d541" compoundref="lcd_8c" startline="36">dsp_buff_2</references>
+        <references refid="lcd_8c_1a3555625c7a3fc26b6c911d8f7f109012" compoundref="lcd_8c" startline="36">dsp_buff_3</references>
+        <references refid="lcd_8c_1a130db492e8cd5bb6382659d6279ba4bb" compoundref="lcd_8c" startline="256" endline="286">update_lcd_dog</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>File<sp/>Name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>&quot;lcd.c<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Title<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>&quot;lcd.c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>4/8/2020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>DOG<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Contains<sp/>function<sp/>and<sp/>variable<sp/>definitions<sp/>used<sp/>to<sp/>intialize<sp/>and<sp/>perform<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPI<sp/>communicatioonn<sp/>between<sp/>the<sp/>MCU<sp/>and<sp/>DOG<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/><sp/><sp/><sp/><sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;saml21j18b.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="lcd_8c_1a5e3aaf347c3048fe225b1d4b2771cf04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>freq<sp/>2000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="lcd_8c_1aa759b80a05f4327c136abfd9f2ae8f40" kindref="member">ARRAY_PORT_PINCFG0</ref><sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)&amp;REG_PORT_PINCFG0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="lcd_8c_1a14de3824643f8f9974adc8fa5a5ac3c3" kindref="member">ARRAY_PORT_PMUX0</ref><sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)&amp;REG_PORT_PMUX0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="lcd_8c_1a3555625c7a3fc26b6c911d8f7f109012" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1ad72805206560d19c92ac03e9321abce6" kindref="member">dsp_buff_1</ref>[17],<sp/><ref refid="lcd_8c_1ae1aecd5f026fbc8a4e398fcedce4d541" kindref="member">dsp_buff_2</ref>[17],<sp/><ref refid="lcd_8c_1a3555625c7a3fc26b6c911d8f7f109012" kindref="member">dsp_buff_3</ref>[17];</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="lcd_8h_1a945fcfddb2cd3089d44b3f0201f97519" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>clock_factor<sp/>=<sp/><ref refid="lcd_8c_1a5e3aaf347c3048fe225b1d4b2771cf04" kindref="member">freq</ref>/1000000;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delay<sp/>loop<sp/>from<sp/>i=0<sp/>to<sp/>i&lt;6<sp/>is<sp/>30us<sp/>long<sp/>at<sp/>1<sp/>MHz.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>6*clock_factor;<sp/>i++)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>loop<sp/>end<sp/>value<sp/>is<sp/>adjusted<sp/>based<sp/>on<sp/>frequency<sp/>macro<sp/>constant.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__asm(</highlight><highlight class="stringliteral">&quot;nop&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="lcd_8h_1a6699ddda2fdbc83fcfda7cc61813eebb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a6699ddda2fdbc83fcfda7cc61813eebb" kindref="member">v_delay</ref><sp/>(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>inner,<sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>outer)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>inner--;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(inner<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6699ddda2fdbc83fcfda7cc61813eebb" kindref="member">v_delay</ref>(inner,<sp/>outer);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>outer--;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(outer<sp/>!=<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6699ddda2fdbc83fcfda7cc61813eebb" kindref="member">v_delay</ref>(0,outer);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="lcd_8c_1a54dfe53179770995a964dd56ab7d1ad3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a54dfe53179770995a964dd56ab7d1ad3" kindref="member">delay_40ms</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/>v_delay(0,4);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/>//call<sp/>v_delay<sp/>function<sp/>with<sp/>inner<sp/>loop<sp/>variable=0<sp/>and<sp/>outer<sp/>loop<sp/>variable=4</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"></highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;=<sp/>1240;<sp/>j++){</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>Name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>&quot;init_spi_lcd&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>4/8/2020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>DOG<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Initializzes<sp/>the<sp/>MCU&apos;s<sp/>SPI<sp/>communication<sp/>to<sp/>the<sp/>DOGG<sp/>LCD<sp/>at<sp/>SERCOM1.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>PA16<sp/>=<sp/>MOSI,<sp/>PA17<sp/>=<sp/>SCK,<sp/>PA18<sp/>=<sp/>/SS,<sp/>PA19<sp/>=<sp/>MISO<sp/>(noot<sp/>used),<sp/>PB06<sp/>=<sp/>RS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/><sp/><sp/><sp/><sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="lcd_8h_1a0f268347583db61f04a11de5afafb08b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a0f268347583db61f04a11de5afafb08b" kindref="member">init_spi_lcd</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_GCLK_PCHCTRL19<sp/>=<sp/>0x00000040;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>SERCOM1<sp/>core<sp/>clock<sp/>not<sp/>enabled<sp/>by<sp/>default<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1aa759b80a05f4327c136abfd9f2ae8f40" kindref="member">ARRAY_PORT_PINCFG0</ref>[16]<sp/>|=<sp/>1;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>allow<sp/>pmux<sp/>to<sp/>set<sp/>PA16<sp/>pin<sp/>configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1aa759b80a05f4327c136abfd9f2ae8f40" kindref="member">ARRAY_PORT_PINCFG0</ref>[17]<sp/>|=<sp/>1;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>allow<sp/>pmux<sp/>to<sp/>set<sp/>PA17<sp/>pin<sp/>configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1aa759b80a05f4327c136abfd9f2ae8f40" kindref="member">ARRAY_PORT_PINCFG0</ref>[18]<sp/>|=<sp/>1;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>allow<sp/>pmux<sp/>to<sp/>set<sp/>PA18<sp/>pin<sp/>configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1aa759b80a05f4327c136abfd9f2ae8f40" kindref="member">ARRAY_PORT_PINCFG0</ref>[19]<sp/>|=<sp/>1;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>allow<sp/>pmux<sp/>to<sp/>set<sp/>PB06<sp/>pin<sp/>configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a14de3824643f8f9974adc8fa5a5ac3c3" kindref="member">ARRAY_PORT_PMUX0</ref>[8]<sp/>=<sp/>0x22;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>PA16<sp/>=<sp/>MOSI,<sp/>PA17<sp/>=<sp/>SCK<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a14de3824643f8f9974adc8fa5a5ac3c3" kindref="member">ARRAY_PORT_PMUX0</ref>[9]<sp/>=<sp/>0x22;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>PA18<sp/>=<sp/>SS,<sp/><sp/><sp/>PA19<sp/>=<sp/>MISO<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_DIRSET1<sp/>=<sp/>0x40;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>RS<sp/>output<sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_CTRLA<sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>reset<sp/>SERCOM1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(REG_SERCOM1_SPI_CTRLA<sp/>&amp;<sp/>1)<sp/>{}<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>wait<sp/>for<sp/>reset<sp/>to<sp/>complete<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_CTRLA<sp/>=<sp/>0x3030000C;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>MISO-3,<sp/>MOSI-0,<sp/>SCK-1,<sp/>SS-2,<sp/>CPOL=1,<sp/>CPHA=1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_CTRLB<sp/>=<sp/>0x00002000;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Master<sp/>SS,<sp/>8-bit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_BAUD<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>SPI<sp/>clock<sp/>is<sp/>4MHz/2<sp/>=<sp/>2MzHz<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_CTRLA<sp/>|=<sp/>2;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>enable<sp/>SERCOM1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>Name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>&quot;lcd_spi_transmit_CMD&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>4/8/2020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>DOG<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Sends<sp/>a<sp/>single<sp/>8<sp/>-<sp/>bit<sp/>value<sp/>to<sp/>the<sp/>DOG<sp/>LCD.<sp/>Value<sp/>seen<sp/>as<sp/>a<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/><sp/><sp/><sp/><sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="lcd_8h_1a5a553c70392ad5ff03d55ea16c3d2c43" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>CMD)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_OUTCLR1<sp/>=<sp/>0x00000040;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>RS<sp/>=<sp/>0<sp/>-&gt;<sp/>command,<sp/>/SS<sp/>=<sp/>0<sp/>-&gt;<sp/>selected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!(REG_SERCOM1_SPI_INTFLAG<sp/>&amp;<sp/>1))<sp/>{}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>wait<sp/>until<sp/>Tx<sp/>ready<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_DATA<sp/>=<sp/>CMD;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>send<sp/>data<sp/>byte<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_OUTSET1<sp/>=<sp/>0x00040000;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>/SS<sp/>=<sp/>1<sp/>-&gt;<sp/>deselected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>Name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>&quot;lcd_spi_transmit<sp/>Data&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>4/8/2020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>DOG<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Sends<sp/>a<sp/>single<sp/>8-bit<sp/>value<sp/>to<sp/>the<sp/>DOG<sp/>LCD&gt;<sp/>Value<sp/>seen<sp/>as<sp/>data<sp/>to<sp/>be<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">//<sp/>displayed<sp/>by<sp/>the<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/><sp/><sp/><sp/><sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="lcd_8h_1a5545bb2f9b85842ca794d6009f767823" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a5545bb2f9b85842ca794d6009f767823" kindref="member">lcd_spi_transmit_DATA</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_OUTSET1<sp/>=<sp/>0x00000040;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>RS<sp/>=<sp/>1<sp/>-&gt;<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_OUTCLR1<sp/>=<sp/>0x00040000;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>/SS<sp/>=<sp/>0<sp/>-&gt;<sp/>selected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!(REG_SERCOM1_SPI_INTFLAG<sp/>&amp;<sp/>1))<sp/>{}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>wait<sp/>until<sp/>Tx<sp/>ready<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_DATA<sp/>=<sp/>data;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>send<sp/>data<sp/>byte<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_OUTSET1<sp/>=<sp/>0x00040000;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>/SS<sp/>=<sp/>1<sp/>-&gt;<sp/>deselected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>Name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>&quot;init_lcd_dog&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>4/8/2020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>DOG<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Configures<sp/>and<sp/>initializes<sp/>DOG<sp/>LCD<sp/>and<sp/>MCU<sp/>for<sp/>SPI<sp/>coommunication<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/><sp/><sp/><sp/><sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="lcd_8h_1a4c0ca25c2b5e3649f7f1ba5e2af92746" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a4c0ca25c2b5e3649f7f1ba5e2af92746" kindref="member">init_lcd_dog</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a0f268347583db61f04a11de5afafb08b" kindref="member">init_spi_lcd</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialize<sp/>SPI<sp/>ports<sp/>for<sp/>LCD<sp/>DOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a54dfe53179770995a964dd56ab7d1ad3" kindref="member">delay_40ms</ref>();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//function<sp/>set<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref>(0x39);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//send<sp/>function<sp/>set<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//function<sp/>set<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref>(0x39);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//send<sp/>function<sp/>set<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//set<sp/>bias<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref>(0x1E);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//set<sp/>bias<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//power<sp/>control</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref>(0x55);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//configure<sp/>for<sp/>3.3<sp/>V</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//follower<sp/>control</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref>(0x6C);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//follower<sp/>mode<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a54dfe53179770995a964dd56ab7d1ad3" kindref="member">delay_40ms</ref>();</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//contrast<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref>(0x7F);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//configure<sp/>for<sp/>3.3<sp/>V</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//display<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref>(0x0C);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//display<sp/>on,<sp/>cursor<sp/>off,<sp/>blink<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//clear<sp/>display</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref>(0x01);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//clear<sp/>display,<sp/>cursor<sp/>home</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//entry<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref>(0x06);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//clear<sp/>display,<sp/>cursor<sp/>home</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>Name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>&quot;update_lcd_dog&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>4/8/2020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>DOG<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Updates<sp/>the<sp/>LCD<sp/>display<sp/>with<sp/>the<sp/>current<sp/>value<sp/>in<sp/>dsp_buff_1,<sp/>dsp_buff_2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>dsp_buff_3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/><sp/><sp/><sp/><sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="lcd_8h_1a130db492e8cd5bb6382659d6279ba4bb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a130db492e8cd5bb6382659d6279ba4bb" kindref="member">update_lcd_dog</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>i;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//initialize<sp/>loop<sp/>variable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a0f268347583db61f04a11de5afafb08b" kindref="member">init_spi_lcd</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//initialize<sp/>SPI<sp/>ports</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//send<sp/>line<sp/>1<sp/>to<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref>(0x80);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//initialize<sp/>DDRAM<sp/>addr-ctr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;<sp/>i&lt;=15;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5545bb2f9b85842ca794d6009f767823" kindref="member">lcd_spi_transmit_DATA</ref>(<ref refid="lcd_8c_1ad72805206560d19c92ac03e9321abce6" kindref="member">dsp_buff_1</ref>[i]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//send<sp/>buff<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//send<sp/>line<sp/>2<sp/>to<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref>(0x90);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//initialize<sp/>DDRAM<sp/>addr-ctr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;<sp/>i&lt;=15;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5545bb2f9b85842ca794d6009f767823" kindref="member">lcd_spi_transmit_DATA</ref>(<ref refid="lcd_8c_1ae1aecd5f026fbc8a4e398fcedce4d541" kindref="member">dsp_buff_2</ref>[i]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//send<sp/>buff<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//send<sp/>line<sp/>3<sp/>to<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5a553c70392ad5ff03d55ea16c3d2c43" kindref="member">lcd_spi_transmit_CMD</ref>(0xA0);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//initialize<sp/>DDRAM<sp/>addr-ctr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;<sp/>i&lt;=15;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a5545bb2f9b85842ca794d6009f767823" kindref="member">lcd_spi_transmit_DATA</ref>(<ref refid="lcd_8c_1a3555625c7a3fc26b6c911d8f7f109012" kindref="member">dsp_buff_3</ref>[i]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//send<sp/>buff<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a945fcfddb2cd3089d44b3f0201f97519" kindref="member">delay_30us</ref>();</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>Name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>&quot;clr_dsp_buff&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>4/8/2020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>DOG<sp/>LCD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Clears<sp/>LCD<sp/>by<sp/>filling<sp/>display<sp/>buffers<sp/>with<sp/>all<sp/>spaces<sp/>and<sp/>calling<sp/>the<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="comment">//<sp/>update_lcd_dog<sp/>function<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/><sp/><sp/><sp/><sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309" refid="lcd_8h_1a6606d0f5a079141d7c98950307113330" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a6606d0f5a079141d7c98950307113330" kindref="member">clr_dsp_buff</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(<ref refid="lcd_8c_1ad72805206560d19c92ac03e9321abce6" kindref="member">dsp_buff_1</ref>,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//loads<sp/>display<sp/>buffers<sp/>with<sp/>all<sp/>spaces</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(<ref refid="lcd_8c_1ae1aecd5f026fbc8a4e398fcedce4d541" kindref="member">dsp_buff_2</ref>,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(<ref refid="lcd_8c_1a3555625c7a3fc26b6c911d8f7f109012" kindref="member">dsp_buff_3</ref>,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a130db492e8cd5bb6382659d6279ba4bb" kindref="member">update_lcd_dog</ref>();</highlight></codeline>
+<codeline lineno="314"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.c"/>
+  </compounddef>
+</doxygen>

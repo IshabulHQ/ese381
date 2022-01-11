@@ -1,0 +1,83 @@
+.TH "//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" 3 "Mon May 11 2020" "Lab10" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'saml21j18b\&.h'\fP
+.br
+\fC#include 'bme680\&.h'\fP
+.br
+\fC#include 'bme680_defs\&.h'\fP
+.br
+\fC#include 'lcd\&.h'\fP
+.br
+\fC#include 'rs232\&.h'\fP
+.br
+\fC#include 'sys_support\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit_spi_MCU\fP (void)"
+.br
+.ti -1c
+.RI "void \fBuser_delay_ms\fP (uint32_t period)"
+.br
+.ti -1c
+.RI "int8_t \fBuser_spi_read\fP (uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len)"
+.br
+.ti -1c
+.RI "int8_t \fBuser_spi_write\fP (uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len)"
+.br
+.ti -1c
+.RI "int \fBmain\fP (void)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBstatus\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBid\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void init_spi_MCU (void)"
+
+.SS "int main (void)"
+
+.PP
+Definition at line 38 of file main\&.c\&.
+.SS "void user_delay_ms (uint32_t period)"
+
+.PP
+Definition at line 203 of file main\&.c\&.
+.SS "int8_t user_spi_read (uint8_t dev_id, uint8_t reg_addr, uint8_t * reg_data, uint16_t len)"
+
+.PP
+Definition at line 263 of file main\&.c\&.
+.SS "int8_t user_spi_write (uint8_t dev_id, uint8_t reg_addr, uint8_t * reg_data, uint16_t len)"
+
+.PP
+Definition at line 299 of file main\&.c\&.
+.SH "Variable Documentation"
+.PP 
+.SS "uint8_t id"
+
+.PP
+Definition at line 29 of file main\&.c\&.
+.SS "uint8_t status"
+
+.PP
+Definition at line 29 of file main\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Lab10 from the source code\&.

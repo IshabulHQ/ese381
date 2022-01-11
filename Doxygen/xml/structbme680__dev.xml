@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structbme680__dev" kind="struct" language="C++" prot="public">
+    <compoundname>bme680_dev</compoundname>
+    <includes refid="bme680__defs_8h" local="no">bme680_defs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbme680__dev_1a88e300db221e7a0382f2a4c289b9557d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t chip_id</definition>
+        <argsstring></argsstring>
+        <name>chip_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Chip Id </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="510" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="510" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1a360603720ae8b2c0e4931dd0f648c504" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t dev_id</definition>
+        <argsstring></argsstring>
+        <name>dev_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Device Id </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="512" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="512" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1a704c987d019d06ba6641bb769545aae6" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="group___b_m_e680_1ga2232c03d0c1282e976af41b39e1b87d6" kindref="member">bme680_intf</ref></type>
+        <definition>enum bme680_intf intf</definition>
+        <argsstring></argsstring>
+        <name>intf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SPI/I2C interface </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="512" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="514" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1aa686d4be91dd67b606593a76bb506303" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mem_page</definition>
+        <argsstring></argsstring>
+        <name>mem_page</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Memory page used </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="516" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="516" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1a6d4444052a032e932b7e300415ba284c" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t amb_temp</definition>
+        <argsstring></argsstring>
+        <name>amb_temp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ambient temperature in Degree C </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="518" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1a2bf9047fe5625c12909c7f3810edac53" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structbme680__calib__data" kindref="compound">bme680_calib_data</ref></type>
+        <definition>struct bme680_calib_data calib</definition>
+        <argsstring></argsstring>
+        <name>calib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sensor calibration data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="518" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="520" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1a838270a634e397d99b838192bf0f2664" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structbme680__tph__sett" kindref="compound">bme680_tph_sett</ref></type>
+        <definition>struct bme680_tph_sett tph_sett</definition>
+        <argsstring></argsstring>
+        <name>tph_sett</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sensor settings </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="518" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="522" bodyend="-1"/>
+        <referencedby refid="group___b_m_e680_1ga192f772bc9cb619e5855e93d6ebd6128" compoundref="bme680_8c" startline="647" endline="667">bme680_set_profile_dur</referencedby>
+        <referencedby refid="group___b_m_e680_1gae49a6f126c136fb16a8557a67e39d07c" compoundref="bme680_8c" startline="672" endline="698">bme680_get_profile_dur</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1ac3b142354292c55afff31109e18bc0ee" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structbme680__gas__sett" kindref="compound">bme680_gas_sett</ref></type>
+        <definition>struct bme680_gas_sett gas_sett</definition>
+        <argsstring></argsstring>
+        <name>gas_sett</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gas Sensor settings </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="518" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="524" bodyend="-1"/>
+        <referencedby refid="group___b_m_e680_1ga192f772bc9cb619e5855e93d6ebd6128" compoundref="bme680_8c" startline="647" endline="667">bme680_set_profile_dur</referencedby>
+        <referencedby refid="group___b_m_e680_1gae49a6f126c136fb16a8557a67e39d07c" compoundref="bme680_8c" startline="672" endline="698">bme680_get_profile_dur</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1a5d7bfe9503c1c86a8a5d245129749b07" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t power_mode</definition>
+        <argsstring></argsstring>
+        <name>power_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sensor power modes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="526" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="526" bodyend="-1"/>
+        <referencedby refid="group___b_m_e680_1ga2fea1365b4fa1d33eef434769b16e811" compoundref="bme680_8c" startline="413" endline="531">bme680_set_sensor_settings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1a2b09d4f4cd7b32f9dac243e2e19d6c4e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t new_fields</definition>
+        <argsstring></argsstring>
+        <name>new_fields</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>New sensor fields </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="528" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="528" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1a2ca706ef8f472b1c77a4d308c96fa887" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t info_msg</definition>
+        <argsstring></argsstring>
+        <name>info_msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Store the info messages </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="530" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="530" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1aa8215525e98304c1037bef2f1407f8ee" prot="public" static="no" mutable="no">
+        <type><ref refid="group___b_m_e680_1gaa7d183195e66f1db50f64f3a3d4ede57" kindref="member">bme680_com_fptr_t</ref></type>
+        <definition>bme680_com_fptr_t read</definition>
+        <argsstring></argsstring>
+        <name>read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bus read function pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="532" column="19" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="532" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1a796d8ab19af12146a56567358ab6089c" prot="public" static="no" mutable="no">
+        <type><ref refid="group___b_m_e680_1gaa7d183195e66f1db50f64f3a3d4ede57" kindref="member">bme680_com_fptr_t</ref></type>
+        <definition>bme680_com_fptr_t write</definition>
+        <argsstring></argsstring>
+        <name>write</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bus write function pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="534" column="19" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="534" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1acfd9f63e6ac639204678889c004d9a27" prot="public" static="no" mutable="no">
+        <type><ref refid="group___b_m_e680_1ga596d17716255952ac5581c5217f895d4" kindref="member">bme680_delay_fptr_t</ref></type>
+        <definition>bme680_delay_fptr_t delay_ms</definition>
+        <argsstring></argsstring>
+        <name>delay_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>delay function pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="536" column="21" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="536" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__dev_1a75f4f26417a14eeb41a677a1c3770a4d" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t com_rslt</definition>
+        <argsstring></argsstring>
+        <name>com_rslt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Communication function result </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="538" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="538" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>BME680 device structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>bme680_tph_sett</label>
+        <link refid="structbme680__tph__sett"/>
+      </node>
+      <node id="1">
+        <label>bme680_dev</label>
+        <link refid="structbme680__dev"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>tph_sett</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>gas_sett</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>calib</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>bme680_gas_sett</label>
+        <link refid="structbme680__gas__sett"/>
+      </node>
+      <node id="4">
+        <label>bme680_calib_data</label>
+        <link refid="structbme680__calib__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="508" column="17" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="508" bodyend="539"/>
+    <listofallmembers>
+      <member refid="structbme680__dev_1a6d4444052a032e932b7e300415ba284c" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>amb_temp</name></member>
+      <member refid="structbme680__dev_1a2bf9047fe5625c12909c7f3810edac53" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>calib</name></member>
+      <member refid="structbme680__dev_1a88e300db221e7a0382f2a4c289b9557d" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>chip_id</name></member>
+      <member refid="structbme680__dev_1a75f4f26417a14eeb41a677a1c3770a4d" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>com_rslt</name></member>
+      <member refid="structbme680__dev_1acfd9f63e6ac639204678889c004d9a27" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>delay_ms</name></member>
+      <member refid="structbme680__dev_1a360603720ae8b2c0e4931dd0f648c504" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>dev_id</name></member>
+      <member refid="structbme680__dev_1ac3b142354292c55afff31109e18bc0ee" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>gas_sett</name></member>
+      <member refid="structbme680__dev_1a2ca706ef8f472b1c77a4d308c96fa887" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>info_msg</name></member>
+      <member refid="structbme680__dev_1a704c987d019d06ba6641bb769545aae6" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>intf</name></member>
+      <member refid="structbme680__dev_1aa686d4be91dd67b606593a76bb506303" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>mem_page</name></member>
+      <member refid="structbme680__dev_1a2b09d4f4cd7b32f9dac243e2e19d6c4e" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>new_fields</name></member>
+      <member refid="structbme680__dev_1a5d7bfe9503c1c86a8a5d245129749b07" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>power_mode</name></member>
+      <member refid="structbme680__dev_1aa8215525e98304c1037bef2f1407f8ee" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>read</name></member>
+      <member refid="structbme680__dev_1a838270a634e397d99b838192bf0f2664" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>tph_sett</name></member>
+      <member refid="structbme680__dev_1a796d8ab19af12146a56567358ab6089c" prot="public" virt="non-virtual"><scope>bme680_dev</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

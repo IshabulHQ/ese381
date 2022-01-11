@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structbme680__gas__sett" kind="struct" language="C++" prot="public">
+    <compoundname>bme680_gas_sett</compoundname>
+    <includes refid="bme680__defs_8h" local="no">bme680_defs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbme680__gas__sett_1a2c1e0711e31d6c02427784004a8387d8" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t nb_conv</definition>
+        <argsstring></argsstring>
+        <name>nb_conv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store nb conversion </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="494" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="494" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__gas__sett_1a94f9f699dafdfd8ac3f6e93b8e22c4a9" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t heatr_ctrl</definition>
+        <argsstring></argsstring>
+        <name>heatr_ctrl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to store heater control </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="496" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="496" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__gas__sett_1a89128634f22f0c2309ab03346aa2b7ab" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t run_gas</definition>
+        <argsstring></argsstring>
+        <name>run_gas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Run gas enable value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="498" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="498" bodyend="-1"/>
+        <referencedby refid="group___b_m_e680_1gae49a6f126c136fb16a8557a67e39d07c" compoundref="bme680_8c" startline="672" endline="698">bme680_get_profile_dur</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__gas__sett_1a8ce6af5d8fce352d043faef7e367a466" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t heatr_temp</definition>
+        <argsstring></argsstring>
+        <name>heatr_temp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Heater temperature value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="500" column="10" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbme680__gas__sett_1ab412f4a6feca7ae5340dafc536763cb3" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t heatr_dur</definition>
+        <argsstring></argsstring>
+        <name>heatr_dur</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Duration profile value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="502" column="10" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="502" bodyend="-1"/>
+        <referencedby refid="group___b_m_e680_1ga192f772bc9cb619e5855e93d6ebd6128" compoundref="bme680_8c" startline="647" endline="667">bme680_set_profile_dur</referencedby>
+        <referencedby refid="group___b_m_e680_1gae49a6f126c136fb16a8557a67e39d07c" compoundref="bme680_8c" startline="672" endline="698">bme680_get_profile_dur</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>BME680 gas sensor which comprises of gas settings and status parameters. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" line="492" column="22" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680_defs.h" bodystart="492" bodyend="503"/>
+    <listofallmembers>
+      <member refid="structbme680__gas__sett_1a94f9f699dafdfd8ac3f6e93b8e22c4a9" prot="public" virt="non-virtual"><scope>bme680_gas_sett</scope><name>heatr_ctrl</name></member>
+      <member refid="structbme680__gas__sett_1ab412f4a6feca7ae5340dafc536763cb3" prot="public" virt="non-virtual"><scope>bme680_gas_sett</scope><name>heatr_dur</name></member>
+      <member refid="structbme680__gas__sett_1a8ce6af5d8fce352d043faef7e367a466" prot="public" virt="non-virtual"><scope>bme680_gas_sett</scope><name>heatr_temp</name></member>
+      <member refid="structbme680__gas__sett_1a2c1e0711e31d6c02427784004a8387d8" prot="public" virt="non-virtual"><scope>bme680_gas_sett</scope><name>nb_conv</name></member>
+      <member refid="structbme680__gas__sett_1a89128634f22f0c2309ab03346aa2b7ab" prot="public" virt="non-virtual"><scope>bme680_gas_sett</scope><name>run_gas</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

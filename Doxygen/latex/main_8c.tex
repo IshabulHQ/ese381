@@ -1,0 +1,104 @@
+\hypertarget{main_8c}{}\doxysection{//\+Mac/\+Home/\+Desktop/\+E\+SE 381/\+Labs/\+Lab 10/lab10\+\_\+task1/lab10\+\_\+task1/main.c File Reference}
+\label{main_8c}\index{//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10\_task1/lab10\_task1/main.c@{//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10\_task1/lab10\_task1/main.c}}
+{\ttfamily \#include \char`\"{}saml21j18b.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bme680.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bme680\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rs232.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+support.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a689701eba71f623892eb064ccf452ac3}{init\+\_\+spi\+\_\+\+M\+CU}} (void)
+\item 
+void \mbox{\hyperlink{main_8c_adc86d5995b888a6f4ef7dd5647b94f8f}{user\+\_\+delay\+\_\+ms}} (uint32\+\_\+t period)
+\item 
+int8\+\_\+t \mbox{\hyperlink{main_8c_ae9ccd01733dde0f72d39c14f1b2e58d6}{user\+\_\+spi\+\_\+read}} (uint8\+\_\+t dev\+\_\+id, uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t $\ast$reg\+\_\+data, uint16\+\_\+t len)
+\item 
+int8\+\_\+t \mbox{\hyperlink{main_8c_a155c737a8393d19406d6990d45f1c590}{user\+\_\+spi\+\_\+write}} (uint8\+\_\+t dev\+\_\+id, uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t $\ast$reg\+\_\+data, uint16\+\_\+t len)
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_ade818037fd6c985038ff29656089758d}{status}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a1e6927fa1486224044e568f9c370519b}{id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a689701eba71f623892eb064ccf452ac3}\label{main_8c_a689701eba71f623892eb064ccf452ac3}} 
+\index{main.c@{main.c}!init\_spi\_MCU@{init\_spi\_MCU}}
+\index{init\_spi\_MCU@{init\_spi\_MCU}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{init\_spi\_MCU()}{init\_spi\_MCU()}}
+{\footnotesize\ttfamily void init\+\_\+spi\+\_\+\+M\+CU (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file main.\+c.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{main_8c_adc86d5995b888a6f4ef7dd5647b94f8f}\label{main_8c_adc86d5995b888a6f4ef7dd5647b94f8f}} 
+\index{main.c@{main.c}!user\_delay\_ms@{user\_delay\_ms}}
+\index{user\_delay\_ms@{user\_delay\_ms}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{user\_delay\_ms()}{user\_delay\_ms()}}
+{\footnotesize\ttfamily void user\+\_\+delay\+\_\+ms (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{period }\end{DoxyParamCaption})}
+
+
+
+Definition at line 203 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_ae9ccd01733dde0f72d39c14f1b2e58d6}\label{main_8c_ae9ccd01733dde0f72d39c14f1b2e58d6}} 
+\index{main.c@{main.c}!user\_spi\_read@{user\_spi\_read}}
+\index{user\_spi\_read@{user\_spi\_read}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{user\_spi\_read()}{user\_spi\_read()}}
+{\footnotesize\ttfamily int8\+\_\+t user\+\_\+spi\+\_\+read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{dev\+\_\+id,  }\item[{uint8\+\_\+t}]{reg\+\_\+addr,  }\item[{uint8\+\_\+t $\ast$}]{reg\+\_\+data,  }\item[{uint16\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 263 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_a155c737a8393d19406d6990d45f1c590}\label{main_8c_a155c737a8393d19406d6990d45f1c590}} 
+\index{main.c@{main.c}!user\_spi\_write@{user\_spi\_write}}
+\index{user\_spi\_write@{user\_spi\_write}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{user\_spi\_write()}{user\_spi\_write()}}
+{\footnotesize\ttfamily int8\+\_\+t user\+\_\+spi\+\_\+write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{dev\+\_\+id,  }\item[{uint8\+\_\+t}]{reg\+\_\+addr,  }\item[{uint8\+\_\+t $\ast$}]{reg\+\_\+data,  }\item[{uint16\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 299 of file main.\+c.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a1e6927fa1486224044e568f9c370519b}\label{main_8c_a1e6927fa1486224044e568f9c370519b}} 
+\index{main.c@{main.c}!id@{id}}
+\index{id@{id}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily uint8\+\_\+t id}
+
+
+
+Definition at line 29 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_ade818037fd6c985038ff29656089758d}\label{main_8c_ade818037fd6c985038ff29656089758d}} 
+\index{main.c@{main.c}!status@{status}}
+\index{status@{status}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily uint8\+\_\+t status}
+
+
+
+Definition at line 29 of file main.\+c.
+

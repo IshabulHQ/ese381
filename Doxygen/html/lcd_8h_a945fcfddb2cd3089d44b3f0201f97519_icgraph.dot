@@ -1,0 +1,22 @@
+digraph "delay_30us"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="delay_30us",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="delay_40ms",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8c.html#a54dfe53179770995a964dd56ab7d1ad3",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="init_lcd_dog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8h.html#a4c0ca25c2b5e3649f7f1ba5e2af92746",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="update_lcd_dog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8h.html#a130db492e8cd5bb6382659d6279ba4bb",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="clr_dsp_buff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8h.html#a6606d0f5a079141d7c98950307113330",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="v_delay",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8h.html#a6699ddda2fdbc83fcfda7cc61813eebb",tooltip=" "];
+  Node7 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

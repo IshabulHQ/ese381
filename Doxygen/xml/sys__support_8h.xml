@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="sys__support_8h" kind="file" language="C++">
+    <compoundname>sys_support.h</compoundname>
+    <includedby refid="main_8c" local="yes">//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h</label>
+        <link refid="sys__support_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sys__support_8h_1a5f66b19f21f61eb1375f6b035ece5bc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _write</definition>
+        <argsstring>(FILE *f, char *buf, int n)</argsstring>
+        <name>_write</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" line="11" column="12" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="22" bodyend="27" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" declline="11" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="sys__support_8h_1afb99756b9a148ae560f5d4ebed26d78c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _read</definition>
+        <argsstring>(FILE *f, char *buf, int n)</argsstring>
+        <name>_read</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" line="12" column="12" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="29" bodyend="37" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" declline="12" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="sys__support_8h_1af837c0c7f2cb1ba687f24a8a1ac69abb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _close</definition>
+        <argsstring>(FILE *f)</argsstring>
+        <name>_close</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" line="13" column="12" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="39" bodyend="41" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" declline="13" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="sys__support_8h_1ae9b6651bf9ce256ed7200d4f35682580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _fstat</definition>
+        <argsstring>(FILE *f, void *p)</argsstring>
+        <name>_fstat</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" line="14" column="12" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="43" bodyend="46" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" declline="14" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="sys__support_8h_1a0cd32552b29e043abc227351764137a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _isatty</definition>
+        <argsstring>(FILE *f)</argsstring>
+        <name>_isatty</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" line="15" column="12" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="48" bodyend="50" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" declline="15" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="sys__support_8h_1a4145da22170dd151b830a7a2743b7698" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _lseek</definition>
+        <argsstring>(FILE *f, int o, int w)</argsstring>
+        <name>_lseek</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" line="16" column="12" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="52" bodyend="54" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" declline="16" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="sys__support_8h_1a12b60424727643778a849210d7511eb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* _sbrk</definition>
+        <argsstring>(int i)</argsstring>
+        <name>_sbrk</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" line="17" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="56" bodyend="58" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h" declline="17" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>sys_support.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Created:<sp/>4/13/2020<sp/>2:50:53<sp/>PM</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Author:<sp/>kshort</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SYS_SUPPORT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYS_SUPPORT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8h_1a5f66b19f21f61eb1375f6b035ece5bc1" kindref="member">_write</ref>(FILE<sp/>*f,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8h_1afb99756b9a148ae560f5d4ebed26d78c" kindref="member">_read</ref>(FILE<sp/>*f,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8h_1af837c0c7f2cb1ba687f24a8a1ac69abb" kindref="member">_close</ref>(FILE<sp/>*f);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8h_1ae9b6651bf9ce256ed7200d4f35682580" kindref="member">_fstat</ref>(FILE<sp/>*f,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8h_1a0cd32552b29e043abc227351764137a6" kindref="member">_isatty</ref>(FILE<sp/>*f);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8h_1a4145da22170dd151b830a7a2743b7698" kindref="member">_lseek</ref>(FILE<sp/>*f,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>o,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="sys__support_8h_1a12b60424727643778a849210d7511eb5" kindref="member">_sbrk</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SYS_SUPPORT_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,576 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="main_8c" kind="file" language="C++">
+    <compoundname>main.c</compoundname>
+    <includes local="yes">saml21j18b.h</includes>
+    <includes refid="bme680_8h" local="yes">bme680.h</includes>
+    <includes refid="bme680__defs_8h" local="yes">bme680_defs.h</includes>
+    <includes refid="lcd_8h" local="yes">lcd.h</includes>
+    <includes refid="rs232_8h" local="yes">rs232.h</includes>
+    <includes refid="sys__support_8h" local="yes">sys_support.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>saml21j18b.h</label>
+      </node>
+      <node id="10">
+        <label>sys_support.h</label>
+        <link refid="sys__support_8h"/>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>lcd.h</label>
+        <link refid="lcd_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+      </node>
+      <node id="1">
+        <label>//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c</label>
+        <link refid="main_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>bme680.h</label>
+        <link refid="bme680_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>rs232.h</label>
+        <link refid="rs232_8h"/>
+      </node>
+      <node id="4">
+        <label>bme680_defs.h</label>
+        <link refid="bme680__defs_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8c_1ade818037fd6c985038ff29656089758d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" line="29" column="9" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1a1e6927fa1486224044e568f9c370519b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" line="29" column="16" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8c_1a689701eba71f623892eb064ccf452ac3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_spi_MCU</definition>
+        <argsstring>(void)</argsstring>
+        <name>init_spi_MCU</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" line="31" column="6" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" declline="31" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a690f61eb31068d4fe3a37772e8be377c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void init_spi_BME680</definition>
+        <argsstring>(void)</argsstring>
+        <name>init_spi_BME680</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" line="129" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" bodystart="129" bodyend="147" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" declline="32" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1aeac81a696ec8759a73427b5320c1fc7e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void init_BME680</definition>
+        <argsstring>(void)</argsstring>
+        <name>init_BME680</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" line="169" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" bodystart="170" bodyend="183" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" declline="33" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1adc86d5995b888a6f4ef7dd5647b94f8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void user_delay_ms</definition>
+        <argsstring>(uint32_t period)</argsstring>
+        <name>user_delay_ms</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" line="203" column="6" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" bodystart="203" bodyend="207" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" declline="34" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a8d161d483c095113df5b69798e9cd725" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t spi_transfer</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>spi_transfer</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" line="229" column="16" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" bodystart="229" bodyend="237" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" declline="35" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1ae9ccd01733dde0f72d39c14f1b2e58d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t user_spi_read</definition>
+        <argsstring>(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len)</argsstring>
+        <name>user_spi_read</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>dev_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>reg_data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" line="263" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" bodystart="263" bodyend="274" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" declline="36" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a155c737a8393d19406d6990d45f1c590" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t user_spi_write</definition>
+        <argsstring>(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len)</argsstring>
+        <name>user_spi_write</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>dev_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>reg_data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" line="299" column="8" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" bodystart="299" bodyend="309" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" declline="37" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" line="38" column="5" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c" bodystart="38" bodyend="108"/>
+        <references refid="lcd_8c_1a4c0ca25c2b5e3649f7f1ba5e2af92746" compoundref="lcd_8c" startline="193" endline="232">init_lcd_dog</references>
+        <references refid="rs232_8c_1a0b207695e4757928cb8a88c33c730b83" compoundref="rs232_8c" startline="56" endline="72">UART4_init</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>File<sp/>Name<sp/>:<sp/>&quot;BME680<sp/>Sensor<sp/>API<sp/>dt2&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Title<sp/>:<sp/>BME680<sp/>Sensor<sp/>API<sp/>dt2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/>:<sp/>5/8/20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/>;<sp/>DOG<sp/>LCD,<sp/>BME680</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Utilizes<sp/>the<sp/>BME680&apos;s<sp/>API<sp/>to<sp/>convert<sp/>it&apos;s<sp/>ADC&apos;s<sp/>readings<sp/>into<sp/>actual</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>values<sp/>to<sp/>be<sp/>displayed<sp/>on<sp/>the<sp/>DOG<sp/>LCD<sp/>and<sp/>TeraTerm.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;saml21j18b.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bme680_8h" kindref="compound">bme680.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bme680__defs_8h" kindref="compound">bme680_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lcd_8h" kindref="compound">lcd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rs232_8h" kindref="compound">rs232.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sys__support_8h" kindref="compound">sys_support.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="main_8c_1ade818037fd6c985038ff29656089758d" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="main_8c_1ade818037fd6c985038ff29656089758d" kindref="member">status</ref>,<sp/><ref refid="main_8c_1a1e6927fa1486224044e568f9c370519b" kindref="member">id</ref>;<sp/></highlight><highlight class="comment">//declare<sp/>chip<sp/>id<sp/>and<sp/>page<sp/>number<sp/>global<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//function<sp/>prototypes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a689701eba71f623892eb064ccf452ac3" kindref="member">init_spi_MCU</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_spi_BME680<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_BME680(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1adc86d5995b888a6f4ef7dd5647b94f8f" kindref="member">user_delay_ms</ref><sp/>(uint32_t<sp/>period);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>spi_transfer<sp/>(uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">int8_t<sp/><ref refid="main_8c_1ae9ccd01733dde0f72d39c14f1b2e58d6" kindref="member">user_spi_read</ref><sp/>(uint8_t<sp/>dev_id,<sp/>uint8_t<sp/>reg_addr,<sp/>uint8_t<sp/>*reg_data,<sp/>uint16_t<sp/>len);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">int8_t<sp/><ref refid="main_8c_1a155c737a8393d19406d6990d45f1c590" kindref="member">user_spi_write</ref><sp/>(uint8_t<sp/>dev_id,<sp/>uint8_t<sp/>reg_addr,<sp/>uint8_t<sp/>*reg_data,<sp/>uint16_t<sp/>len);</highlight></codeline>
+<codeline lineno="38" refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>KeyPress=0x04,<sp/>Last_KeyPress,<sp/>count=0;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>set_required_settings,<sp/>meas_period;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//initialize<sp/>SERCOM4<sp/>for<sp/>RS232<sp/>communication<sp/>and<sp/>SERCOM1<sp/>for<sp/>the<sp/>LCD<sp/>and<sp/>BME680</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rs232_8c_1a0b207695e4757928cb8a88c33c730b83" kindref="member">UART4_init</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a4c0ca25c2b5e3649f7f1ba5e2af92746" kindref="member">init_lcd_dog</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>init_spi_BME680();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>init_BME680();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbme680__dev" kindref="compound">bme680_dev</ref><sp/>gas_sensor;<sp/></highlight><highlight class="comment">//create<sp/>instance<sp/>of<sp/>bme680_dev<sp/>named<sp/>gas_sensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1a360603720ae8b2c0e4931dd0f648c504" kindref="member">dev_id</ref><sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//fill<sp/>in<sp/>various<sp/>parameters<sp/>for<sp/>gas_sensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1a704c987d019d06ba6641bb769545aae6" kindref="member">intf</ref><sp/>=<sp/><ref refid="group___b_m_e680_1gga2232c03d0c1282e976af41b39e1b87d6a504bd691a4b57b0c914cc8c77bd696c3" kindref="member">BME680_SPI_INTF</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1aa8215525e98304c1037bef2f1407f8ee" kindref="member">read</ref><sp/>=<sp/><ref refid="main_8c_1ae9ccd01733dde0f72d39c14f1b2e58d6" kindref="member">user_spi_read</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1a796d8ab19af12146a56567358ab6089c" kindref="member">write</ref><sp/>=<sp/><ref refid="main_8c_1a155c737a8393d19406d6990d45f1c590" kindref="member">user_spi_write</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1acfd9f63e6ac639204678889c004d9a27" kindref="member">delay_ms</ref><sp/>=<sp/><ref refid="main_8c_1adc86d5995b888a6f4ef7dd5647b94f8f" kindref="member">user_delay_ms</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1a6d4444052a032e932b7e300415ba284c" kindref="member">amb_temp</ref><sp/>=<sp/>25;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/>rslt<sp/>=<sp/><ref refid="group___b_m_e680_1ga2e82e5c447a9dbbeebf95b1ba189effb" kindref="member">BME680_OK</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>rslt<sp/>=<sp/><ref refid="group___b_m_e680_1gaee75ae524b7ca8f4a9b6dbb7f640c2e4" kindref="member">bme680_init</ref>(&amp;gas_sensor);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//set<sp/>the<sp/>temperature,<sp/>pressure<sp/>and<sp/>humidity<sp/>oversampling.<sp/>set<sp/>IIR<sp/>filter<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1a838270a634e397d99b838192bf0f2664" kindref="member">tph_sett</ref>.<ref refid="structbme680__tph__sett_1aa2b315a5e149e613b69a235f1cd799f4" kindref="member">os_hum</ref><sp/>=<sp/><ref refid="group___b_m_e680_1ga52e63cfbad8239eefa594fc823306dfb" kindref="member">BME680_OS_2X</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1a838270a634e397d99b838192bf0f2664" kindref="member">tph_sett</ref>.<ref refid="structbme680__tph__sett_1ad4d1e27669b8d9bbfce53c8eae258b27" kindref="member">os_pres</ref><sp/>=<sp/><ref refid="group___b_m_e680_1ga4c3caae2c0b27b0abf1dec7cddcd5c8d" kindref="member">BME680_OS_4X</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1a838270a634e397d99b838192bf0f2664" kindref="member">tph_sett</ref>.<ref refid="structbme680__tph__sett_1a83ac2b084c3e4162a70482ddf3f73a13" kindref="member">os_temp</ref><sp/>=<sp/><ref refid="group___b_m_e680_1gae262407360d48abca904e671cc824466" kindref="member">BME680_OS_8X</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1a838270a634e397d99b838192bf0f2664" kindref="member">tph_sett</ref>.<ref refid="structbme680__tph__sett_1aa69d890d38e8a1abafc8697d1760bb04" kindref="member">filter</ref><sp/>=<sp/><ref refid="group___b_m_e680_1ga8827e54c9ae9a50b5b86024369428fa4" kindref="member">BME680_FILTER_SIZE_3</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//enable<sp/>gas<sp/>measurements<sp/>and<sp/>configure<sp/>gas<sp/>heat<sp/>plate<sp/>temperature<sp/>and<sp/>heating<sp/>duration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1ac3b142354292c55afff31109e18bc0ee" kindref="member">gas_sett</ref>.<ref refid="structbme680__gas__sett_1a89128634f22f0c2309ab03346aa2b7ab" kindref="member">run_gas</ref><sp/>=<sp/><ref refid="group___b_m_e680_1ga1799bbf23959f4979849b196f898b25d" kindref="member">BME680_ENABLE_GAS_MEAS</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1ac3b142354292c55afff31109e18bc0ee" kindref="member">gas_sett</ref>.<ref refid="structbme680__gas__sett_1a8ce6af5d8fce352d043faef7e367a466" kindref="member">heatr_temp</ref><sp/>=<sp/>320;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1ac3b142354292c55afff31109e18bc0ee" kindref="member">gas_sett</ref>.<ref refid="structbme680__gas__sett_1ab412f4a6feca7ae5340dafc536763cb3" kindref="member">heatr_dur</ref><sp/>=<sp/>150;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//put<sp/>BME680<sp/>into<sp/>forced<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>gas_sensor.<ref refid="structbme680__dev_1a5d7bfe9503c1c86a8a5d245129749b07" kindref="member">power_mode</ref><sp/>=<sp/><ref refid="group___b_m_e680_1ga1ed7f0fb1ebaf8ec88b28d5f96c19df2" kindref="member">BME680_FORCED_MODE</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//configure<sp/>all<sp/>the<sp/>temperature,<sp/>pressure,<sp/>humidity<sp/>and<sp/>gas<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>set_required_settings<sp/>=<sp/><ref refid="group___b_m_e680_1ga7ecfc9ebc2dc3fae358c38215821db6d" kindref="member">BME680_OST_SEL</ref><sp/>|<sp/><ref refid="group___b_m_e680_1gac414417f6a2c0d9b7373c24c41edd804" kindref="member">BME680_OSP_SEL</ref><sp/>|<sp/><ref refid="group___b_m_e680_1ga9671bc43c2a7a81674cf5c9376a48bee" kindref="member">BME680_OSH_SEL</ref><sp/>|<sp/><ref refid="group___b_m_e680_1ga56ea9531725679aaad25b574ac3ab0ce" kindref="member">BME680_FILTER_SEL</ref><sp/>|</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_m_e680_1gaacc8080cd16dacf5d5af16edbc69a98c" kindref="member">BME680_GAS_SENSOR_SEL</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>rslt<sp/>=<sp/><ref refid="group___b_m_e680_1ga2fea1365b4fa1d33eef434769b16e811" kindref="member">bme680_set_sensor_settings</ref>(set_required_settings,<sp/>&amp;gas_sensor);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>rslt<sp/>=<sp/><ref refid="group___b_m_e680_1ga5ca765226e758e71c862553c7cc0b371" kindref="member">bme680_set_sensor_mode</ref>(&amp;gas_sensor);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___b_m_e680_1gae49a6f126c136fb16a8557a67e39d07c" kindref="member">bme680_get_profile_dur</ref>(&amp;meas_period,<sp/>&amp;gas_sensor);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbme680__field__data" kindref="compound">bme680_field_data</ref><sp/>data;<sp/></highlight><highlight class="comment">//create<sp/>instance<sp/>of<sp/>bme680_field_data<sp/>name<sp/>&apos;data&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1adc86d5995b888a6f4ef7dd5647b94f8f" kindref="member">user_delay_ms</ref>(meas_period);<sp/></highlight><highlight class="comment">//delay<sp/>for<sp/>meas_period<sp/>ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rslt<sp/>=<sp/><ref refid="group___b_m_e680_1ga1025301e420e1e21911044bebb62f940" kindref="member">bme680_get_sensor_data</ref>(&amp;data,<sp/>&amp;gas_sensor);<sp/></highlight><highlight class="comment">//read<sp/>sensor<sp/>measurements<sp/>and<sp/>store<sp/>in<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a0f268347583db61f04a11de5afafb08b" kindref="member">init_spi_lcd</ref>();<sp/></highlight><highlight class="comment">//initialize<sp/>spi<sp/>for<sp/>lcd<sp/>before<sp/>transactions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Last_KeyPress<sp/>=<sp/>KeyPress;<sp/></highlight><highlight class="comment">//set<sp/>last<sp/>key<sp/>press<sp/>equal<sp/>to<sp/>current<sp/>key<sp/>press</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KeyPress<sp/>=<sp/>REG_PORT_IN0<sp/>&amp;<sp/>0x04;<sp/></highlight><highlight class="comment">//mask<sp/>pushbutton<sp/>value<sp/>onto<sp/>current<sp/>key<sp/>press</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Last_KeyPress<sp/>!=<sp/>KeyPress)<sp/>{<sp/></highlight><highlight class="comment">//if<sp/>last<sp/>and<sp/>current<sp/>key<sp/>value<sp/>no<sp/>equal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(KeyPress<sp/>==<sp/>0x04)<sp/>{<sp/></highlight><highlight class="comment">//and<sp/>if<sp/>key<sp/>is<sp/>not<sp/>held<sp/>down,<sp/>increment<sp/>counter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count<sp/>%<sp/>2<sp/>==<sp/>0)<sp/>{<sp/></highlight><highlight class="comment">//if<sp/>count<sp/>is<sp/>even<sp/>display<sp/>temperature<sp/>and<sp/>pressure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<ref refid="lcd_8c_1ad72805206560d19c92ac03e9321abce6" kindref="member">dsp_buff_1</ref>,<sp/></highlight><highlight class="stringliteral">&quot;T:<sp/>%.2f<sp/>degC&quot;</highlight><highlight class="normal">,<sp/>data.<ref refid="structbme680__field__data_1a4af92569ea830250443045233c9bf5fb" kindref="member">temperature</ref><sp/>/<sp/>100.0f);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<ref refid="lcd_8c_1ae1aecd5f026fbc8a4e398fcedce4d541" kindref="member">dsp_buff_2</ref>,<sp/></highlight><highlight class="stringliteral">&quot;P:<sp/>%.2f<sp/>hPa<sp/>&quot;</highlight><highlight class="normal">,<sp/>data.<ref refid="structbme680__field__data_1a40802f00da9a5333c393554eec7d3912" kindref="member">pressure</ref><sp/>/<sp/>100.0f);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a130db492e8cd5bb6382659d6279ba4bb" kindref="member">update_lcd_dog</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="comment">//if<sp/>count<sp/>is<sp/>odd<sp/>display<sp/>humidity<sp/>and<sp/>gas<sp/>resistance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<ref refid="lcd_8c_1ad72805206560d19c92ac03e9321abce6" kindref="member">dsp_buff_1</ref>,<sp/></highlight><highlight class="stringliteral">&quot;H:<sp/>%.2f<sp/>%%rH&quot;</highlight><highlight class="normal">,<sp/>data.<ref refid="structbme680__field__data_1a50c9fa7d72a92ac100303875e378d55c" kindref="member">humidity</ref><sp/>/<sp/>1000.0f);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data.<ref refid="structbme680__field__data_1ade818037fd6c985038ff29656089758d" kindref="member">status</ref><sp/>&amp;<sp/><ref refid="group___b_m_e680_1ga18969c0772c82f03479f5be7a0c11cd0" kindref="member">BME680_GASM_VALID_MSK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<ref refid="lcd_8c_1ae1aecd5f026fbc8a4e398fcedce4d541" kindref="member">dsp_buff_2</ref>,<sp/></highlight><highlight class="stringliteral">&quot;G:<sp/>%ld<sp/>ohms<sp/>&quot;</highlight><highlight class="normal">,<sp/>data.<ref refid="structbme680__field__data_1a61b252fa5c68b4e022049d3881cb32f6" kindref="member">gas_resistance</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a130db492e8cd5bb6382659d6279ba4bb" kindref="member">update_lcd_dog</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//print<sp/>values<sp/>to<sp/>TeraTerm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;T:<sp/>%.2f<sp/>degC,<sp/>P:<sp/>%.2f<sp/>hPa,<sp/>H:<sp/>%.2f<sp/>%%rH&quot;</highlight><highlight class="normal">,<sp/>data.<ref refid="structbme680__field__data_1a4af92569ea830250443045233c9bf5fb" kindref="member">temperature</ref><sp/>/<sp/>100.0f,<sp/>data.<ref refid="structbme680__field__data_1a40802f00da9a5333c393554eec7d3912" kindref="member">pressure</ref><sp/>/<sp/>100.0f,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data.<ref refid="structbme680__field__data_1a50c9fa7d72a92ac100303875e378d55c" kindref="member">humidity</ref><sp/>/<sp/>1000.0f);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data.<ref refid="structbme680__field__data_1ade818037fd6c985038ff29656089758d" kindref="member">status</ref><sp/>&amp;<sp/><ref refid="group___b_m_e680_1ga18969c0772c82f03479f5be7a0c11cd0" kindref="member">BME680_GASM_VALID_MSK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;,<sp/>G:<sp/>%ld<sp/>ohms&quot;</highlight><highlight class="normal">,<sp/>data.<ref refid="structbme680__field__data_1a61b252fa5c68b4e022049d3881cb32f6" kindref="member">gas_resistance</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>init_spi_BME680();<sp/></highlight><highlight class="comment">//initialize<sp/>spi<sp/>for<sp/>BME680<sp/>before<sp/>transactions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gas_sensor.<ref refid="structbme680__dev_1a5d7bfe9503c1c86a8a5d245129749b07" kindref="member">power_mode</ref><sp/>==<sp/><ref refid="group___b_m_e680_1ga1ed7f0fb1ebaf8ec88b28d5f96c19df2" kindref="member">BME680_FORCED_MODE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rslt<sp/>=<sp/><ref refid="group___b_m_e680_1ga5ca765226e758e71c862553c7cc0b371" kindref="member">bme680_set_sensor_mode</ref>(&amp;gas_sensor);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>Name<sp/>:<sp/>&quot;init_spi_BME680&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/>:<sp/>5/9/20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/>;<sp/>BME680</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Configures<sp/>the<sp/>SAML21J18B&apos;s<sp/>SERCOM1<sp/>for<sp/>SPI<sp/>communication<sp/>with<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>BME680.<sp/>PA16<sp/>=<sp/>MOSI,<sp/>PA17<sp/>=<sp/>SCK,<sp/>PA19<sp/>=<sp/>MISO,<sp/>PB07<sp/>=<sp/>CS.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_spi_BME680<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_GCLK_PCHCTRL19<sp/>=<sp/>0x00000040;<sp/></highlight><highlight class="comment">/*<sp/>SERCOM1<sp/>core<sp/>clock<sp/>not<sp/>enabled<sp/>by<sp/>default<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1aa759b80a05f4327c136abfd9f2ae8f40" kindref="member">ARRAY_PORT_PINCFG0</ref>[16]<sp/>|=<sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>allow<sp/>pmux<sp/>to<sp/>set<sp/>PA16<sp/>pin<sp/>configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1aa759b80a05f4327c136abfd9f2ae8f40" kindref="member">ARRAY_PORT_PINCFG0</ref>[17]<sp/>|=<sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>allow<sp/>pmux<sp/>to<sp/>set<sp/>PA17<sp/>pin<sp/>configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1aa759b80a05f4327c136abfd9f2ae8f40" kindref="member">ARRAY_PORT_PINCFG0</ref>[18]<sp/>|=<sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>allow<sp/>pmux<sp/>to<sp/>set<sp/>PA18<sp/>pin<sp/>configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1aa759b80a05f4327c136abfd9f2ae8f40" kindref="member">ARRAY_PORT_PINCFG0</ref>[19]<sp/>|=<sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>allow<sp/>pmux<sp/>to<sp/>set<sp/>PA19<sp/>pin<sp/>configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a14de3824643f8f9974adc8fa5a5ac3c3" kindref="member">ARRAY_PORT_PMUX0</ref>[8]<sp/>=<sp/>0x22;<sp/></highlight><highlight class="comment">/*<sp/>PA16<sp/>=<sp/>MOSI,<sp/>PA17<sp/>=<sp/>SCK<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a14de3824643f8f9974adc8fa5a5ac3c3" kindref="member">ARRAY_PORT_PMUX0</ref>[9]<sp/>=<sp/>0x22;<sp/></highlight><highlight class="comment">/*<sp/>PA18<sp/>=<sp/>SS,<sp/>PA19<sp/>=<sp/>MISO<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_DIRSET1<sp/>=<sp/>0x80;<sp/></highlight><highlight class="comment">/*<sp/>PB07<sp/>=<sp/>CS<sp/>for<sp/>BME680<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_DIRCLR0<sp/>=<sp/>0x04;<sp/></highlight><highlight class="comment">//PA02<sp/>input<sp/>for<sp/>SW0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1aa759b80a05f4327c136abfd9f2ae8f40" kindref="member">ARRAY_PORT_PINCFG0</ref>[2]<sp/>|=<sp/>6;<sp/></highlight><highlight class="comment">//enable<sp/>PA02<sp/>with<sp/>pull</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_OUTSET0<sp/>=<sp/>0x04;<sp/></highlight><highlight class="comment">//make<sp/>PA02<sp/>pull-up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_CTRLA<sp/>=<sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>reset<sp/>SERCOM1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(REG_SERCOM1_SPI_CTRLA<sp/>&amp;<sp/>1)<sp/>{}<sp/></highlight><highlight class="comment">/*<sp/>wait<sp/>for<sp/>reset<sp/>to<sp/>complete<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_CTRLA<sp/>=<sp/>0x3030000C;<sp/></highlight><highlight class="comment">/*<sp/>MISO-3,<sp/>MOSI-0,<sp/>SCK-1,<sp/>SS-2,<sp/>CPOL=1,<sp/>CPHA=1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_CTRLB<sp/>=<sp/>0x00020000;<sp/></highlight><highlight class="comment">/*<sp/>Master<sp/>SS,<sp/>8-bit,<sp/>receiver<sp/>enabled<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_BAUD<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">/*<sp/>SPI<sp/>clock<sp/>is<sp/>4MHz/2<sp/>=<sp/>2MzHz<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_CTRLA<sp/>|=<sp/>2;<sp/></highlight><highlight class="comment">/*<sp/>enable<sp/>SERCOM1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>Name<sp/>:<sp/>&quot;init_BME680&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/>:<sp/>5/9/20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/>;<sp/>BME680</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Software<sp/>resets<sp/>the<sp/>BME680<sp/>and<sp/>reads<sp/>its<sp/>memory<sp/>map<sp/>page<sp/>and<sp/>status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">//<sp/>register.<sp/>Sets<sp/>the<sp/>memory<sp/>map<sp/>to<sp/>page<sp/>1<sp/>so<sp/>the<sp/>BME680<sp/>is<sp/>ready<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">//<sp/>configuration<sp/>after<sp/>this<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_BME680</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>write_data<sp/>=<sp/>0xB6;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_DIRSET1<sp/>|=<sp/>0x80;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8c_1a155c737a8393d19406d6990d45f1c590" kindref="member">user_spi_write</ref><sp/>(0,<sp/>0x60,<sp/>&amp;write_data,<sp/>1);<sp/></highlight><highlight class="comment">//software<sp/>reset<sp/>BME680</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>write_data<sp/>=<sp/>0x00;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8c_1a155c737a8393d19406d6990d45f1c590" kindref="member">user_spi_write</ref>(0,<sp/>0x73,<sp/>&amp;write_data,<sp/>1);<sp/></highlight><highlight class="comment">//switch<sp/>to<sp/>page<sp/>0<sp/>of<sp/>memory<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8c_1ae9ccd01733dde0f72d39c14f1b2e58d6" kindref="member">user_spi_read</ref>(0,<sp/>0x73,<sp/>&amp;<ref refid="main_8c_1ade818037fd6c985038ff29656089758d" kindref="member">status</ref>,<sp/>1);<sp/></highlight><highlight class="comment">//read<sp/>status<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8c_1ade818037fd6c985038ff29656089758d" kindref="member">status</ref><sp/>&gt;&gt;=<sp/>4;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8c_1ae9ccd01733dde0f72d39c14f1b2e58d6" kindref="member">user_spi_read</ref>(0,<sp/>0x50,<sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>1);<sp/></highlight><highlight class="comment">//read<sp/>id<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>write_data<sp/>=<sp/>0x10;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8c_1a155c737a8393d19406d6990d45f1c590" kindref="member">user_spi_write</ref>(0,<sp/>0x73,<sp/>&amp;write_data,<sp/>1);<sp/></highlight><highlight class="comment">//switch<sp/>to<sp/>page<sp/>1<sp/>of<sp/>memory<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8c_1ae9ccd01733dde0f72d39c14f1b2e58d6" kindref="member">user_spi_read</ref>(0,<sp/>0x73,<sp/>&amp;<ref refid="main_8c_1ade818037fd6c985038ff29656089758d" kindref="member">status</ref>,<sp/>1);<sp/></highlight><highlight class="comment">//read<sp/>status<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8c_1ade818037fd6c985038ff29656089758d" kindref="member">status</ref><sp/>&gt;&gt;=<sp/>4;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>Name<sp/>:<sp/>&quot;user_delay_ms&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/>:<sp/>5/9/20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/>;<sp/>N/A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Delays<sp/>the<sp/>system<sp/>by<sp/>a<sp/>&apos;period&apos;<sp/>number<sp/>of<sp/>ms.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="main_8c_1adc86d5995b888a6f4ef7dd5647b94f8f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1adc86d5995b888a6f4ef7dd5647b94f8f" kindref="member">user_delay_ms</ref><sp/>(uint32_t<sp/>period)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>170*period;<sp/>i++)<sp/>{<sp/></highlight><highlight class="comment">//based<sp/>off<sp/>of<sp/>30us<sp/>delay<sp/>in<sp/>DOGM163W_A_SERCOM1.c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__asm(</highlight><highlight class="stringliteral">&quot;nop&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//delay<sp/>by<sp/>period<sp/>ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>Name<sp/>:<sp/>&quot;spi_transfer&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/>:<sp/>5/9/20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/>;<sp/>BME680</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Transmits<sp/>an<sp/>unsigned<sp/>integer<sp/>byte<sp/>&apos;data&apos;<sp/>through<sp/>SERCOM1&apos;s<sp/>SPI<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">//<sp/>register,<sp/>then<sp/>receives<sp/>a<sp/>transmission<sp/>through<sp/>SERCOM1&apos;s<sp/>SPI<sp/>data<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>returns<sp/>the<sp/>received<sp/>unsigned<sp/>integer<sp/>byte.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>spi_transfer<sp/>(uint8_t<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>Rx_data;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!(REG_SERCOM1_SPI_INTFLAG<sp/>&amp;<sp/>1))<sp/>{}<sp/></highlight><highlight class="comment">//wait<sp/>until<sp/>Tx<sp/>ready</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_SERCOM1_SPI_DATA<sp/>=<sp/>data;<sp/></highlight><highlight class="comment">//send<sp/>data<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!(REG_SERCOM1_SPI_INTFLAG<sp/>&amp;<sp/>2))<sp/>{}<sp/></highlight><highlight class="comment">//wait<sp/>until<sp/>transmit<sp/>is<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!(REG_SERCOM1_SPI_INTFLAG<sp/>&amp;<sp/>4))<sp/>{}<sp/></highlight><highlight class="comment">//wait<sp/>until<sp/>receive<sp/>is<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>Rx_data<sp/>=<sp/>REG_SERCOM1_SPI_DATA;<sp/></highlight><highlight class="comment">//read<sp/>data<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Rx_data;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>Name<sp/>:<sp/>&quot;user_spi_read&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/>:<sp/>5/9/20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/>;<sp/>BME680</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>is<sp/>passed<sp/>4<sp/>parameters,<sp/>only<sp/>reg_addr,<sp/>*reg_data<sp/>and<sp/>len<sp/>are</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment">//<sp/>used<sp/>in<sp/>this<sp/>definition.<sp/>The<sp/>MS<sp/>bit<sp/>of<sp/>reg_addr<sp/>is<sp/>masked<sp/>to<sp/>a<sp/>&apos;1&apos;<sp/>in<sp/>order</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>indicate<sp/>a<sp/>read<sp/>transaction<sp/>to<sp/>the<sp/>BME680.<sp/>The<sp/>spi_transfer<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">//<sp/>is<sp/>first<sp/>called<sp/>to<sp/>pass<sp/>the<sp/>register<sp/>address<sp/>to<sp/>be<sp/>read.<sp/>It<sp/>is<sp/>then<sp/>called</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>second<sp/>time<sp/>to<sp/>receive<sp/>the<sp/>register&apos;s<sp/>data<sp/>and<sp/>update<sp/>*reg_data.<sp/>If</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="comment">//<sp/>len<sp/>&gt;<sp/>1,<sp/>the<sp/>register<sp/>address<sp/>to<sp/>be<sp/>read<sp/>is<sp/>auto-incremented<sp/>and<sp/>the<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>reg_data<sp/>is<sp/>incremented<sp/>as<sp/>well<sp/>to<sp/>allow<sp/>for<sp/>multiple<sp/>read<sp/>transactions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="main_8c_1ae9ccd01733dde0f72d39c14f1b2e58d6" refkind="member"><highlight class="normal">int8_t<sp/><ref refid="main_8c_1ae9ccd01733dde0f72d39c14f1b2e58d6" kindref="member">user_spi_read</ref><sp/>(uint8_t<sp/>dev_id,<sp/>uint8_t<sp/>reg_addr,<sp/>uint8_t<sp/>*reg_data,<sp/>uint16_t<sp/>len)<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/>rslt<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//return<sp/>0<sp/>for<sp/>success,<sp/>non-zero<sp/>for<sp/>failure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>reg_addr<sp/>|=<sp/>0x80;<sp/></highlight><highlight class="comment">//mask<sp/>bit<sp/>7<sp/>to<sp/>a<sp/>&apos;1&apos;<sp/>for<sp/>a<sp/>read<sp/>transaction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_OUTCLR1<sp/>&amp;=<sp/>0x80;<sp/></highlight><highlight class="comment">//CS<sp/>=<sp/>0<sp/>-&gt;<sp/>BME680<sp/>selected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>spi_transfer(reg_addr);<sp/></highlight><highlight class="comment">//send<sp/>control<sp/>byte<sp/>with<sp/>register<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len--)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*reg_data<sp/>=<sp/>spi_transfer(0);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reg_data++;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_OUTSET1<sp/>|=<sp/>0x80;<sp/></highlight><highlight class="comment">//CS<sp/>=<sp/>1<sp/>-&gt;<sp/>BME680<sp/>unselected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rslt;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>Name<sp/>:<sp/>&quot;user_spi_write&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/>:<sp/>5/9/20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>MCU<sp/>:<sp/>SAML21J18B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>Hardware<sp/>;<sp/>BME680</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/>:<sp/>Brandon<sp/>Cheung,<sp/>Ishabul<sp/>Haque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DESCRIPTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>is<sp/>passed<sp/>4<sp/>parameters,<sp/>only<sp/>reg_addr,<sp/>*reg_data<sp/>and<sp/>len<sp/>are</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="comment">//<sp/>used<sp/>in<sp/>this<sp/>definition.<sp/>The<sp/>spi_transfer<sp/>function<sp/>is<sp/>first<sp/>called<sp/>to<sp/>pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>register<sp/>address<sp/>to<sp/>be<sp/>written<sp/>to.<sp/>spi_transfer<sp/>is<sp/>then<sp/>called<sp/>a<sp/>second</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="comment">//<sp/>time<sp/>to<sp/>write<sp/>*reg_data<sp/>to<sp/>the<sp/>register.<sp/>If<sp/>len<sp/>&gt;<sp/>1,<sp/>the<sp/>register<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>be<sp/>written<sp/>to<sp/>is<sp/>auto-incremented<sp/>and<sp/>reg_data<sp/>is<sp/>incremented<sp/>as<sp/>well</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>allow<sp/>for<sp/>multiple<sp/>write<sp/>transactions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warnings<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restrictions<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Algorithms<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="comment">//<sp/>References<sp/>:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="comment">//re</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>History<sp/>:<sp/>Initial<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="comment">//**************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299" refid="main_8c_1a155c737a8393d19406d6990d45f1c590" refkind="member"><highlight class="normal">int8_t<sp/><ref refid="main_8c_1a155c737a8393d19406d6990d45f1c590" kindref="member">user_spi_write</ref><sp/>(uint8_t<sp/>dev_id,<sp/>uint8_t<sp/>reg_addr,<sp/>uint8_t<sp/>*reg_data,<sp/>uint16_t<sp/>len)<sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/>rslt<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_OUTCLR1<sp/>&amp;=<sp/>0x80;<sp/></highlight><highlight class="comment">//CS<sp/>=<sp/>0<sp/>-&gt;<sp/>BME680<sp/>selected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>spi_transfer(reg_addr);<sp/></highlight><highlight class="comment">//send<sp/>control<sp/>byte<sp/>with<sp/>register<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len--)<sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spi_transfer(*reg_data);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reg_data++;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>REG_PORT_OUTSET1<sp/>|=<sp/>0x80;<sp/></highlight><highlight class="comment">//CS<sp/>=<sp/>1<sp/>-&gt;<sp/>BME680<sp/>unselected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rslt;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/main.c"/>
+  </compounddef>
+</doxygen>

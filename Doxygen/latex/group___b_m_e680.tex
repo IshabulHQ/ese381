@@ -1,0 +1,2416 @@
+\hypertarget{group___b_m_e680}{}\doxysection{S\+E\+N\+S\+OR A\+PI}
+\label{group___b_m_e680}\index{SENSOR API@{SENSOR API}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structbme680__field__data}{bme680\+\_\+field\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Sensor field data structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structbme680__calib__data}{bme680\+\_\+calib\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Structure to hold the Calibration data. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structbme680__tph__sett}{bme680\+\_\+tph\+\_\+sett}}
+\begin{DoxyCompactList}\small\item\em B\+M\+E680 sensor settings structure which comprises of O\+DR, over-\/sampling and filter settings. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structbme680__gas__sett}{bme680\+\_\+gas\+\_\+sett}}
+\begin{DoxyCompactList}\small\item\em B\+M\+E680 gas sensor which comprises of gas settings and status parameters. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}}
+\begin{DoxyCompactList}\small\item\em B\+M\+E680 device structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_gaee75ae524b7ca8f4a9b6dbb7f640c2e4}{bme680\+\_\+init}} (struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is the entry point. It reads the chip-\/id and calibration data from the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga5d1bad74f7ac28e75aca9d7de66fd2b4}{bme680\+\_\+set\+\_\+regs}} (const uint8\+\_\+t $\ast$reg\+\_\+addr, const uint8\+\_\+t $\ast$reg\+\_\+data, uint8\+\_\+t len, struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI writes the given data to the register address of the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_gaf5548cbdbf327e2c77bdb0afb1dde9e4}{bme680\+\_\+get\+\_\+regs}} (uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t $\ast$reg\+\_\+data, uint16\+\_\+t len, struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI reads the data from the given register address of the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga7f0f1a4378bc6cd0a34acf62509cdec7}{bme680\+\_\+soft\+\_\+reset}} (struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI performs the soft reset of the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga5ca765226e758e71c862553c7cc0b371}{bme680\+\_\+set\+\_\+sensor\+\_\+mode}} (struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is used to set the power mode of the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga4e50492a1f4747868f7e9a826492f1e7}{bme680\+\_\+get\+\_\+sensor\+\_\+mode}} (struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is used to get the power mode of the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___b_m_e680_ga192f772bc9cb619e5855e93d6ebd6128}{bme680\+\_\+set\+\_\+profile\+\_\+dur}} (uint16\+\_\+t duration, struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is used to set the profile duration of the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___b_m_e680_gae49a6f126c136fb16a8557a67e39d07c}{bme680\+\_\+get\+\_\+profile\+\_\+dur}} (uint16\+\_\+t $\ast$duration, const struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is used to get the profile duration of the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga1025301e420e1e21911044bebb62f940}{bme680\+\_\+get\+\_\+sensor\+\_\+data}} (struct \mbox{\hyperlink{structbme680__field__data}{bme680\+\_\+field\+\_\+data}} $\ast$data, struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI reads the pressure, temperature and humidity and gas data from the sensor, compensates the data and store it in the bme680\+\_\+data structure instance passed by the user. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga2fea1365b4fa1d33eef434769b16e811}{bme680\+\_\+set\+\_\+sensor\+\_\+settings}} (uint16\+\_\+t desired\+\_\+settings, struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is used to set the oversampling, filter and T,P,H, gas selection settings in the sensor. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{group___b_m_e680_ga7826b058b8eddcf05ccbb117fd9d41b7}{bme680\+\_\+get\+\_\+sensor\+\_\+settings}} (uint16\+\_\+t desired\+\_\+settings, struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em This A\+PI is used to get the oversampling, filter and T,P,H, gas selection settings in the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Common macros}
+\label{_amgrp23fc37f16121dfba41e95244ec559eb7}%
+~\newline
+ \begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(x)~S8\+\_\+C(x)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(x)~U8\+\_\+C(x)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga838b261fec725cb0f5d5b6769d3521e7}{I\+N\+T16\+\_\+C}}(x)~S16\+\_\+C(x)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(x)~U16\+\_\+C(x)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gad78650fb7726f4e99205406569ef403d}{I\+N\+T32\+\_\+C}}(x)~S32\+\_\+C(x)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga2451a7ede7ebd810357f1503e9898ea6}{U\+I\+N\+T32\+\_\+C}}(x)~U32\+\_\+C(x)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga93d102802b35d3b8abae9bbe7f0fed75}{I\+N\+T64\+\_\+C}}(x)~S64\+\_\+C(x)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga134ae84400d184ed2570e3270d5472c2}{U\+I\+N\+T64\+\_\+C}}(x)~U64\+\_\+C(x)
+\end{DoxyCompactItemize}
+\doxysubsection*{C standard macros}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___b_m_e680_ga2232c03d0c1282e976af41b39e1b87d6}{bme680\+\_\+intf}} \{ \mbox{\hyperlink{group___b_m_e680_gga2232c03d0c1282e976af41b39e1b87d6a504bd691a4b57b0c914cc8c77bd696c3}{B\+M\+E680\+\_\+\+S\+P\+I\+\_\+\+I\+N\+TF}}, 
+\mbox{\hyperlink{group___b_m_e680_gga2232c03d0c1282e976af41b39e1b87d6a8c5c46109186b1f476eafcb0fa608cf5}{B\+M\+E680\+\_\+\+I2\+C\+\_\+\+I\+N\+TF}}
+ \}
+\begin{DoxyCompactList}\small\item\em Interface selection Enumerations. \end{DoxyCompactList}\item 
+typedef int8\+\_\+t($\ast$ \mbox{\hyperlink{group___b_m_e680_gaa7d183195e66f1db50f64f3a3d4ede57}{bme680\+\_\+com\+\_\+fptr\+\_\+t}}) (uint8\+\_\+t dev\+\_\+id, uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t $\ast$data, uint16\+\_\+t len)
+\item 
+typedef void($\ast$ \mbox{\hyperlink{group___b_m_e680_ga596d17716255952ac5581c5217f895d4}{bme680\+\_\+delay\+\_\+fptr\+\_\+t}}) (uint32\+\_\+t period)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}~((void $\ast$) 0)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga7545f57cf8b21f71292f4d2998049ab0}{B\+M\+E680\+\_\+\+P\+O\+L\+L\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(10)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaf27a16304a83f75bb23883d754610df3}{B\+M\+E680\+\_\+\+I2\+C\+\_\+\+A\+D\+D\+R\+\_\+\+P\+R\+I\+M\+A\+RY}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x76)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga11dad5edfb9672d9355cea8cd69a9fc8}{B\+M\+E680\+\_\+\+I2\+C\+\_\+\+A\+D\+D\+R\+\_\+\+S\+E\+C\+O\+N\+D\+A\+RY}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x77)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga762d33b22cceaa1f90dc2044ace463ee}{B\+M\+E680\+\_\+\+C\+H\+I\+P\+\_\+\+ID}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x61)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga4cf6e3574a83160f0adbfcf8cc5e3729}{B\+M\+E680\+\_\+\+C\+O\+E\+F\+F\+\_\+\+S\+I\+ZE}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(41)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga72647a6cd6285a2e959ddebcb620811c}{B\+M\+E680\+\_\+\+C\+O\+E\+F\+F\+\_\+\+A\+D\+D\+R1\+\_\+\+L\+EN}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(25)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gafb1dd0a4ba022afb5b3f20bc4f20c22b}{B\+M\+E680\+\_\+\+C\+O\+E\+F\+F\+\_\+\+A\+D\+D\+R2\+\_\+\+L\+EN}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(16)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga7cb775d981358b7e58eb8db0094bd1d7}{B\+M\+E680\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L\+E\+N\+G\+TH}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(15)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaeb95305af562b362a91acb1e2abfecab}{B\+M\+E680\+\_\+\+F\+I\+E\+L\+D\+\_\+\+A\+D\+D\+R\+\_\+\+O\+F\+F\+S\+ET}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(17)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga6da379a1060ef5079d34ba88191c3488}{B\+M\+E680\+\_\+\+S\+O\+F\+T\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+MD}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0xb6)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga2e82e5c447a9dbbeebf95b1ba189effb}{B\+M\+E680\+\_\+\+OK}}~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(0)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gad11881e59c1b265c9c86abf970637819}{B\+M\+E680\+\_\+\+E\+\_\+\+N\+U\+L\+L\+\_\+\+P\+TR}}~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(-\/1)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gafa2490175882e55b410f4c383dd89b81}{B\+M\+E680\+\_\+\+E\+\_\+\+C\+O\+M\+\_\+\+F\+A\+IL}}~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(-\/2)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaeaccfbff7ccd3150102f427e7c24bf36}{B\+M\+E680\+\_\+\+E\+\_\+\+D\+E\+V\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(-\/3)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga1e32ed028e1547f9b5b0d699252895e2}{B\+M\+E680\+\_\+\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+N\+G\+TH}}~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(-\/4)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga2ba5b50c969a788bf8c046b48ca9244e}{B\+M\+E680\+\_\+\+W\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+P\+W\+R\+\_\+\+M\+O\+DE}}~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(1)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga533eca7a4a75913b602b89f8793f71c4}{B\+M\+E680\+\_\+\+W\+\_\+\+N\+O\+\_\+\+N\+E\+W\+\_\+\+D\+A\+TA}}~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(2)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gae68bbfadb05ed1dd48eec5477abdd094}{B\+M\+E680\+\_\+\+I\+\_\+\+M\+I\+N\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga7a16c7f1ccf8000a8be2da2f2010eaa4}{B\+M\+E680\+\_\+\+I\+\_\+\+M\+A\+X\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(2)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaf6a74cbd7c52c150a5d83766e86f3bf1}{B\+M\+E680\+\_\+\+A\+D\+D\+R\+\_\+\+R\+E\+S\+\_\+\+H\+E\+A\+T\+\_\+\+V\+A\+L\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x00)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaf9b953db9521005b67eb5b802806e32c}{B\+M\+E680\+\_\+\+A\+D\+D\+R\+\_\+\+R\+E\+S\+\_\+\+H\+E\+A\+T\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x02)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga057a5bdc515058c97afc7793b12579f9}{B\+M\+E680\+\_\+\+A\+D\+D\+R\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+W\+\_\+\+E\+R\+R\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x04)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gac938d57e137ed56de68d53aa464f770d}{B\+M\+E680\+\_\+\+A\+D\+D\+R\+\_\+\+S\+E\+N\+S\+\_\+\+C\+O\+N\+F\+\_\+\+S\+T\+A\+RT}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x5A)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga2dd74a16a0871aec1986bd46427d1ecb}{B\+M\+E680\+\_\+\+A\+D\+D\+R\+\_\+\+G\+A\+S\+\_\+\+C\+O\+N\+F\+\_\+\+S\+T\+A\+RT}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x64)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaa1126d8a0cab009b3812d4dba28beec3}{B\+M\+E680\+\_\+\+F\+I\+E\+L\+D0\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x1d)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gad1429130a198bff35d0bb98bd1d4cbc1}{B\+M\+E680\+\_\+\+R\+E\+S\+\_\+\+H\+E\+A\+T0\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x5a)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaf336411b8277b6514284d35e379e6bfa}{B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+W\+A\+I\+T0\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x64)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga995aae4506cba06c735bb2ff37fbca49}{B\+M\+E680\+\_\+\+C\+O\+N\+F\+\_\+\+H\+E\+A\+T\+\_\+\+C\+T\+R\+L\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x70)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga7ece2b31e421c4eccc359f86b1d9d1e8}{B\+M\+E680\+\_\+\+C\+O\+N\+F\+\_\+\+O\+D\+R\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+N\+B\+C\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x71)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gabaa63e660c9ff9564ca0fd77c7b3b6b9}{B\+M\+E680\+\_\+\+C\+O\+N\+F\+\_\+\+O\+S\+\_\+\+H\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x72)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaaeb2b1ccd1f00d9c2444a3b30dbbd67d}{B\+M\+E680\+\_\+\+M\+E\+M\+\_\+\+P\+A\+G\+E\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0xf3)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga91607f3be92722408129f7dc4d9da94e}{B\+M\+E680\+\_\+\+C\+O\+N\+F\+\_\+\+T\+\_\+\+P\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x74)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga76aff0494ce12a91e5e4647d898a3303}{B\+M\+E680\+\_\+\+C\+O\+N\+F\+\_\+\+O\+D\+R\+\_\+\+F\+I\+L\+T\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x75)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga839d12e3afe0332b3383be0e258c472e}{B\+M\+E680\+\_\+\+C\+O\+E\+F\+F\+\_\+\+A\+D\+D\+R1}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x89)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gab6ab32c925171f0f64387c2ad3bbdcf0}{B\+M\+E680\+\_\+\+C\+O\+E\+F\+F\+\_\+\+A\+D\+D\+R2}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0xe1)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaa24d214515e9c3606dcefb874888c055}{B\+M\+E680\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0xd0)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga69bae1e3eba277068c1055e3028bbf41}{B\+M\+E680\+\_\+\+S\+O\+F\+T\+\_\+\+R\+E\+S\+E\+T\+\_\+\+A\+D\+DR}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0xe0)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga9e973dfcc1a103110cc44077f3ed86c1}{B\+M\+E680\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+H\+E\+A\+T\+ER}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x00)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga78ae55eb1a642204835cdc9f5fd48dd7}{B\+M\+E680\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+H\+E\+A\+T\+ER}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x08)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gad5a18c765061877212395397d58e2c20}{B\+M\+E680\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+G\+A\+S\+\_\+\+M\+E\+AS}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x00)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga1799bbf23959f4979849b196f898b25d}{B\+M\+E680\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+G\+A\+S\+\_\+\+M\+E\+AS}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x01)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga5ba113b3902da4c9baf45da5f32958d0}{B\+M\+E680\+\_\+\+O\+S\+\_\+\+N\+O\+NE}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga90f5a043c6dcb6382136d674bdddaf9f}{B\+M\+E680\+\_\+\+O\+S\+\_\+1X}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga52e63cfbad8239eefa594fc823306dfb}{B\+M\+E680\+\_\+\+O\+S\+\_\+2X}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(2)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga4c3caae2c0b27b0abf1dec7cddcd5c8d}{B\+M\+E680\+\_\+\+O\+S\+\_\+4X}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(3)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gae262407360d48abca904e671cc824466}{B\+M\+E680\+\_\+\+O\+S\+\_\+8X}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gabba27bfd061689ca82ee9bac3a11f31e}{B\+M\+E680\+\_\+\+O\+S\+\_\+16X}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(5)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga5edcb9fcb77440f52d2b2865a89b5475}{B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+0}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga577fdee6366e9677903cc5b80be9348d}{B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+1}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga8827e54c9ae9a50b5b86024369428fa4}{B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+3}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(2)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gab5678e5df2163711af64b392bff862b9}{B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+7}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(3)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaeb92ac0b2821a64b8fd76f24a1e60485}{B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+15}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga2f3b3c9a71391d53ca2649ab6d823592}{B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+31}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(5)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga6f71fe46cd0b97165d8dd4fce562dbf8}{B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+63}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(6)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga5b5941f3e4e6344b6e2b3e28e6356074}{B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+127}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(7)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga9fc5e8034aa79028c0286ea4c974ee69}{B\+M\+E680\+\_\+\+S\+L\+E\+E\+P\+\_\+\+M\+O\+DE}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga1ed7f0fb1ebaf8ec88b28d5f96c19df2}{B\+M\+E680\+\_\+\+F\+O\+R\+C\+E\+D\+\_\+\+M\+O\+DE}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga6409d476475762c095a746a1b785bdd6}{B\+M\+E680\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+E\+R\+I\+OD}}~\mbox{\hyperlink{group___b_m_e680_ga2451a7ede7ebd810357f1503e9898ea6}{U\+I\+N\+T32\+\_\+C}}(10)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga2af2d059c5cdc5925dc050a5d67f2d0b}{B\+M\+E680\+\_\+\+M\+E\+M\+\_\+\+P\+A\+G\+E0}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x10)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga7f7a072d2cf401f5167a33acde2fd905}{B\+M\+E680\+\_\+\+M\+E\+M\+\_\+\+P\+A\+G\+E1}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x00)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaa9320cbf90a9bb81b912da4bf036e73b}{B\+M\+E680\+\_\+\+H\+U\+M\+\_\+\+R\+E\+G\+\_\+\+S\+H\+I\+F\+T\+\_\+\+V\+AL}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga7cdfa822370f97878b251ec8ae437ad8}{B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+D\+I\+S\+A\+B\+LE}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaec72fd2001a168dc042f558438d77e1b}{B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+E\+N\+A\+B\+LE}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga9be3bfa321b5d7b421ae2b8900d49eff}{B\+M\+E680\+\_\+\+T\+M\+P\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(40)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga8bbf94a63af9425d361db02bf8855ba7}{B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(6)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga9036237895b2336d61d5dfbef708f331}{B\+M\+E680\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(3)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga764977e7eb831e12841b70587ff42e24}{B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+R\+E\+G\+\_\+\+B\+U\+F\+\_\+\+L\+E\+N\+G\+TH}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(20)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga7ecfc9ebc2dc3fae358c38215821db6d}{B\+M\+E680\+\_\+\+O\+S\+T\+\_\+\+S\+EL}}~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(1)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gac414417f6a2c0d9b7373c24c41edd804}{B\+M\+E680\+\_\+\+O\+S\+P\+\_\+\+S\+EL}}~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(2)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga9671bc43c2a7a81674cf5c9376a48bee}{B\+M\+E680\+\_\+\+O\+S\+H\+\_\+\+S\+EL}}~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(4)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga6ba77fc5b103421f67a9e328720af15e}{B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+M\+E\+A\+S\+\_\+\+S\+EL}}~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(8)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga56ea9531725679aaad25b574ac3ab0ce}{B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+EL}}~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(16)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga3db4f67603ca3b538ab71a49d3b08c34}{B\+M\+E680\+\_\+\+H\+C\+N\+T\+R\+L\+\_\+\+S\+EL}}~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(32)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gac15ff8b6a3383b66cc2dee7cc780cb52}{B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+S\+EL}}~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(64)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gabd5465ac39b9882e80dcf8c75ab4d64a}{B\+M\+E680\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+S\+EL}}~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(128)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaacc8080cd16dacf5d5af16edbc69a98c}{B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+S\+EL}}~(\mbox{\hyperlink{group___b_m_e680_ga6ba77fc5b103421f67a9e328720af15e}{B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+M\+E\+A\+S\+\_\+\+S\+EL}} $\vert$ \mbox{\hyperlink{group___b_m_e680_gac15ff8b6a3383b66cc2dee7cc780cb52}{B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+S\+EL}} $\vert$ \mbox{\hyperlink{group___b_m_e680_gabd5465ac39b9882e80dcf8c75ab4d64a}{B\+M\+E680\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+S\+EL}})
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga8b0bdbbedd050d35a8bc27e23c9c96c4}{B\+M\+E680\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+M\+IN}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gad0000459f5d4f89d82d8294199ff74ff}{B\+M\+E680\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+M\+AX}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(10)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gadff9a0ef09e48aa5fcecc9bcfb0bf6f2}{B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+M\+E\+A\+S\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x30)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga87e774256c06c12924b3a6431a41ab83}{B\+M\+E680\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0\+X0F)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaad7a1978731310a9e2f58c40cbaeab06}{B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0\+X1C)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gac61390eab22977a4a4fa93cf6874e8aa}{B\+M\+E680\+\_\+\+O\+S\+T\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0\+X\+E0)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga488e303db5a4f1958e094ca59365f6c9}{B\+M\+E680\+\_\+\+O\+S\+P\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0\+X1C)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gacaaee0a0a8aa84b9b5c763f856a3c7a4}{B\+M\+E680\+\_\+\+O\+S\+H\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0\+X07)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga404d7c1425e779bce5a8ab6454a21d59}{B\+M\+E680\+\_\+\+H\+C\+T\+R\+L\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x08)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gae474a7d9b0768fcfbe7516b4435cdbdb}{B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x10)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga2f5287272867bdab94595b90e303488e}{B\+M\+E680\+\_\+\+M\+O\+D\+E\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x03)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga92c7d6e920f86722a20742a2273ce507}{B\+M\+E680\+\_\+\+R\+H\+R\+A\+N\+G\+E\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x30)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga9f47f8f5f54e60941b740127a4fd067e}{B\+M\+E680\+\_\+\+R\+S\+E\+R\+R\+O\+R\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0xf0)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gae5154502bd57ab10d3f51ebeb9c1055d}{B\+M\+E680\+\_\+\+N\+E\+W\+\_\+\+D\+A\+T\+A\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x80)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaf008a56a09f0095ee6ec6407de1d8ae4}{B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x0f)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga1dac00f71350a4298f1f6ec663e20d2d}{B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+R\+A\+N\+G\+E\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x0f)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga18969c0772c82f03479f5be7a0c11cd0}{B\+M\+E680\+\_\+\+G\+A\+S\+M\+\_\+\+V\+A\+L\+I\+D\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x20)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaf08b72120096ba6069878faafd721832}{B\+M\+E680\+\_\+\+H\+E\+A\+T\+\_\+\+S\+T\+A\+B\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x10)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga7858e5d3b4d39482fc04848a02bcd4cb}{B\+M\+E680\+\_\+\+M\+E\+M\+\_\+\+P\+A\+G\+E\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x10)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga82221087b2a61c32876783ffaf23ce02}{B\+M\+E680\+\_\+\+S\+P\+I\+\_\+\+R\+D\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x80)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga22e8383fee778e9ae7a9e91405438f29}{B\+M\+E680\+\_\+\+S\+P\+I\+\_\+\+W\+R\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x7f)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaa5ee22e8db0d3264c58e15c7d7506640}{B\+M\+E680\+\_\+\+B\+I\+T\+\_\+\+H1\+\_\+\+D\+A\+T\+A\+\_\+\+M\+SK}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x0F)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaa72739940e9ab88370b0ae23ef687f15}{B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+M\+E\+A\+S\+\_\+\+P\+OS}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga32d4f0ab555a23a400d940d455cd10ed}{B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+OS}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(2)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga41f951fff6b3579dd6cfe30fbef98178}{B\+M\+E680\+\_\+\+O\+S\+T\+\_\+\+P\+OS}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(5)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaa254a8b4e057080bb70ffdc2cf9e686a}{B\+M\+E680\+\_\+\+O\+S\+P\+\_\+\+P\+OS}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(2)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaf4152a3764a38d2484bfde4346006b32}{B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+P\+OS}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gab0bf47738f04f4e67488166d66096752}{B\+M\+E680\+\_\+\+T2\+\_\+\+L\+S\+B\+\_\+\+R\+EG}}~(1)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga24c2ce0d4413d92d029f9ba3439990d2}{B\+M\+E680\+\_\+\+T2\+\_\+\+M\+S\+B\+\_\+\+R\+EG}}~(2)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga9626ce9952f9e2605b6d42674222a25d}{B\+M\+E680\+\_\+\+T3\+\_\+\+R\+EG}}~(3)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gac2a68fdb70bafe67bd14d4f29d52a095}{B\+M\+E680\+\_\+\+P1\+\_\+\+L\+S\+B\+\_\+\+R\+EG}}~(5)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaf37fb5c2354427586d25e1a61f0e4f9c}{B\+M\+E680\+\_\+\+P1\+\_\+\+M\+S\+B\+\_\+\+R\+EG}}~(6)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga2d6ceda8a2ac80c772d6bc548897065b}{B\+M\+E680\+\_\+\+P2\+\_\+\+L\+S\+B\+\_\+\+R\+EG}}~(7)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga30391307c0564eaf8d2c872165137d93}{B\+M\+E680\+\_\+\+P2\+\_\+\+M\+S\+B\+\_\+\+R\+EG}}~(8)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga1e3d7d668ed3764eeb728bc91e5afdc7}{B\+M\+E680\+\_\+\+P3\+\_\+\+R\+EG}}~(9)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gacee13b799f1525c7db130281b8adc0d4}{B\+M\+E680\+\_\+\+P4\+\_\+\+L\+S\+B\+\_\+\+R\+EG}}~(11)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gad22d0cc1c0d8c652e07af82b4255f214}{B\+M\+E680\+\_\+\+P4\+\_\+\+M\+S\+B\+\_\+\+R\+EG}}~(12)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga9bd758c47b79a3f8e7ca4c272b52104d}{B\+M\+E680\+\_\+\+P5\+\_\+\+L\+S\+B\+\_\+\+R\+EG}}~(13)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga1ea70fab294628f5562ca43e40084a16}{B\+M\+E680\+\_\+\+P5\+\_\+\+M\+S\+B\+\_\+\+R\+EG}}~(14)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga2fec08fa03365bd7cecffb255ff42002}{B\+M\+E680\+\_\+\+P7\+\_\+\+R\+EG}}~(15)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga7098e3f040b32e84a85a153fd89f58f0}{B\+M\+E680\+\_\+\+P6\+\_\+\+R\+EG}}~(16)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga24e4d129db86ae29b1bcb0bf2928ea0d}{B\+M\+E680\+\_\+\+P8\+\_\+\+L\+S\+B\+\_\+\+R\+EG}}~(19)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga4a10e9d435d2d907151828e446df5577}{B\+M\+E680\+\_\+\+P8\+\_\+\+M\+S\+B\+\_\+\+R\+EG}}~(20)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gab2980917bffc20371cb49e6bd230f992}{B\+M\+E680\+\_\+\+P9\+\_\+\+L\+S\+B\+\_\+\+R\+EG}}~(21)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga6be400180d87c87c68b336cce9057151}{B\+M\+E680\+\_\+\+P9\+\_\+\+M\+S\+B\+\_\+\+R\+EG}}~(22)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gad5344209efe095c80b8dbd36b76ce16f}{B\+M\+E680\+\_\+\+P10\+\_\+\+R\+EG}}~(23)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga43a322b565daddb4e92145b88de49413}{B\+M\+E680\+\_\+\+H2\+\_\+\+M\+S\+B\+\_\+\+R\+EG}}~(25)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gae9104a7a0fd5ee4ca48b923d9cf456ea}{B\+M\+E680\+\_\+\+H2\+\_\+\+L\+S\+B\+\_\+\+R\+EG}}~(26)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaefd68b5b70bcdcfa4b2685d84ee5e0c9}{B\+M\+E680\+\_\+\+H1\+\_\+\+L\+S\+B\+\_\+\+R\+EG}}~(26)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga6566f642c3607f1a7d9b2c03b36e9467}{B\+M\+E680\+\_\+\+H1\+\_\+\+M\+S\+B\+\_\+\+R\+EG}}~(27)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gab3f37863a4c1400f28048753406135c3}{B\+M\+E680\+\_\+\+H3\+\_\+\+R\+EG}}~(28)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gacaca0b68c4422223d4a360d7d7a2febd}{B\+M\+E680\+\_\+\+H4\+\_\+\+R\+EG}}~(29)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gadc37e78fdc42f7de7ae972bdc2cd316c}{B\+M\+E680\+\_\+\+H5\+\_\+\+R\+EG}}~(30)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga12349ac4ac73dcd6a85ae50cdb864be9}{B\+M\+E680\+\_\+\+H6\+\_\+\+R\+EG}}~(31)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga66ec7d773394e5de70e6415b8b0afa64}{B\+M\+E680\+\_\+\+H7\+\_\+\+R\+EG}}~(32)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga342e1de1c75d3f622e3c4f9b9acf359e}{B\+M\+E680\+\_\+\+T1\+\_\+\+L\+S\+B\+\_\+\+R\+EG}}~(33)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga361d6bd1a04dab7bfe2064060220ea1c}{B\+M\+E680\+\_\+\+T1\+\_\+\+M\+S\+B\+\_\+\+R\+EG}}~(34)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaff954cd6b5f15510c07a15db41f651c6}{B\+M\+E680\+\_\+\+G\+H2\+\_\+\+L\+S\+B\+\_\+\+R\+EG}}~(35)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga880b1b5a90f3849fd159fea0fc33e825}{B\+M\+E680\+\_\+\+G\+H2\+\_\+\+M\+S\+B\+\_\+\+R\+EG}}~(36)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga78a6ccd6bde3995006c26b0b54320cbd}{B\+M\+E680\+\_\+\+G\+H1\+\_\+\+R\+EG}}~(37)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga7181bfa862c457cc5d207be66cd04dba}{B\+M\+E680\+\_\+\+G\+H3\+\_\+\+R\+EG}}~(38)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gabead566b839b70723d7dc5be6eb65c12}{B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+I\+N\+D\+EX}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(5)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaec07f7b368b29f7418ca1bc8f207b9aa}{B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+T\+E\+M\+P\+\_\+\+I\+N\+D\+EX}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gafdc7f2bb002c413323008b44ddcdefdb}{B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+P\+R\+E\+S\+\_\+\+I\+N\+D\+EX}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga50d6c94b5ec0b48f6add5158c8341706}{B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+H\+U\+M\+\_\+\+I\+N\+D\+EX}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(2)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga4b42bf56b98dbdde2ce46ea4a77c4c61}{B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+I\+N\+D\+EX}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga358279697df80441622801132433cf87}{B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+I\+N\+D\+EX}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga68e59b1432c8845d9fb41f8c7fb05d85}{B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+H\+C\+T\+R\+L\+\_\+\+I\+N\+D\+EX}}~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga0508d0ce67c130119405030ddbe54080}{B\+M\+E680\+\_\+\+M\+A\+X\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W\+\_\+\+V\+AL}}~\mbox{\hyperlink{group___b_m_e680_gad78650fb7726f4e99205406569ef403d}{I\+N\+T32\+\_\+C}}(0x40000000)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga9aac51cc4b47a1f1c9f30c07026840ab}{B\+M\+E680\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+B\+Y\+T\+ES}}(msb,  lsb)~(((uint16\+\_\+t)msb $<$$<$ 8) $\vert$ (uint16\+\_\+t)lsb)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaa2dfae23c0c4a846bde4fdf3780c390e}{B\+M\+E680\+\_\+\+S\+E\+T\+\_\+\+B\+I\+TS}}(reg\+\_\+data,  bitname,  data)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga08f4b60cad6cc750b3fe2a0f4377c192}{B\+M\+E680\+\_\+\+G\+E\+T\+\_\+\+B\+I\+TS}}(reg\+\_\+data,  bitname)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_ga5e3fed11d9e1cb98d8c05bc5f418d4e8}{B\+M\+E680\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+S\+\_\+\+P\+O\+S\+\_\+0}}(reg\+\_\+data,  bitname,  data)
+\item 
+\#define \mbox{\hyperlink{group___b_m_e680_gaf514daef101aff8022022eb6c9200b08}{B\+M\+E680\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+S\+\_\+\+P\+O\+S\+\_\+0}}(reg\+\_\+data,  bitname)~(reg\+\_\+data \& (bitname\#\#\+\_\+\+M\+SK))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___b_m_e680_ga2dd74a16a0871aec1986bd46427d1ecb}\label{group___b_m_e680_ga2dd74a16a0871aec1986bd46427d1ecb}} 
+\index{SENSOR API@{SENSOR API}!BME680\_ADDR\_GAS\_CONF\_START@{BME680\_ADDR\_GAS\_CONF\_START}}
+\index{BME680\_ADDR\_GAS\_CONF\_START@{BME680\_ADDR\_GAS\_CONF\_START}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_ADDR\_GAS\_CONF\_START}{BME680\_ADDR\_GAS\_CONF\_START}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+A\+D\+D\+R\+\_\+\+G\+A\+S\+\_\+\+C\+O\+N\+F\+\_\+\+S\+T\+A\+RT~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x64)}
+
+
+
+Definition at line 153 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga057a5bdc515058c97afc7793b12579f9}\label{group___b_m_e680_ga057a5bdc515058c97afc7793b12579f9}} 
+\index{SENSOR API@{SENSOR API}!BME680\_ADDR\_RANGE\_SW\_ERR\_ADDR@{BME680\_ADDR\_RANGE\_SW\_ERR\_ADDR}}
+\index{BME680\_ADDR\_RANGE\_SW\_ERR\_ADDR@{BME680\_ADDR\_RANGE\_SW\_ERR\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_ADDR\_RANGE\_SW\_ERR\_ADDR}{BME680\_ADDR\_RANGE\_SW\_ERR\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+A\+D\+D\+R\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+W\+\_\+\+E\+R\+R\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x04)}
+
+
+
+Definition at line 151 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaf9b953db9521005b67eb5b802806e32c}\label{group___b_m_e680_gaf9b953db9521005b67eb5b802806e32c}} 
+\index{SENSOR API@{SENSOR API}!BME680\_ADDR\_RES\_HEAT\_RANGE\_ADDR@{BME680\_ADDR\_RES\_HEAT\_RANGE\_ADDR}}
+\index{BME680\_ADDR\_RES\_HEAT\_RANGE\_ADDR@{BME680\_ADDR\_RES\_HEAT\_RANGE\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_ADDR\_RES\_HEAT\_RANGE\_ADDR}{BME680\_ADDR\_RES\_HEAT\_RANGE\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+A\+D\+D\+R\+\_\+\+R\+E\+S\+\_\+\+H\+E\+A\+T\+\_\+\+R\+A\+N\+G\+E\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x02)}
+
+
+
+Definition at line 150 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaf6a74cbd7c52c150a5d83766e86f3bf1}\label{group___b_m_e680_gaf6a74cbd7c52c150a5d83766e86f3bf1}} 
+\index{SENSOR API@{SENSOR API}!BME680\_ADDR\_RES\_HEAT\_VAL\_ADDR@{BME680\_ADDR\_RES\_HEAT\_VAL\_ADDR}}
+\index{BME680\_ADDR\_RES\_HEAT\_VAL\_ADDR@{BME680\_ADDR\_RES\_HEAT\_VAL\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_ADDR\_RES\_HEAT\_VAL\_ADDR}{BME680\_ADDR\_RES\_HEAT\_VAL\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+A\+D\+D\+R\+\_\+\+R\+E\+S\+\_\+\+H\+E\+A\+T\+\_\+\+V\+A\+L\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x00)}
+
+Register map Other coefficient\textquotesingle{}s address 
+
+Definition at line 149 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gac938d57e137ed56de68d53aa464f770d}\label{group___b_m_e680_gac938d57e137ed56de68d53aa464f770d}} 
+\index{SENSOR API@{SENSOR API}!BME680\_ADDR\_SENS\_CONF\_START@{BME680\_ADDR\_SENS\_CONF\_START}}
+\index{BME680\_ADDR\_SENS\_CONF\_START@{BME680\_ADDR\_SENS\_CONF\_START}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_ADDR\_SENS\_CONF\_START}{BME680\_ADDR\_SENS\_CONF\_START}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+A\+D\+D\+R\+\_\+\+S\+E\+N\+S\+\_\+\+C\+O\+N\+F\+\_\+\+S\+T\+A\+RT~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x5A)}
+
+
+
+Definition at line 152 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaa5ee22e8db0d3264c58e15c7d7506640}\label{group___b_m_e680_gaa5ee22e8db0d3264c58e15c7d7506640}} 
+\index{SENSOR API@{SENSOR API}!BME680\_BIT\_H1\_DATA\_MSK@{BME680\_BIT\_H1\_DATA\_MSK}}
+\index{BME680\_BIT\_H1\_DATA\_MSK@{BME680\_BIT\_H1\_DATA\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_BIT\_H1\_DATA\_MSK}{BME680\_BIT\_H1\_DATA\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+B\+I\+T\+\_\+\+H1\+\_\+\+D\+A\+T\+A\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x0F)}
+
+
+
+Definition at line 265 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga762d33b22cceaa1f90dc2044ace463ee}\label{group___b_m_e680_ga762d33b22cceaa1f90dc2044ace463ee}} 
+\index{SENSOR API@{SENSOR API}!BME680\_CHIP\_ID@{BME680\_CHIP\_ID}}
+\index{BME680\_CHIP\_ID@{BME680\_CHIP\_ID}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_CHIP\_ID}{BME680\_CHIP\_ID}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+H\+I\+P\+\_\+\+ID~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x61)}
+
+B\+M\+E680 unique chip identifier 
+
+Definition at line 117 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaa24d214515e9c3606dcefb874888c055}\label{group___b_m_e680_gaa24d214515e9c3606dcefb874888c055}} 
+\index{SENSOR API@{SENSOR API}!BME680\_CHIP\_ID\_ADDR@{BME680\_CHIP\_ID\_ADDR}}
+\index{BME680\_CHIP\_ID\_ADDR@{BME680\_CHIP\_ID\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_CHIP\_ID\_ADDR}{BME680\_CHIP\_ID\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0xd0)}
+
+Chip identifier 
+
+Definition at line 175 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga839d12e3afe0332b3383be0e258c472e}\label{group___b_m_e680_ga839d12e3afe0332b3383be0e258c472e}} 
+\index{SENSOR API@{SENSOR API}!BME680\_COEFF\_ADDR1@{BME680\_COEFF\_ADDR1}}
+\index{BME680\_COEFF\_ADDR1@{BME680\_COEFF\_ADDR1}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_COEFF\_ADDR1}{BME680\_COEFF\_ADDR1}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+O\+E\+F\+F\+\_\+\+A\+D\+D\+R1~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x89)}
+
+Coefficient\textquotesingle{}s address 
+
+Definition at line 171 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga72647a6cd6285a2e959ddebcb620811c}\label{group___b_m_e680_ga72647a6cd6285a2e959ddebcb620811c}} 
+\index{SENSOR API@{SENSOR API}!BME680\_COEFF\_ADDR1\_LEN@{BME680\_COEFF\_ADDR1\_LEN}}
+\index{BME680\_COEFF\_ADDR1\_LEN@{BME680\_COEFF\_ADDR1\_LEN}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_COEFF\_ADDR1\_LEN}{BME680\_COEFF\_ADDR1\_LEN}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+O\+E\+F\+F\+\_\+\+A\+D\+D\+R1\+\_\+\+L\+EN~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(25)}
+
+
+
+Definition at line 121 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gab6ab32c925171f0f64387c2ad3bbdcf0}\label{group___b_m_e680_gab6ab32c925171f0f64387c2ad3bbdcf0}} 
+\index{SENSOR API@{SENSOR API}!BME680\_COEFF\_ADDR2@{BME680\_COEFF\_ADDR2}}
+\index{BME680\_COEFF\_ADDR2@{BME680\_COEFF\_ADDR2}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_COEFF\_ADDR2}{BME680\_COEFF\_ADDR2}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+O\+E\+F\+F\+\_\+\+A\+D\+D\+R2~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0xe1)}
+
+
+
+Definition at line 172 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gafb1dd0a4ba022afb5b3f20bc4f20c22b}\label{group___b_m_e680_gafb1dd0a4ba022afb5b3f20bc4f20c22b}} 
+\index{SENSOR API@{SENSOR API}!BME680\_COEFF\_ADDR2\_LEN@{BME680\_COEFF\_ADDR2\_LEN}}
+\index{BME680\_COEFF\_ADDR2\_LEN@{BME680\_COEFF\_ADDR2\_LEN}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_COEFF\_ADDR2\_LEN}{BME680\_COEFF\_ADDR2\_LEN}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+O\+E\+F\+F\+\_\+\+A\+D\+D\+R2\+\_\+\+L\+EN~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(16)}
+
+
+
+Definition at line 122 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga4cf6e3574a83160f0adbfcf8cc5e3729}\label{group___b_m_e680_ga4cf6e3574a83160f0adbfcf8cc5e3729}} 
+\index{SENSOR API@{SENSOR API}!BME680\_COEFF\_SIZE@{BME680\_COEFF\_SIZE}}
+\index{BME680\_COEFF\_SIZE@{BME680\_COEFF\_SIZE}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_COEFF\_SIZE}{BME680\_COEFF\_SIZE}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+O\+E\+F\+F\+\_\+\+S\+I\+ZE~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(41)}
+
+B\+M\+E680 coefficients related defines 
+
+Definition at line 120 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga9aac51cc4b47a1f1c9f30c07026840ab}\label{group___b_m_e680_ga9aac51cc4b47a1f1c9f30c07026840ab}} 
+\index{SENSOR API@{SENSOR API}!BME680\_CONCAT\_BYTES@{BME680\_CONCAT\_BYTES}}
+\index{BME680\_CONCAT\_BYTES@{BME680\_CONCAT\_BYTES}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_CONCAT\_BYTES}{BME680\_CONCAT\_BYTES}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+B\+Y\+T\+ES(\begin{DoxyParamCaption}\item[{}]{msb,  }\item[{}]{lsb }\end{DoxyParamCaption})~(((uint16\+\_\+t)msb $<$$<$ 8) $\vert$ (uint16\+\_\+t)lsb)}
+
+Macro to combine two 8 bit data\textquotesingle{}s to form a 16 bit data 
+
+Definition at line 328 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga995aae4506cba06c735bb2ff37fbca49}\label{group___b_m_e680_ga995aae4506cba06c735bb2ff37fbca49}} 
+\index{SENSOR API@{SENSOR API}!BME680\_CONF\_HEAT\_CTRL\_ADDR@{BME680\_CONF\_HEAT\_CTRL\_ADDR}}
+\index{BME680\_CONF\_HEAT\_CTRL\_ADDR@{BME680\_CONF\_HEAT\_CTRL\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_CONF\_HEAT\_CTRL\_ADDR}{BME680\_CONF\_HEAT\_CTRL\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+O\+N\+F\+\_\+\+H\+E\+A\+T\+\_\+\+C\+T\+R\+L\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x70)}
+
+Sensor configuration registers 
+
+Definition at line 163 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga76aff0494ce12a91e5e4647d898a3303}\label{group___b_m_e680_ga76aff0494ce12a91e5e4647d898a3303}} 
+\index{SENSOR API@{SENSOR API}!BME680\_CONF\_ODR\_FILT\_ADDR@{BME680\_CONF\_ODR\_FILT\_ADDR}}
+\index{BME680\_CONF\_ODR\_FILT\_ADDR@{BME680\_CONF\_ODR\_FILT\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_CONF\_ODR\_FILT\_ADDR}{BME680\_CONF\_ODR\_FILT\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+O\+N\+F\+\_\+\+O\+D\+R\+\_\+\+F\+I\+L\+T\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x75)}
+
+
+
+Definition at line 168 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga7ece2b31e421c4eccc359f86b1d9d1e8}\label{group___b_m_e680_ga7ece2b31e421c4eccc359f86b1d9d1e8}} 
+\index{SENSOR API@{SENSOR API}!BME680\_CONF\_ODR\_RUN\_GAS\_NBC\_ADDR@{BME680\_CONF\_ODR\_RUN\_GAS\_NBC\_ADDR}}
+\index{BME680\_CONF\_ODR\_RUN\_GAS\_NBC\_ADDR@{BME680\_CONF\_ODR\_RUN\_GAS\_NBC\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_CONF\_ODR\_RUN\_GAS\_NBC\_ADDR}{BME680\_CONF\_ODR\_RUN\_GAS\_NBC\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+O\+N\+F\+\_\+\+O\+D\+R\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+N\+B\+C\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x71)}
+
+
+
+Definition at line 164 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gabaa63e660c9ff9564ca0fd77c7b3b6b9}\label{group___b_m_e680_gabaa63e660c9ff9564ca0fd77c7b3b6b9}} 
+\index{SENSOR API@{SENSOR API}!BME680\_CONF\_OS\_H\_ADDR@{BME680\_CONF\_OS\_H\_ADDR}}
+\index{BME680\_CONF\_OS\_H\_ADDR@{BME680\_CONF\_OS\_H\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_CONF\_OS\_H\_ADDR}{BME680\_CONF\_OS\_H\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+O\+N\+F\+\_\+\+O\+S\+\_\+\+H\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x72)}
+
+
+
+Definition at line 165 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga91607f3be92722408129f7dc4d9da94e}\label{group___b_m_e680_ga91607f3be92722408129f7dc4d9da94e}} 
+\index{SENSOR API@{SENSOR API}!BME680\_CONF\_T\_P\_MODE\_ADDR@{BME680\_CONF\_T\_P\_MODE\_ADDR}}
+\index{BME680\_CONF\_T\_P\_MODE\_ADDR@{BME680\_CONF\_T\_P\_MODE\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_CONF\_T\_P\_MODE\_ADDR}{BME680\_CONF\_T\_P\_MODE\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+C\+O\+N\+F\+\_\+\+T\+\_\+\+P\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x74)}
+
+
+
+Definition at line 167 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gad5a18c765061877212395397d58e2c20}\label{group___b_m_e680_gad5a18c765061877212395397d58e2c20}} 
+\index{SENSOR API@{SENSOR API}!BME680\_DISABLE\_GAS\_MEAS@{BME680\_DISABLE\_GAS\_MEAS}}
+\index{BME680\_DISABLE\_GAS\_MEAS@{BME680\_DISABLE\_GAS\_MEAS}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_DISABLE\_GAS\_MEAS}{BME680\_DISABLE\_GAS\_MEAS}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+G\+A\+S\+\_\+\+M\+E\+AS~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x00)}
+
+Gas measurement settings 
+
+Definition at line 185 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga78ae55eb1a642204835cdc9f5fd48dd7}\label{group___b_m_e680_ga78ae55eb1a642204835cdc9f5fd48dd7}} 
+\index{SENSOR API@{SENSOR API}!BME680\_DISABLE\_HEATER@{BME680\_DISABLE\_HEATER}}
+\index{BME680\_DISABLE\_HEATER@{BME680\_DISABLE\_HEATER}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_DISABLE\_HEATER}{BME680\_DISABLE\_HEATER}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+H\+E\+A\+T\+ER~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x08)}
+
+
+
+Definition at line 182 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gafa2490175882e55b410f4c383dd89b81}\label{group___b_m_e680_gafa2490175882e55b410f4c383dd89b81}} 
+\index{SENSOR API@{SENSOR API}!BME680\_E\_COM\_FAIL@{BME680\_E\_COM\_FAIL}}
+\index{BME680\_E\_COM\_FAIL@{BME680\_E\_COM\_FAIL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_E\_COM\_FAIL}{BME680\_E\_COM\_FAIL}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+E\+\_\+\+C\+O\+M\+\_\+\+F\+A\+IL~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(-\/2)}
+
+
+
+Definition at line 135 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaeaccfbff7ccd3150102f427e7c24bf36}\label{group___b_m_e680_gaeaccfbff7ccd3150102f427e7c24bf36}} 
+\index{SENSOR API@{SENSOR API}!BME680\_E\_DEV\_NOT\_FOUND@{BME680\_E\_DEV\_NOT\_FOUND}}
+\index{BME680\_E\_DEV\_NOT\_FOUND@{BME680\_E\_DEV\_NOT\_FOUND}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_E\_DEV\_NOT\_FOUND}{BME680\_E\_DEV\_NOT\_FOUND}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+E\+\_\+\+D\+E\+V\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(-\/3)}
+
+
+
+Definition at line 136 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga1e32ed028e1547f9b5b0d699252895e2}\label{group___b_m_e680_ga1e32ed028e1547f9b5b0d699252895e2}} 
+\index{SENSOR API@{SENSOR API}!BME680\_E\_INVALID\_LENGTH@{BME680\_E\_INVALID\_LENGTH}}
+\index{BME680\_E\_INVALID\_LENGTH@{BME680\_E\_INVALID\_LENGTH}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_E\_INVALID\_LENGTH}{BME680\_E\_INVALID\_LENGTH}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+N\+G\+TH~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(-\/4)}
+
+
+
+Definition at line 137 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gad11881e59c1b265c9c86abf970637819}\label{group___b_m_e680_gad11881e59c1b265c9c86abf970637819}} 
+\index{SENSOR API@{SENSOR API}!BME680\_E\_NULL\_PTR@{BME680\_E\_NULL\_PTR}}
+\index{BME680\_E\_NULL\_PTR@{BME680\_E\_NULL\_PTR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_E\_NULL\_PTR}{BME680\_E\_NULL\_PTR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+E\+\_\+\+N\+U\+L\+L\+\_\+\+P\+TR~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(-\/1)}
+
+
+
+Definition at line 134 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga1799bbf23959f4979849b196f898b25d}\label{group___b_m_e680_ga1799bbf23959f4979849b196f898b25d}} 
+\index{SENSOR API@{SENSOR API}!BME680\_ENABLE\_GAS\_MEAS@{BME680\_ENABLE\_GAS\_MEAS}}
+\index{BME680\_ENABLE\_GAS\_MEAS@{BME680\_ENABLE\_GAS\_MEAS}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_ENABLE\_GAS\_MEAS}{BME680\_ENABLE\_GAS\_MEAS}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+G\+A\+S\+\_\+\+M\+E\+AS~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x01)}
+
+
+
+Definition at line 186 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga9e973dfcc1a103110cc44077f3ed86c1}\label{group___b_m_e680_ga9e973dfcc1a103110cc44077f3ed86c1}} 
+\index{SENSOR API@{SENSOR API}!BME680\_ENABLE\_HEATER@{BME680\_ENABLE\_HEATER}}
+\index{BME680\_ENABLE\_HEATER@{BME680\_ENABLE\_HEATER}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_ENABLE\_HEATER}{BME680\_ENABLE\_HEATER}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+H\+E\+A\+T\+ER~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x00)}
+
+Heater control settings 
+
+Definition at line 181 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaa1126d8a0cab009b3812d4dba28beec3}\label{group___b_m_e680_gaa1126d8a0cab009b3812d4dba28beec3}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FIELD0\_ADDR@{BME680\_FIELD0\_ADDR}}
+\index{BME680\_FIELD0\_ADDR@{BME680\_FIELD0\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FIELD0\_ADDR}{BME680\_FIELD0\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+E\+L\+D0\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x1d)}
+
+Field settings 
+
+Definition at line 156 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaeb95305af562b362a91acb1e2abfecab}\label{group___b_m_e680_gaeb95305af562b362a91acb1e2abfecab}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FIELD\_ADDR\_OFFSET@{BME680\_FIELD\_ADDR\_OFFSET}}
+\index{BME680\_FIELD\_ADDR\_OFFSET@{BME680\_FIELD\_ADDR\_OFFSET}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FIELD\_ADDR\_OFFSET}{BME680\_FIELD\_ADDR\_OFFSET}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+E\+L\+D\+\_\+\+A\+D\+D\+R\+\_\+\+O\+F\+F\+S\+ET~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(17)}
+
+
+
+Definition at line 126 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga9036237895b2336d61d5dfbef708f331}\label{group___b_m_e680_ga9036237895b2336d61d5dfbef708f331}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FIELD\_DATA\_LENGTH@{BME680\_FIELD\_DATA\_LENGTH}}
+\index{BME680\_FIELD\_DATA\_LENGTH@{BME680\_FIELD\_DATA\_LENGTH}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FIELD\_DATA\_LENGTH}{BME680\_FIELD\_DATA\_LENGTH}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(3)}
+
+
+
+Definition at line 227 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga7cb775d981358b7e58eb8db0094bd1d7}\label{group___b_m_e680_ga7cb775d981358b7e58eb8db0094bd1d7}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FIELD\_LENGTH@{BME680\_FIELD\_LENGTH}}
+\index{BME680\_FIELD\_LENGTH@{BME680\_FIELD\_LENGTH}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FIELD\_LENGTH}{BME680\_FIELD\_LENGTH}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L\+E\+N\+G\+TH~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(15)}
+
+B\+M\+E680 field\+\_\+x related defines 
+
+Definition at line 125 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaad7a1978731310a9e2f58c40cbaeab06}\label{group___b_m_e680_gaad7a1978731310a9e2f58c40cbaeab06}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FILTER\_MSK@{BME680\_FILTER\_MSK}}
+\index{BME680\_FILTER\_MSK@{BME680\_FILTER\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FILTER\_MSK}{BME680\_FILTER\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0\+X1C)}
+
+
+
+Definition at line 248 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga32d4f0ab555a23a400d940d455cd10ed}\label{group___b_m_e680_ga32d4f0ab555a23a400d940d455cd10ed}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FILTER\_POS@{BME680\_FILTER\_POS}}
+\index{BME680\_FILTER\_POS@{BME680\_FILTER\_POS}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FILTER\_POS}{BME680\_FILTER\_POS}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+OS~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(2)}
+
+
+
+Definition at line 269 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga56ea9531725679aaad25b574ac3ab0ce}\label{group___b_m_e680_ga56ea9531725679aaad25b574ac3ab0ce}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FILTER\_SEL@{BME680\_FILTER\_SEL}}
+\index{BME680\_FILTER\_SEL@{BME680\_FILTER\_SEL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FILTER\_SEL}{BME680\_FILTER\_SEL}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+EL~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(16)}
+
+
+
+Definition at line 235 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga5edcb9fcb77440f52d2b2865a89b5475}\label{group___b_m_e680_ga5edcb9fcb77440f52d2b2865a89b5475}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FILTER\_SIZE\_0@{BME680\_FILTER\_SIZE\_0}}
+\index{BME680\_FILTER\_SIZE\_0@{BME680\_FILTER\_SIZE\_0}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FILTER\_SIZE\_0}{BME680\_FILTER\_SIZE\_0}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+0~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0)}
+
+I\+IR filter settings 
+
+Definition at line 197 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga577fdee6366e9677903cc5b80be9348d}\label{group___b_m_e680_ga577fdee6366e9677903cc5b80be9348d}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FILTER\_SIZE\_1@{BME680\_FILTER\_SIZE\_1}}
+\index{BME680\_FILTER\_SIZE\_1@{BME680\_FILTER\_SIZE\_1}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FILTER\_SIZE\_1}{BME680\_FILTER\_SIZE\_1}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+1~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)}
+
+
+
+Definition at line 198 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga5b5941f3e4e6344b6e2b3e28e6356074}\label{group___b_m_e680_ga5b5941f3e4e6344b6e2b3e28e6356074}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FILTER\_SIZE\_127@{BME680\_FILTER\_SIZE\_127}}
+\index{BME680\_FILTER\_SIZE\_127@{BME680\_FILTER\_SIZE\_127}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FILTER\_SIZE\_127}{BME680\_FILTER\_SIZE\_127}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+127~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(7)}
+
+
+
+Definition at line 204 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaeb92ac0b2821a64b8fd76f24a1e60485}\label{group___b_m_e680_gaeb92ac0b2821a64b8fd76f24a1e60485}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FILTER\_SIZE\_15@{BME680\_FILTER\_SIZE\_15}}
+\index{BME680\_FILTER\_SIZE\_15@{BME680\_FILTER\_SIZE\_15}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FILTER\_SIZE\_15}{BME680\_FILTER\_SIZE\_15}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+15~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)}
+
+
+
+Definition at line 201 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga8827e54c9ae9a50b5b86024369428fa4}\label{group___b_m_e680_ga8827e54c9ae9a50b5b86024369428fa4}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FILTER\_SIZE\_3@{BME680\_FILTER\_SIZE\_3}}
+\index{BME680\_FILTER\_SIZE\_3@{BME680\_FILTER\_SIZE\_3}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FILTER\_SIZE\_3}{BME680\_FILTER\_SIZE\_3}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+3~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(2)}
+
+
+
+Definition at line 199 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga2f3b3c9a71391d53ca2649ab6d823592}\label{group___b_m_e680_ga2f3b3c9a71391d53ca2649ab6d823592}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FILTER\_SIZE\_31@{BME680\_FILTER\_SIZE\_31}}
+\index{BME680\_FILTER\_SIZE\_31@{BME680\_FILTER\_SIZE\_31}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FILTER\_SIZE\_31}{BME680\_FILTER\_SIZE\_31}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+31~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(5)}
+
+
+
+Definition at line 202 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga6f71fe46cd0b97165d8dd4fce562dbf8}\label{group___b_m_e680_ga6f71fe46cd0b97165d8dd4fce562dbf8}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FILTER\_SIZE\_63@{BME680\_FILTER\_SIZE\_63}}
+\index{BME680\_FILTER\_SIZE\_63@{BME680\_FILTER\_SIZE\_63}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FILTER\_SIZE\_63}{BME680\_FILTER\_SIZE\_63}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+63~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(6)}
+
+
+
+Definition at line 203 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gab5678e5df2163711af64b392bff862b9}\label{group___b_m_e680_gab5678e5df2163711af64b392bff862b9}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FILTER\_SIZE\_7@{BME680\_FILTER\_SIZE\_7}}
+\index{BME680\_FILTER\_SIZE\_7@{BME680\_FILTER\_SIZE\_7}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FILTER\_SIZE\_7}{BME680\_FILTER\_SIZE\_7}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+7~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(3)}
+
+
+
+Definition at line 200 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga1ed7f0fb1ebaf8ec88b28d5f96c19df2}\label{group___b_m_e680_ga1ed7f0fb1ebaf8ec88b28d5f96c19df2}} 
+\index{SENSOR API@{SENSOR API}!BME680\_FORCED\_MODE@{BME680\_FORCED\_MODE}}
+\index{BME680\_FORCED\_MODE@{BME680\_FORCED\_MODE}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_FORCED\_MODE}{BME680\_FORCED\_MODE}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+F\+O\+R\+C\+E\+D\+\_\+\+M\+O\+DE~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)}
+
+
+
+Definition at line 208 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaf008a56a09f0095ee6ec6407de1d8ae4}\label{group___b_m_e680_gaf008a56a09f0095ee6ec6407de1d8ae4}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GAS\_INDEX\_MSK@{BME680\_GAS\_INDEX\_MSK}}
+\index{BME680\_GAS\_INDEX\_MSK@{BME680\_GAS\_INDEX\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GAS\_INDEX\_MSK}{BME680\_GAS\_INDEX\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x0f)}
+
+
+
+Definition at line 258 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gadff9a0ef09e48aa5fcecc9bcfb0bf6f2}\label{group___b_m_e680_gadff9a0ef09e48aa5fcecc9bcfb0bf6f2}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GAS\_MEAS\_MSK@{BME680\_GAS\_MEAS\_MSK}}
+\index{BME680\_GAS\_MEAS\_MSK@{BME680\_GAS\_MEAS\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GAS\_MEAS\_MSK}{BME680\_GAS\_MEAS\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+M\+E\+A\+S\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x30)}
+
+Mask definitions 
+
+Definition at line 246 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaa72739940e9ab88370b0ae23ef687f15}\label{group___b_m_e680_gaa72739940e9ab88370b0ae23ef687f15}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GAS\_MEAS\_POS@{BME680\_GAS\_MEAS\_POS}}
+\index{BME680\_GAS\_MEAS\_POS@{BME680\_GAS\_MEAS\_POS}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GAS\_MEAS\_POS}{BME680\_GAS\_MEAS\_POS}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+M\+E\+A\+S\+\_\+\+P\+OS~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)}
+
+Bit position definitions for sensor settings 
+
+Definition at line 268 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga6ba77fc5b103421f67a9e328720af15e}\label{group___b_m_e680_ga6ba77fc5b103421f67a9e328720af15e}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GAS\_MEAS\_SEL@{BME680\_GAS\_MEAS\_SEL}}
+\index{BME680\_GAS\_MEAS\_SEL@{BME680\_GAS\_MEAS\_SEL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GAS\_MEAS\_SEL}{BME680\_GAS\_MEAS\_SEL}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+M\+E\+A\+S\+\_\+\+S\+EL~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(8)}
+
+
+
+Definition at line 234 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga1dac00f71350a4298f1f6ec663e20d2d}\label{group___b_m_e680_ga1dac00f71350a4298f1f6ec663e20d2d}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GAS\_RANGE\_MSK@{BME680\_GAS\_RANGE\_MSK}}
+\index{BME680\_GAS\_RANGE\_MSK@{BME680\_GAS\_RANGE\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GAS\_RANGE\_MSK}{BME680\_GAS\_RANGE\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+R\+A\+N\+G\+E\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x0f)}
+
+
+
+Definition at line 259 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga764977e7eb831e12841b70587ff42e24}\label{group___b_m_e680_ga764977e7eb831e12841b70587ff42e24}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GAS\_REG\_BUF\_LENGTH@{BME680\_GAS\_REG\_BUF\_LENGTH}}
+\index{BME680\_GAS\_REG\_BUF\_LENGTH@{BME680\_GAS\_REG\_BUF\_LENGTH}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GAS\_REG\_BUF\_LENGTH}{BME680\_GAS\_REG\_BUF\_LENGTH}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+R\+E\+G\+\_\+\+B\+U\+F\+\_\+\+L\+E\+N\+G\+TH~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(20)}
+
+
+
+Definition at line 228 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaacc8080cd16dacf5d5af16edbc69a98c}\label{group___b_m_e680_gaacc8080cd16dacf5d5af16edbc69a98c}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GAS\_SENSOR\_SEL@{BME680\_GAS\_SENSOR\_SEL}}
+\index{BME680\_GAS\_SENSOR\_SEL@{BME680\_GAS\_SENSOR\_SEL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GAS\_SENSOR\_SEL}{BME680\_GAS\_SENSOR\_SEL}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+S\+EL~(\mbox{\hyperlink{group___b_m_e680_ga6ba77fc5b103421f67a9e328720af15e}{B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+M\+E\+A\+S\+\_\+\+S\+EL}} $\vert$ \mbox{\hyperlink{group___b_m_e680_gac15ff8b6a3383b66cc2dee7cc780cb52}{B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+S\+EL}} $\vert$ \mbox{\hyperlink{group___b_m_e680_gabd5465ac39b9882e80dcf8c75ab4d64a}{B\+M\+E680\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+S\+EL}})}
+
+
+
+Definition at line 239 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaf336411b8277b6514284d35e379e6bfa}\label{group___b_m_e680_gaf336411b8277b6514284d35e379e6bfa}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GAS\_WAIT0\_ADDR@{BME680\_GAS\_WAIT0\_ADDR}}
+\index{BME680\_GAS\_WAIT0\_ADDR@{BME680\_GAS\_WAIT0\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GAS\_WAIT0\_ADDR}{BME680\_GAS\_WAIT0\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+W\+A\+I\+T0\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x64)}
+
+
+
+Definition at line 160 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga18969c0772c82f03479f5be7a0c11cd0}\label{group___b_m_e680_ga18969c0772c82f03479f5be7a0c11cd0}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GASM\_VALID\_MSK@{BME680\_GASM\_VALID\_MSK}}
+\index{BME680\_GASM\_VALID\_MSK@{BME680\_GASM\_VALID\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GASM\_VALID\_MSK}{BME680\_GASM\_VALID\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+A\+S\+M\+\_\+\+V\+A\+L\+I\+D\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x20)}
+
+
+
+Definition at line 260 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga08f4b60cad6cc750b3fe2a0f4377c192}\label{group___b_m_e680_ga08f4b60cad6cc750b3fe2a0f4377c192}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GET\_BITS@{BME680\_GET\_BITS}}
+\index{BME680\_GET\_BITS@{BME680\_GET\_BITS}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GET\_BITS}{BME680\_GET\_BITS}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+E\+T\+\_\+\+B\+I\+TS(\begin{DoxyParamCaption}\item[{}]{reg\+\_\+data,  }\item[{}]{bitname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    ((reg\_data \& (bitname\#\#\_MSK)) >> \(\backslash\)}
+\DoxyCodeLine{    (bitname\#\#\_POS))}
+
+\end{DoxyCode}
+
+
+Definition at line 334 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaf514daef101aff8022022eb6c9200b08}\label{group___b_m_e680_gaf514daef101aff8022022eb6c9200b08}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GET\_BITS\_POS\_0@{BME680\_GET\_BITS\_POS\_0}}
+\index{BME680\_GET\_BITS\_POS\_0@{BME680\_GET\_BITS\_POS\_0}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GET\_BITS\_POS\_0}{BME680\_GET\_BITS\_POS\_0}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+S\+\_\+\+P\+O\+S\+\_\+0(\begin{DoxyParamCaption}\item[{}]{reg\+\_\+data,  }\item[{}]{bitname }\end{DoxyParamCaption})~(reg\+\_\+data \& (bitname\#\#\+\_\+\+M\+SK))}
+
+
+
+Definition at line 341 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga78a6ccd6bde3995006c26b0b54320cbd}\label{group___b_m_e680_ga78a6ccd6bde3995006c26b0b54320cbd}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GH1\_REG@{BME680\_GH1\_REG}}
+\index{BME680\_GH1\_REG@{BME680\_GH1\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GH1\_REG}{BME680\_GH1\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+H1\+\_\+\+R\+EG~(37)}
+
+
+
+Definition at line 307 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaff954cd6b5f15510c07a15db41f651c6}\label{group___b_m_e680_gaff954cd6b5f15510c07a15db41f651c6}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GH2\_LSB\_REG@{BME680\_GH2\_LSB\_REG}}
+\index{BME680\_GH2\_LSB\_REG@{BME680\_GH2\_LSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GH2\_LSB\_REG}{BME680\_GH2\_LSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+H2\+\_\+\+L\+S\+B\+\_\+\+R\+EG~(35)}
+
+
+
+Definition at line 305 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga880b1b5a90f3849fd159fea0fc33e825}\label{group___b_m_e680_ga880b1b5a90f3849fd159fea0fc33e825}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GH2\_MSB\_REG@{BME680\_GH2\_MSB\_REG}}
+\index{BME680\_GH2\_MSB\_REG@{BME680\_GH2\_MSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GH2\_MSB\_REG}{BME680\_GH2\_MSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+H2\+\_\+\+M\+S\+B\+\_\+\+R\+EG~(36)}
+
+
+
+Definition at line 306 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga7181bfa862c457cc5d207be66cd04dba}\label{group___b_m_e680_ga7181bfa862c457cc5d207be66cd04dba}} 
+\index{SENSOR API@{SENSOR API}!BME680\_GH3\_REG@{BME680\_GH3\_REG}}
+\index{BME680\_GH3\_REG@{BME680\_GH3\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_GH3\_REG}{BME680\_GH3\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+G\+H3\+\_\+\+R\+EG~(38)}
+
+
+
+Definition at line 308 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaefd68b5b70bcdcfa4b2685d84ee5e0c9}\label{group___b_m_e680_gaefd68b5b70bcdcfa4b2685d84ee5e0c9}} 
+\index{SENSOR API@{SENSOR API}!BME680\_H1\_LSB\_REG@{BME680\_H1\_LSB\_REG}}
+\index{BME680\_H1\_LSB\_REG@{BME680\_H1\_LSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_H1\_LSB\_REG}{BME680\_H1\_LSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H1\+\_\+\+L\+S\+B\+\_\+\+R\+EG~(26)}
+
+
+
+Definition at line 296 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga6566f642c3607f1a7d9b2c03b36e9467}\label{group___b_m_e680_ga6566f642c3607f1a7d9b2c03b36e9467}} 
+\index{SENSOR API@{SENSOR API}!BME680\_H1\_MSB\_REG@{BME680\_H1\_MSB\_REG}}
+\index{BME680\_H1\_MSB\_REG@{BME680\_H1\_MSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_H1\_MSB\_REG}{BME680\_H1\_MSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H1\+\_\+\+M\+S\+B\+\_\+\+R\+EG~(27)}
+
+
+
+Definition at line 297 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gae9104a7a0fd5ee4ca48b923d9cf456ea}\label{group___b_m_e680_gae9104a7a0fd5ee4ca48b923d9cf456ea}} 
+\index{SENSOR API@{SENSOR API}!BME680\_H2\_LSB\_REG@{BME680\_H2\_LSB\_REG}}
+\index{BME680\_H2\_LSB\_REG@{BME680\_H2\_LSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_H2\_LSB\_REG}{BME680\_H2\_LSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H2\+\_\+\+L\+S\+B\+\_\+\+R\+EG~(26)}
+
+
+
+Definition at line 295 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga43a322b565daddb4e92145b88de49413}\label{group___b_m_e680_ga43a322b565daddb4e92145b88de49413}} 
+\index{SENSOR API@{SENSOR API}!BME680\_H2\_MSB\_REG@{BME680\_H2\_MSB\_REG}}
+\index{BME680\_H2\_MSB\_REG@{BME680\_H2\_MSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_H2\_MSB\_REG}{BME680\_H2\_MSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H2\+\_\+\+M\+S\+B\+\_\+\+R\+EG~(25)}
+
+
+
+Definition at line 294 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gab3f37863a4c1400f28048753406135c3}\label{group___b_m_e680_gab3f37863a4c1400f28048753406135c3}} 
+\index{SENSOR API@{SENSOR API}!BME680\_H3\_REG@{BME680\_H3\_REG}}
+\index{BME680\_H3\_REG@{BME680\_H3\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_H3\_REG}{BME680\_H3\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H3\+\_\+\+R\+EG~(28)}
+
+
+
+Definition at line 298 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gacaca0b68c4422223d4a360d7d7a2febd}\label{group___b_m_e680_gacaca0b68c4422223d4a360d7d7a2febd}} 
+\index{SENSOR API@{SENSOR API}!BME680\_H4\_REG@{BME680\_H4\_REG}}
+\index{BME680\_H4\_REG@{BME680\_H4\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_H4\_REG}{BME680\_H4\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H4\+\_\+\+R\+EG~(29)}
+
+
+
+Definition at line 299 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gadc37e78fdc42f7de7ae972bdc2cd316c}\label{group___b_m_e680_gadc37e78fdc42f7de7ae972bdc2cd316c}} 
+\index{SENSOR API@{SENSOR API}!BME680\_H5\_REG@{BME680\_H5\_REG}}
+\index{BME680\_H5\_REG@{BME680\_H5\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_H5\_REG}{BME680\_H5\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H5\+\_\+\+R\+EG~(30)}
+
+
+
+Definition at line 300 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga12349ac4ac73dcd6a85ae50cdb864be9}\label{group___b_m_e680_ga12349ac4ac73dcd6a85ae50cdb864be9}} 
+\index{SENSOR API@{SENSOR API}!BME680\_H6\_REG@{BME680\_H6\_REG}}
+\index{BME680\_H6\_REG@{BME680\_H6\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_H6\_REG}{BME680\_H6\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H6\+\_\+\+R\+EG~(31)}
+
+
+
+Definition at line 301 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga66ec7d773394e5de70e6415b8b0afa64}\label{group___b_m_e680_ga66ec7d773394e5de70e6415b8b0afa64}} 
+\index{SENSOR API@{SENSOR API}!BME680\_H7\_REG@{BME680\_H7\_REG}}
+\index{BME680\_H7\_REG@{BME680\_H7\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_H7\_REG}{BME680\_H7\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H7\+\_\+\+R\+EG~(32)}
+
+
+
+Definition at line 302 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga3db4f67603ca3b538ab71a49d3b08c34}\label{group___b_m_e680_ga3db4f67603ca3b538ab71a49d3b08c34}} 
+\index{SENSOR API@{SENSOR API}!BME680\_HCNTRL\_SEL@{BME680\_HCNTRL\_SEL}}
+\index{BME680\_HCNTRL\_SEL@{BME680\_HCNTRL\_SEL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_HCNTRL\_SEL}{BME680\_HCNTRL\_SEL}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H\+C\+N\+T\+R\+L\+\_\+\+S\+EL~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(32)}
+
+
+
+Definition at line 236 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga404d7c1425e779bce5a8ab6454a21d59}\label{group___b_m_e680_ga404d7c1425e779bce5a8ab6454a21d59}} 
+\index{SENSOR API@{SENSOR API}!BME680\_HCTRL\_MSK@{BME680\_HCTRL\_MSK}}
+\index{BME680\_HCTRL\_MSK@{BME680\_HCTRL\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_HCTRL\_MSK}{BME680\_HCTRL\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H\+C\+T\+R\+L\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x08)}
+
+
+
+Definition at line 252 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaf08b72120096ba6069878faafd721832}\label{group___b_m_e680_gaf08b72120096ba6069878faafd721832}} 
+\index{SENSOR API@{SENSOR API}!BME680\_HEAT\_STAB\_MSK@{BME680\_HEAT\_STAB\_MSK}}
+\index{BME680\_HEAT\_STAB\_MSK@{BME680\_HEAT\_STAB\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_HEAT\_STAB\_MSK}{BME680\_HEAT\_STAB\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H\+E\+A\+T\+\_\+\+S\+T\+A\+B\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x10)}
+
+
+
+Definition at line 261 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaa9320cbf90a9bb81b912da4bf036e73b}\label{group___b_m_e680_gaa9320cbf90a9bb81b912da4bf036e73b}} 
+\index{SENSOR API@{SENSOR API}!BME680\_HUM\_REG\_SHIFT\_VAL@{BME680\_HUM\_REG\_SHIFT\_VAL}}
+\index{BME680\_HUM\_REG\_SHIFT\_VAL@{BME680\_HUM\_REG\_SHIFT\_VAL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_HUM\_REG\_SHIFT\_VAL}{BME680\_HUM\_REG\_SHIFT\_VAL}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+H\+U\+M\+\_\+\+R\+E\+G\+\_\+\+S\+H\+I\+F\+T\+\_\+\+V\+AL~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)}
+
+Ambient humidity shift value for compensation 
+
+Definition at line 218 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaf27a16304a83f75bb23883d754610df3}\label{group___b_m_e680_gaf27a16304a83f75bb23883d754610df3}} 
+\index{SENSOR API@{SENSOR API}!BME680\_I2C\_ADDR\_PRIMARY@{BME680\_I2C\_ADDR\_PRIMARY}}
+\index{BME680\_I2C\_ADDR\_PRIMARY@{BME680\_I2C\_ADDR\_PRIMARY}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_I2C\_ADDR\_PRIMARY}{BME680\_I2C\_ADDR\_PRIMARY}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+I2\+C\+\_\+\+A\+D\+D\+R\+\_\+\+P\+R\+I\+M\+A\+RY~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x76)}
+
+B\+M\+E680 I2C addresses 
+
+Definition at line 113 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga11dad5edfb9672d9355cea8cd69a9fc8}\label{group___b_m_e680_ga11dad5edfb9672d9355cea8cd69a9fc8}} 
+\index{SENSOR API@{SENSOR API}!BME680\_I2C\_ADDR\_SECONDARY@{BME680\_I2C\_ADDR\_SECONDARY}}
+\index{BME680\_I2C\_ADDR\_SECONDARY@{BME680\_I2C\_ADDR\_SECONDARY}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_I2C\_ADDR\_SECONDARY}{BME680\_I2C\_ADDR\_SECONDARY}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+I2\+C\+\_\+\+A\+D\+D\+R\+\_\+\+S\+E\+C\+O\+N\+D\+A\+RY~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x77)}
+
+
+
+Definition at line 114 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga7a16c7f1ccf8000a8be2da2f2010eaa4}\label{group___b_m_e680_ga7a16c7f1ccf8000a8be2da2f2010eaa4}} 
+\index{SENSOR API@{SENSOR API}!BME680\_I\_MAX\_CORRECTION@{BME680\_I\_MAX\_CORRECTION}}
+\index{BME680\_I\_MAX\_CORRECTION@{BME680\_I\_MAX\_CORRECTION}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_I\_MAX\_CORRECTION}{BME680\_I\_MAX\_CORRECTION}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+I\+\_\+\+M\+A\+X\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(2)}
+
+
+
+Definition at line 145 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gae68bbfadb05ed1dd48eec5477abdd094}\label{group___b_m_e680_gae68bbfadb05ed1dd48eec5477abdd094}} 
+\index{SENSOR API@{SENSOR API}!BME680\_I\_MIN\_CORRECTION@{BME680\_I\_MIN\_CORRECTION}}
+\index{BME680\_I\_MIN\_CORRECTION@{BME680\_I\_MIN\_CORRECTION}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_I\_MIN\_CORRECTION}{BME680\_I\_MIN\_CORRECTION}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+I\+\_\+\+M\+I\+N\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)}
+
+
+
+Definition at line 144 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga0508d0ce67c130119405030ddbe54080}\label{group___b_m_e680_ga0508d0ce67c130119405030ddbe54080}} 
+\index{SENSOR API@{SENSOR API}!BME680\_MAX\_OVERFLOW\_VAL@{BME680\_MAX\_OVERFLOW\_VAL}}
+\index{BME680\_MAX\_OVERFLOW\_VAL@{BME680\_MAX\_OVERFLOW\_VAL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_MAX\_OVERFLOW\_VAL}{BME680\_MAX\_OVERFLOW\_VAL}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+M\+A\+X\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W\+\_\+\+V\+AL~\mbox{\hyperlink{group___b_m_e680_gad78650fb7726f4e99205406569ef403d}{I\+N\+T32\+\_\+C}}(0x40000000)}
+
+B\+M\+E680 pressure calculation macros
+
+This max value is used to provide precedence to multiplication or division in pressure compensation equation to achieve least loss of precision and avoiding overflows. i.\+e Comparing value, B\+M\+E680\+\_\+\+M\+A\+X\+\_\+\+O\+V\+E\+R\+F\+L\+O\+W\+\_\+\+V\+AL = \mbox{\hyperlink{group___b_m_e680_gad78650fb7726f4e99205406569ef403d}{I\+N\+T32\+\_\+\+C(1 $<$$<$ 30)}} 
+
+Definition at line 325 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga2af2d059c5cdc5925dc050a5d67f2d0b}\label{group___b_m_e680_ga2af2d059c5cdc5925dc050a5d67f2d0b}} 
+\index{SENSOR API@{SENSOR API}!BME680\_MEM\_PAGE0@{BME680\_MEM\_PAGE0}}
+\index{BME680\_MEM\_PAGE0@{BME680\_MEM\_PAGE0}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_MEM\_PAGE0}{BME680\_MEM\_PAGE0}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+M\+E\+M\+\_\+\+P\+A\+G\+E0~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x10)}
+
+S\+PI memory page settings 
+
+Definition at line 214 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga7f7a072d2cf401f5167a33acde2fd905}\label{group___b_m_e680_ga7f7a072d2cf401f5167a33acde2fd905}} 
+\index{SENSOR API@{SENSOR API}!BME680\_MEM\_PAGE1@{BME680\_MEM\_PAGE1}}
+\index{BME680\_MEM\_PAGE1@{BME680\_MEM\_PAGE1}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_MEM\_PAGE1}{BME680\_MEM\_PAGE1}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+M\+E\+M\+\_\+\+P\+A\+G\+E1~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x00)}
+
+
+
+Definition at line 215 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaaeb2b1ccd1f00d9c2444a3b30dbbd67d}\label{group___b_m_e680_gaaeb2b1ccd1f00d9c2444a3b30dbbd67d}} 
+\index{SENSOR API@{SENSOR API}!BME680\_MEM\_PAGE\_ADDR@{BME680\_MEM\_PAGE\_ADDR}}
+\index{BME680\_MEM\_PAGE\_ADDR@{BME680\_MEM\_PAGE\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_MEM\_PAGE\_ADDR}{BME680\_MEM\_PAGE\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+M\+E\+M\+\_\+\+P\+A\+G\+E\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0xf3)}
+
+
+
+Definition at line 166 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga7858e5d3b4d39482fc04848a02bcd4cb}\label{group___b_m_e680_ga7858e5d3b4d39482fc04848a02bcd4cb}} 
+\index{SENSOR API@{SENSOR API}!BME680\_MEM\_PAGE\_MSK@{BME680\_MEM\_PAGE\_MSK}}
+\index{BME680\_MEM\_PAGE\_MSK@{BME680\_MEM\_PAGE\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_MEM\_PAGE\_MSK}{BME680\_MEM\_PAGE\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+M\+E\+M\+\_\+\+P\+A\+G\+E\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x10)}
+
+
+
+Definition at line 262 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga2f5287272867bdab94595b90e303488e}\label{group___b_m_e680_ga2f5287272867bdab94595b90e303488e}} 
+\index{SENSOR API@{SENSOR API}!BME680\_MODE\_MSK@{BME680\_MODE\_MSK}}
+\index{BME680\_MODE\_MSK@{BME680\_MODE\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_MODE\_MSK}{BME680\_MODE\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+M\+O\+D\+E\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x03)}
+
+
+
+Definition at line 254 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gad0000459f5d4f89d82d8294199ff74ff}\label{group___b_m_e680_gad0000459f5d4f89d82d8294199ff74ff}} 
+\index{SENSOR API@{SENSOR API}!BME680\_NBCONV\_MAX@{BME680\_NBCONV\_MAX}}
+\index{BME680\_NBCONV\_MAX@{BME680\_NBCONV\_MAX}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_NBCONV\_MAX}{BME680\_NBCONV\_MAX}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+M\+AX~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(10)}
+
+
+
+Definition at line 243 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga8b0bdbbedd050d35a8bc27e23c9c96c4}\label{group___b_m_e680_ga8b0bdbbedd050d35a8bc27e23c9c96c4}} 
+\index{SENSOR API@{SENSOR API}!BME680\_NBCONV\_MIN@{BME680\_NBCONV\_MIN}}
+\index{BME680\_NBCONV\_MIN@{BME680\_NBCONV\_MIN}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_NBCONV\_MIN}{BME680\_NBCONV\_MIN}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+M\+IN~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0)}
+
+Number of conversion settings 
+
+Definition at line 242 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga87e774256c06c12924b3a6431a41ab83}\label{group___b_m_e680_ga87e774256c06c12924b3a6431a41ab83}} 
+\index{SENSOR API@{SENSOR API}!BME680\_NBCONV\_MSK@{BME680\_NBCONV\_MSK}}
+\index{BME680\_NBCONV\_MSK@{BME680\_NBCONV\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_NBCONV\_MSK}{BME680\_NBCONV\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0\+X0F)}
+
+
+
+Definition at line 247 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gabd5465ac39b9882e80dcf8c75ab4d64a}\label{group___b_m_e680_gabd5465ac39b9882e80dcf8c75ab4d64a}} 
+\index{SENSOR API@{SENSOR API}!BME680\_NBCONV\_SEL@{BME680\_NBCONV\_SEL}}
+\index{BME680\_NBCONV\_SEL@{BME680\_NBCONV\_SEL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_NBCONV\_SEL}{BME680\_NBCONV\_SEL}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+S\+EL~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(128)}
+
+
+
+Definition at line 238 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gae5154502bd57ab10d3f51ebeb9c1055d}\label{group___b_m_e680_gae5154502bd57ab10d3f51ebeb9c1055d}} 
+\index{SENSOR API@{SENSOR API}!BME680\_NEW\_DATA\_MSK@{BME680\_NEW\_DATA\_MSK}}
+\index{BME680\_NEW\_DATA\_MSK@{BME680\_NEW\_DATA\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_NEW\_DATA\_MSK}{BME680\_NEW\_DATA\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+N\+E\+W\+\_\+\+D\+A\+T\+A\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x80)}
+
+
+
+Definition at line 257 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga2e82e5c447a9dbbeebf95b1ba189effb}\label{group___b_m_e680_ga2e82e5c447a9dbbeebf95b1ba189effb}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OK@{BME680\_OK}}
+\index{BME680\_OK@{BME680\_OK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OK}{BME680\_OK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+OK~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(0)}
+
+Error code definitions 
+
+Definition at line 132 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gabba27bfd061689ca82ee9bac3a11f31e}\label{group___b_m_e680_gabba27bfd061689ca82ee9bac3a11f31e}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OS\_16X@{BME680\_OS\_16X}}
+\index{BME680\_OS\_16X@{BME680\_OS\_16X}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OS\_16X}{BME680\_OS\_16X}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+\_\+16X~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(5)}
+
+
+
+Definition at line 194 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga90f5a043c6dcb6382136d674bdddaf9f}\label{group___b_m_e680_ga90f5a043c6dcb6382136d674bdddaf9f}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OS\_1X@{BME680\_OS\_1X}}
+\index{BME680\_OS\_1X@{BME680\_OS\_1X}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OS\_1X}{BME680\_OS\_1X}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+\_\+1X~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)}
+
+
+
+Definition at line 190 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga52e63cfbad8239eefa594fc823306dfb}\label{group___b_m_e680_ga52e63cfbad8239eefa594fc823306dfb}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OS\_2X@{BME680\_OS\_2X}}
+\index{BME680\_OS\_2X@{BME680\_OS\_2X}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OS\_2X}{BME680\_OS\_2X}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+\_\+2X~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(2)}
+
+
+
+Definition at line 191 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga4c3caae2c0b27b0abf1dec7cddcd5c8d}\label{group___b_m_e680_ga4c3caae2c0b27b0abf1dec7cddcd5c8d}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OS\_4X@{BME680\_OS\_4X}}
+\index{BME680\_OS\_4X@{BME680\_OS\_4X}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OS\_4X}{BME680\_OS\_4X}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+\_\+4X~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(3)}
+
+
+
+Definition at line 192 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gae262407360d48abca904e671cc824466}\label{group___b_m_e680_gae262407360d48abca904e671cc824466}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OS\_8X@{BME680\_OS\_8X}}
+\index{BME680\_OS\_8X@{BME680\_OS\_8X}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OS\_8X}{BME680\_OS\_8X}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+\_\+8X~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)}
+
+
+
+Definition at line 193 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga5ba113b3902da4c9baf45da5f32958d0}\label{group___b_m_e680_ga5ba113b3902da4c9baf45da5f32958d0}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OS\_NONE@{BME680\_OS\_NONE}}
+\index{BME680\_OS\_NONE@{BME680\_OS\_NONE}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OS\_NONE}{BME680\_OS\_NONE}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+\_\+\+N\+O\+NE~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0)}
+
+Over-\/sampling settings 
+
+Definition at line 189 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gacaaee0a0a8aa84b9b5c763f856a3c7a4}\label{group___b_m_e680_gacaaee0a0a8aa84b9b5c763f856a3c7a4}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OSH\_MSK@{BME680\_OSH\_MSK}}
+\index{BME680\_OSH\_MSK@{BME680\_OSH\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OSH\_MSK}{BME680\_OSH\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+H\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0\+X07)}
+
+
+
+Definition at line 251 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga9671bc43c2a7a81674cf5c9376a48bee}\label{group___b_m_e680_ga9671bc43c2a7a81674cf5c9376a48bee}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OSH\_SEL@{BME680\_OSH\_SEL}}
+\index{BME680\_OSH\_SEL@{BME680\_OSH\_SEL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OSH\_SEL}{BME680\_OSH\_SEL}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+H\+\_\+\+S\+EL~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(4)}
+
+
+
+Definition at line 233 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga488e303db5a4f1958e094ca59365f6c9}\label{group___b_m_e680_ga488e303db5a4f1958e094ca59365f6c9}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OSP\_MSK@{BME680\_OSP\_MSK}}
+\index{BME680\_OSP\_MSK@{BME680\_OSP\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OSP\_MSK}{BME680\_OSP\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+P\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0\+X1C)}
+
+
+
+Definition at line 250 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaa254a8b4e057080bb70ffdc2cf9e686a}\label{group___b_m_e680_gaa254a8b4e057080bb70ffdc2cf9e686a}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OSP\_POS@{BME680\_OSP\_POS}}
+\index{BME680\_OSP\_POS@{BME680\_OSP\_POS}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OSP\_POS}{BME680\_OSP\_POS}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+P\+\_\+\+P\+OS~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(2)}
+
+
+
+Definition at line 271 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gac414417f6a2c0d9b7373c24c41edd804}\label{group___b_m_e680_gac414417f6a2c0d9b7373c24c41edd804}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OSP\_SEL@{BME680\_OSP\_SEL}}
+\index{BME680\_OSP\_SEL@{BME680\_OSP\_SEL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OSP\_SEL}{BME680\_OSP\_SEL}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+P\+\_\+\+S\+EL~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(2)}
+
+
+
+Definition at line 232 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gac61390eab22977a4a4fa93cf6874e8aa}\label{group___b_m_e680_gac61390eab22977a4a4fa93cf6874e8aa}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OST\_MSK@{BME680\_OST\_MSK}}
+\index{BME680\_OST\_MSK@{BME680\_OST\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OST\_MSK}{BME680\_OST\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+T\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0\+X\+E0)}
+
+
+
+Definition at line 249 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga41f951fff6b3579dd6cfe30fbef98178}\label{group___b_m_e680_ga41f951fff6b3579dd6cfe30fbef98178}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OST\_POS@{BME680\_OST\_POS}}
+\index{BME680\_OST\_POS@{BME680\_OST\_POS}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OST\_POS}{BME680\_OST\_POS}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+T\+\_\+\+P\+OS~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(5)}
+
+
+
+Definition at line 270 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga7ecfc9ebc2dc3fae358c38215821db6d}\label{group___b_m_e680_ga7ecfc9ebc2dc3fae358c38215821db6d}} 
+\index{SENSOR API@{SENSOR API}!BME680\_OST\_SEL@{BME680\_OST\_SEL}}
+\index{BME680\_OST\_SEL@{BME680\_OST\_SEL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_OST\_SEL}{BME680\_OST\_SEL}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+O\+S\+T\+\_\+\+S\+EL~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(1)}
+
+Settings selector 
+
+Definition at line 231 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gad5344209efe095c80b8dbd36b76ce16f}\label{group___b_m_e680_gad5344209efe095c80b8dbd36b76ce16f}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P10\_REG@{BME680\_P10\_REG}}
+\index{BME680\_P10\_REG@{BME680\_P10\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P10\_REG}{BME680\_P10\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P10\+\_\+\+R\+EG~(23)}
+
+
+
+Definition at line 293 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gac2a68fdb70bafe67bd14d4f29d52a095}\label{group___b_m_e680_gac2a68fdb70bafe67bd14d4f29d52a095}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P1\_LSB\_REG@{BME680\_P1\_LSB\_REG}}
+\index{BME680\_P1\_LSB\_REG@{BME680\_P1\_LSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P1\_LSB\_REG}{BME680\_P1\_LSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P1\+\_\+\+L\+S\+B\+\_\+\+R\+EG~(5)}
+
+
+
+Definition at line 278 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaf37fb5c2354427586d25e1a61f0e4f9c}\label{group___b_m_e680_gaf37fb5c2354427586d25e1a61f0e4f9c}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P1\_MSB\_REG@{BME680\_P1\_MSB\_REG}}
+\index{BME680\_P1\_MSB\_REG@{BME680\_P1\_MSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P1\_MSB\_REG}{BME680\_P1\_MSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P1\+\_\+\+M\+S\+B\+\_\+\+R\+EG~(6)}
+
+
+
+Definition at line 279 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga2d6ceda8a2ac80c772d6bc548897065b}\label{group___b_m_e680_ga2d6ceda8a2ac80c772d6bc548897065b}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P2\_LSB\_REG@{BME680\_P2\_LSB\_REG}}
+\index{BME680\_P2\_LSB\_REG@{BME680\_P2\_LSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P2\_LSB\_REG}{BME680\_P2\_LSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P2\+\_\+\+L\+S\+B\+\_\+\+R\+EG~(7)}
+
+
+
+Definition at line 280 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga30391307c0564eaf8d2c872165137d93}\label{group___b_m_e680_ga30391307c0564eaf8d2c872165137d93}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P2\_MSB\_REG@{BME680\_P2\_MSB\_REG}}
+\index{BME680\_P2\_MSB\_REG@{BME680\_P2\_MSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P2\_MSB\_REG}{BME680\_P2\_MSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P2\+\_\+\+M\+S\+B\+\_\+\+R\+EG~(8)}
+
+
+
+Definition at line 281 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga1e3d7d668ed3764eeb728bc91e5afdc7}\label{group___b_m_e680_ga1e3d7d668ed3764eeb728bc91e5afdc7}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P3\_REG@{BME680\_P3\_REG}}
+\index{BME680\_P3\_REG@{BME680\_P3\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P3\_REG}{BME680\_P3\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P3\+\_\+\+R\+EG~(9)}
+
+
+
+Definition at line 282 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gacee13b799f1525c7db130281b8adc0d4}\label{group___b_m_e680_gacee13b799f1525c7db130281b8adc0d4}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P4\_LSB\_REG@{BME680\_P4\_LSB\_REG}}
+\index{BME680\_P4\_LSB\_REG@{BME680\_P4\_LSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P4\_LSB\_REG}{BME680\_P4\_LSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P4\+\_\+\+L\+S\+B\+\_\+\+R\+EG~(11)}
+
+
+
+Definition at line 283 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gad22d0cc1c0d8c652e07af82b4255f214}\label{group___b_m_e680_gad22d0cc1c0d8c652e07af82b4255f214}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P4\_MSB\_REG@{BME680\_P4\_MSB\_REG}}
+\index{BME680\_P4\_MSB\_REG@{BME680\_P4\_MSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P4\_MSB\_REG}{BME680\_P4\_MSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P4\+\_\+\+M\+S\+B\+\_\+\+R\+EG~(12)}
+
+
+
+Definition at line 284 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga9bd758c47b79a3f8e7ca4c272b52104d}\label{group___b_m_e680_ga9bd758c47b79a3f8e7ca4c272b52104d}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P5\_LSB\_REG@{BME680\_P5\_LSB\_REG}}
+\index{BME680\_P5\_LSB\_REG@{BME680\_P5\_LSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P5\_LSB\_REG}{BME680\_P5\_LSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P5\+\_\+\+L\+S\+B\+\_\+\+R\+EG~(13)}
+
+
+
+Definition at line 285 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga1ea70fab294628f5562ca43e40084a16}\label{group___b_m_e680_ga1ea70fab294628f5562ca43e40084a16}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P5\_MSB\_REG@{BME680\_P5\_MSB\_REG}}
+\index{BME680\_P5\_MSB\_REG@{BME680\_P5\_MSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P5\_MSB\_REG}{BME680\_P5\_MSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P5\+\_\+\+M\+S\+B\+\_\+\+R\+EG~(14)}
+
+
+
+Definition at line 286 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga7098e3f040b32e84a85a153fd89f58f0}\label{group___b_m_e680_ga7098e3f040b32e84a85a153fd89f58f0}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P6\_REG@{BME680\_P6\_REG}}
+\index{BME680\_P6\_REG@{BME680\_P6\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P6\_REG}{BME680\_P6\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P6\+\_\+\+R\+EG~(16)}
+
+
+
+Definition at line 288 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga2fec08fa03365bd7cecffb255ff42002}\label{group___b_m_e680_ga2fec08fa03365bd7cecffb255ff42002}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P7\_REG@{BME680\_P7\_REG}}
+\index{BME680\_P7\_REG@{BME680\_P7\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P7\_REG}{BME680\_P7\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P7\+\_\+\+R\+EG~(15)}
+
+
+
+Definition at line 287 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga24e4d129db86ae29b1bcb0bf2928ea0d}\label{group___b_m_e680_ga24e4d129db86ae29b1bcb0bf2928ea0d}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P8\_LSB\_REG@{BME680\_P8\_LSB\_REG}}
+\index{BME680\_P8\_LSB\_REG@{BME680\_P8\_LSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P8\_LSB\_REG}{BME680\_P8\_LSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P8\+\_\+\+L\+S\+B\+\_\+\+R\+EG~(19)}
+
+
+
+Definition at line 289 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga4a10e9d435d2d907151828e446df5577}\label{group___b_m_e680_ga4a10e9d435d2d907151828e446df5577}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P8\_MSB\_REG@{BME680\_P8\_MSB\_REG}}
+\index{BME680\_P8\_MSB\_REG@{BME680\_P8\_MSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P8\_MSB\_REG}{BME680\_P8\_MSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P8\+\_\+\+M\+S\+B\+\_\+\+R\+EG~(20)}
+
+
+
+Definition at line 290 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gab2980917bffc20371cb49e6bd230f992}\label{group___b_m_e680_gab2980917bffc20371cb49e6bd230f992}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P9\_LSB\_REG@{BME680\_P9\_LSB\_REG}}
+\index{BME680\_P9\_LSB\_REG@{BME680\_P9\_LSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P9\_LSB\_REG}{BME680\_P9\_LSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P9\+\_\+\+L\+S\+B\+\_\+\+R\+EG~(21)}
+
+
+
+Definition at line 291 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga6be400180d87c87c68b336cce9057151}\label{group___b_m_e680_ga6be400180d87c87c68b336cce9057151}} 
+\index{SENSOR API@{SENSOR API}!BME680\_P9\_MSB\_REG@{BME680\_P9\_MSB\_REG}}
+\index{BME680\_P9\_MSB\_REG@{BME680\_P9\_MSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_P9\_MSB\_REG}{BME680\_P9\_MSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P9\+\_\+\+M\+S\+B\+\_\+\+R\+EG~(22)}
+
+
+
+Definition at line 292 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga7545f57cf8b21f71292f4d2998049ab0}\label{group___b_m_e680_ga7545f57cf8b21f71292f4d2998049ab0}} 
+\index{SENSOR API@{SENSOR API}!BME680\_POLL\_PERIOD\_MS@{BME680\_POLL\_PERIOD\_MS}}
+\index{BME680\_POLL\_PERIOD\_MS@{BME680\_POLL\_PERIOD\_MS}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_POLL\_PERIOD\_MS}{BME680\_POLL\_PERIOD\_MS}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+P\+O\+L\+L\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(10)}
+
+B\+M\+E680 configuration macros Enable or un-\/comment the macro to provide floating point data output B\+M\+E680 General config 
+
+Definition at line 110 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga8bbf94a63af9425d361db02bf8855ba7}\label{group___b_m_e680_ga8bbf94a63af9425d361db02bf8855ba7}} 
+\index{SENSOR API@{SENSOR API}!BME680\_REG\_BUFFER\_LENGTH@{BME680\_REG\_BUFFER\_LENGTH}}
+\index{BME680\_REG\_BUFFER\_LENGTH@{BME680\_REG\_BUFFER\_LENGTH}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_REG\_BUFFER\_LENGTH}{BME680\_REG\_BUFFER\_LENGTH}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(6)}
+
+
+
+Definition at line 226 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gabead566b839b70723d7dc5be6eb65c12}\label{group___b_m_e680_gabead566b839b70723d7dc5be6eb65c12}} 
+\index{SENSOR API@{SENSOR API}!BME680\_REG\_FILTER\_INDEX@{BME680\_REG\_FILTER\_INDEX}}
+\index{BME680\_REG\_FILTER\_INDEX@{BME680\_REG\_FILTER\_INDEX}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_REG\_FILTER\_INDEX}{BME680\_REG\_FILTER\_INDEX}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+I\+N\+D\+EX~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(5)}
+
+B\+M\+E680 register buffer index settings 
+
+Definition at line 311 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga68e59b1432c8845d9fb41f8c7fb05d85}\label{group___b_m_e680_ga68e59b1432c8845d9fb41f8c7fb05d85}} 
+\index{SENSOR API@{SENSOR API}!BME680\_REG\_HCTRL\_INDEX@{BME680\_REG\_HCTRL\_INDEX}}
+\index{BME680\_REG\_HCTRL\_INDEX@{BME680\_REG\_HCTRL\_INDEX}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_REG\_HCTRL\_INDEX}{BME680\_REG\_HCTRL\_INDEX}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+H\+C\+T\+R\+L\+\_\+\+I\+N\+D\+EX~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0)}
+
+
+
+Definition at line 317 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga50d6c94b5ec0b48f6add5158c8341706}\label{group___b_m_e680_ga50d6c94b5ec0b48f6add5158c8341706}} 
+\index{SENSOR API@{SENSOR API}!BME680\_REG\_HUM\_INDEX@{BME680\_REG\_HUM\_INDEX}}
+\index{BME680\_REG\_HUM\_INDEX@{BME680\_REG\_HUM\_INDEX}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_REG\_HUM\_INDEX}{BME680\_REG\_HUM\_INDEX}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+H\+U\+M\+\_\+\+I\+N\+D\+EX~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(2)}
+
+
+
+Definition at line 314 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga4b42bf56b98dbdde2ce46ea4a77c4c61}\label{group___b_m_e680_ga4b42bf56b98dbdde2ce46ea4a77c4c61}} 
+\index{SENSOR API@{SENSOR API}!BME680\_REG\_NBCONV\_INDEX@{BME680\_REG\_NBCONV\_INDEX}}
+\index{BME680\_REG\_NBCONV\_INDEX@{BME680\_REG\_NBCONV\_INDEX}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_REG\_NBCONV\_INDEX}{BME680\_REG\_NBCONV\_INDEX}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+I\+N\+D\+EX~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)}
+
+
+
+Definition at line 315 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gafdc7f2bb002c413323008b44ddcdefdb}\label{group___b_m_e680_gafdc7f2bb002c413323008b44ddcdefdb}} 
+\index{SENSOR API@{SENSOR API}!BME680\_REG\_PRES\_INDEX@{BME680\_REG\_PRES\_INDEX}}
+\index{BME680\_REG\_PRES\_INDEX@{BME680\_REG\_PRES\_INDEX}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_REG\_PRES\_INDEX}{BME680\_REG\_PRES\_INDEX}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+P\+R\+E\+S\+\_\+\+I\+N\+D\+EX~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)}
+
+
+
+Definition at line 313 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga358279697df80441622801132433cf87}\label{group___b_m_e680_ga358279697df80441622801132433cf87}} 
+\index{SENSOR API@{SENSOR API}!BME680\_REG\_RUN\_GAS\_INDEX@{BME680\_REG\_RUN\_GAS\_INDEX}}
+\index{BME680\_REG\_RUN\_GAS\_INDEX@{BME680\_REG\_RUN\_GAS\_INDEX}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_REG\_RUN\_GAS\_INDEX}{BME680\_REG\_RUN\_GAS\_INDEX}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+I\+N\+D\+EX~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)}
+
+
+
+Definition at line 316 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaec07f7b368b29f7418ca1bc8f207b9aa}\label{group___b_m_e680_gaec07f7b368b29f7418ca1bc8f207b9aa}} 
+\index{SENSOR API@{SENSOR API}!BME680\_REG\_TEMP\_INDEX@{BME680\_REG\_TEMP\_INDEX}}
+\index{BME680\_REG\_TEMP\_INDEX@{BME680\_REG\_TEMP\_INDEX}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_REG\_TEMP\_INDEX}{BME680\_REG\_TEMP\_INDEX}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+E\+G\+\_\+\+T\+E\+M\+P\+\_\+\+I\+N\+D\+EX~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)}
+
+
+
+Definition at line 312 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gad1429130a198bff35d0bb98bd1d4cbc1}\label{group___b_m_e680_gad1429130a198bff35d0bb98bd1d4cbc1}} 
+\index{SENSOR API@{SENSOR API}!BME680\_RES\_HEAT0\_ADDR@{BME680\_RES\_HEAT0\_ADDR}}
+\index{BME680\_RES\_HEAT0\_ADDR@{BME680\_RES\_HEAT0\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_RES\_HEAT0\_ADDR}{BME680\_RES\_HEAT0\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+E\+S\+\_\+\+H\+E\+A\+T0\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x5a)}
+
+Heater settings 
+
+Definition at line 159 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga6409d476475762c095a746a1b785bdd6}\label{group___b_m_e680_ga6409d476475762c095a746a1b785bdd6}} 
+\index{SENSOR API@{SENSOR API}!BME680\_RESET\_PERIOD@{BME680\_RESET\_PERIOD}}
+\index{BME680\_RESET\_PERIOD@{BME680\_RESET\_PERIOD}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_RESET\_PERIOD}{BME680\_RESET\_PERIOD}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+E\+R\+I\+OD~\mbox{\hyperlink{group___b_m_e680_ga2451a7ede7ebd810357f1503e9898ea6}{U\+I\+N\+T32\+\_\+C}}(10)}
+
+Delay related macro declaration 
+
+Definition at line 211 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga92c7d6e920f86722a20742a2273ce507}\label{group___b_m_e680_ga92c7d6e920f86722a20742a2273ce507}} 
+\index{SENSOR API@{SENSOR API}!BME680\_RHRANGE\_MSK@{BME680\_RHRANGE\_MSK}}
+\index{BME680\_RHRANGE\_MSK@{BME680\_RHRANGE\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_RHRANGE\_MSK}{BME680\_RHRANGE\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+H\+R\+A\+N\+G\+E\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x30)}
+
+
+
+Definition at line 255 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga9f47f8f5f54e60941b740127a4fd067e}\label{group___b_m_e680_ga9f47f8f5f54e60941b740127a4fd067e}} 
+\index{SENSOR API@{SENSOR API}!BME680\_RSERROR\_MSK@{BME680\_RSERROR\_MSK}}
+\index{BME680\_RSERROR\_MSK@{BME680\_RSERROR\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_RSERROR\_MSK}{BME680\_RSERROR\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+S\+E\+R\+R\+O\+R\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0xf0)}
+
+
+
+Definition at line 256 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga7cdfa822370f97878b251ec8ae437ad8}\label{group___b_m_e680_ga7cdfa822370f97878b251ec8ae437ad8}} 
+\index{SENSOR API@{SENSOR API}!BME680\_RUN\_GAS\_DISABLE@{BME680\_RUN\_GAS\_DISABLE}}
+\index{BME680\_RUN\_GAS\_DISABLE@{BME680\_RUN\_GAS\_DISABLE}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_RUN\_GAS\_DISABLE}{BME680\_RUN\_GAS\_DISABLE}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+D\+I\+S\+A\+B\+LE~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0)}
+
+Run gas enable and disable settings 
+
+Definition at line 221 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaec72fd2001a168dc042f558438d77e1b}\label{group___b_m_e680_gaec72fd2001a168dc042f558438d77e1b}} 
+\index{SENSOR API@{SENSOR API}!BME680\_RUN\_GAS\_ENABLE@{BME680\_RUN\_GAS\_ENABLE}}
+\index{BME680\_RUN\_GAS\_ENABLE@{BME680\_RUN\_GAS\_ENABLE}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_RUN\_GAS\_ENABLE}{BME680\_RUN\_GAS\_ENABLE}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+E\+N\+A\+B\+LE~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(1)}
+
+
+
+Definition at line 222 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gae474a7d9b0768fcfbe7516b4435cdbdb}\label{group___b_m_e680_gae474a7d9b0768fcfbe7516b4435cdbdb}} 
+\index{SENSOR API@{SENSOR API}!BME680\_RUN\_GAS\_MSK@{BME680\_RUN\_GAS\_MSK}}
+\index{BME680\_RUN\_GAS\_MSK@{BME680\_RUN\_GAS\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_RUN\_GAS\_MSK}{BME680\_RUN\_GAS\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x10)}
+
+
+
+Definition at line 253 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaf4152a3764a38d2484bfde4346006b32}\label{group___b_m_e680_gaf4152a3764a38d2484bfde4346006b32}} 
+\index{SENSOR API@{SENSOR API}!BME680\_RUN\_GAS\_POS@{BME680\_RUN\_GAS\_POS}}
+\index{BME680\_RUN\_GAS\_POS@{BME680\_RUN\_GAS\_POS}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_RUN\_GAS\_POS}{BME680\_RUN\_GAS\_POS}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+P\+OS~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(4)}
+
+
+
+Definition at line 272 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gac15ff8b6a3383b66cc2dee7cc780cb52}\label{group___b_m_e680_gac15ff8b6a3383b66cc2dee7cc780cb52}} 
+\index{SENSOR API@{SENSOR API}!BME680\_RUN\_GAS\_SEL@{BME680\_RUN\_GAS\_SEL}}
+\index{BME680\_RUN\_GAS\_SEL@{BME680\_RUN\_GAS\_SEL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_RUN\_GAS\_SEL}{BME680\_RUN\_GAS\_SEL}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+S\+EL~\mbox{\hyperlink{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}{U\+I\+N\+T16\+\_\+C}}(64)}
+
+
+
+Definition at line 237 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gaa2dfae23c0c4a846bde4fdf3780c390e}\label{group___b_m_e680_gaa2dfae23c0c4a846bde4fdf3780c390e}} 
+\index{SENSOR API@{SENSOR API}!BME680\_SET\_BITS@{BME680\_SET\_BITS}}
+\index{BME680\_SET\_BITS@{BME680\_SET\_BITS}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_SET\_BITS}{BME680\_SET\_BITS}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+S\+E\+T\+\_\+\+B\+I\+TS(\begin{DoxyParamCaption}\item[{}]{reg\+\_\+data,  }\item[{}]{bitname,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        ((reg\_data \& \string~(bitname\#\#\_MSK)) | \(\backslash\)}
+\DoxyCodeLine{        ((data << bitname\#\#\_POS) \& bitname\#\#\_MSK))}
+
+\end{DoxyCode}
+Macro to S\+ET and G\+ET B\+I\+TS of a register 
+
+Definition at line 331 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga5e3fed11d9e1cb98d8c05bc5f418d4e8}\label{group___b_m_e680_ga5e3fed11d9e1cb98d8c05bc5f418d4e8}} 
+\index{SENSOR API@{SENSOR API}!BME680\_SET\_BITS\_POS\_0@{BME680\_SET\_BITS\_POS\_0}}
+\index{BME680\_SET\_BITS\_POS\_0@{BME680\_SET\_BITS\_POS\_0}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_SET\_BITS\_POS\_0}{BME680\_SET\_BITS\_POS\_0}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+S\+\_\+\+P\+O\+S\+\_\+0(\begin{DoxyParamCaption}\item[{}]{reg\+\_\+data,  }\item[{}]{bitname,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                ((reg\_data \& \string~(bitname\#\#\_MSK)) | \(\backslash\)}
+\DoxyCodeLine{                (data \& bitname\#\#\_MSK))}
+
+\end{DoxyCode}
+Macro variant to handle the bitname position if it is zero 
+
+Definition at line 338 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga9fc5e8034aa79028c0286ea4c974ee69}\label{group___b_m_e680_ga9fc5e8034aa79028c0286ea4c974ee69}} 
+\index{SENSOR API@{SENSOR API}!BME680\_SLEEP\_MODE@{BME680\_SLEEP\_MODE}}
+\index{BME680\_SLEEP\_MODE@{BME680\_SLEEP\_MODE}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_SLEEP\_MODE}{BME680\_SLEEP\_MODE}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+S\+L\+E\+E\+P\+\_\+\+M\+O\+DE~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0)}
+
+Power mode settings 
+
+Definition at line 207 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga69bae1e3eba277068c1055e3028bbf41}\label{group___b_m_e680_ga69bae1e3eba277068c1055e3028bbf41}} 
+\index{SENSOR API@{SENSOR API}!BME680\_SOFT\_RESET\_ADDR@{BME680\_SOFT\_RESET\_ADDR}}
+\index{BME680\_SOFT\_RESET\_ADDR@{BME680\_SOFT\_RESET\_ADDR}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_SOFT\_RESET\_ADDR}{BME680\_SOFT\_RESET\_ADDR}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+S\+O\+F\+T\+\_\+\+R\+E\+S\+E\+T\+\_\+\+A\+D\+DR~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0xe0)}
+
+Soft reset register 
+
+Definition at line 178 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga6da379a1060ef5079d34ba88191c3488}\label{group___b_m_e680_ga6da379a1060ef5079d34ba88191c3488}} 
+\index{SENSOR API@{SENSOR API}!BME680\_SOFT\_RESET\_CMD@{BME680\_SOFT\_RESET\_CMD}}
+\index{BME680\_SOFT\_RESET\_CMD@{BME680\_SOFT\_RESET\_CMD}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_SOFT\_RESET\_CMD}{BME680\_SOFT\_RESET\_CMD}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+S\+O\+F\+T\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+MD~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0xb6)}
+
+Soft reset command 
+
+Definition at line 129 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga82221087b2a61c32876783ffaf23ce02}\label{group___b_m_e680_ga82221087b2a61c32876783ffaf23ce02}} 
+\index{SENSOR API@{SENSOR API}!BME680\_SPI\_RD\_MSK@{BME680\_SPI\_RD\_MSK}}
+\index{BME680\_SPI\_RD\_MSK@{BME680\_SPI\_RD\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_SPI\_RD\_MSK}{BME680\_SPI\_RD\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+S\+P\+I\+\_\+\+R\+D\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x80)}
+
+
+
+Definition at line 263 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga22e8383fee778e9ae7a9e91405438f29}\label{group___b_m_e680_ga22e8383fee778e9ae7a9e91405438f29}} 
+\index{SENSOR API@{SENSOR API}!BME680\_SPI\_WR\_MSK@{BME680\_SPI\_WR\_MSK}}
+\index{BME680\_SPI\_WR\_MSK@{BME680\_SPI\_WR\_MSK}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_SPI\_WR\_MSK}{BME680\_SPI\_WR\_MSK}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+S\+P\+I\+\_\+\+W\+R\+\_\+\+M\+SK~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(0x7f)}
+
+
+
+Definition at line 264 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga342e1de1c75d3f622e3c4f9b9acf359e}\label{group___b_m_e680_ga342e1de1c75d3f622e3c4f9b9acf359e}} 
+\index{SENSOR API@{SENSOR API}!BME680\_T1\_LSB\_REG@{BME680\_T1\_LSB\_REG}}
+\index{BME680\_T1\_LSB\_REG@{BME680\_T1\_LSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_T1\_LSB\_REG}{BME680\_T1\_LSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+T1\+\_\+\+L\+S\+B\+\_\+\+R\+EG~(33)}
+
+
+
+Definition at line 303 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga361d6bd1a04dab7bfe2064060220ea1c}\label{group___b_m_e680_ga361d6bd1a04dab7bfe2064060220ea1c}} 
+\index{SENSOR API@{SENSOR API}!BME680\_T1\_MSB\_REG@{BME680\_T1\_MSB\_REG}}
+\index{BME680\_T1\_MSB\_REG@{BME680\_T1\_MSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_T1\_MSB\_REG}{BME680\_T1\_MSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+T1\+\_\+\+M\+S\+B\+\_\+\+R\+EG~(34)}
+
+
+
+Definition at line 304 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gab0bf47738f04f4e67488166d66096752}\label{group___b_m_e680_gab0bf47738f04f4e67488166d66096752}} 
+\index{SENSOR API@{SENSOR API}!BME680\_T2\_LSB\_REG@{BME680\_T2\_LSB\_REG}}
+\index{BME680\_T2\_LSB\_REG@{BME680\_T2\_LSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_T2\_LSB\_REG}{BME680\_T2\_LSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+T2\+\_\+\+L\+S\+B\+\_\+\+R\+EG~(1)}
+
+Array Index to Field data mapping for Calibration Data 
+
+Definition at line 275 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga24c2ce0d4413d92d029f9ba3439990d2}\label{group___b_m_e680_ga24c2ce0d4413d92d029f9ba3439990d2}} 
+\index{SENSOR API@{SENSOR API}!BME680\_T2\_MSB\_REG@{BME680\_T2\_MSB\_REG}}
+\index{BME680\_T2\_MSB\_REG@{BME680\_T2\_MSB\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_T2\_MSB\_REG}{BME680\_T2\_MSB\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+T2\+\_\+\+M\+S\+B\+\_\+\+R\+EG~(2)}
+
+
+
+Definition at line 276 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga9626ce9952f9e2605b6d42674222a25d}\label{group___b_m_e680_ga9626ce9952f9e2605b6d42674222a25d}} 
+\index{SENSOR API@{SENSOR API}!BME680\_T3\_REG@{BME680\_T3\_REG}}
+\index{BME680\_T3\_REG@{BME680\_T3\_REG}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_T3\_REG}{BME680\_T3\_REG}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+T3\+\_\+\+R\+EG~(3)}
+
+
+
+Definition at line 277 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga9be3bfa321b5d7b421ae2b8900d49eff}\label{group___b_m_e680_ga9be3bfa321b5d7b421ae2b8900d49eff}} 
+\index{SENSOR API@{SENSOR API}!BME680\_TMP\_BUFFER\_LENGTH@{BME680\_TMP\_BUFFER\_LENGTH}}
+\index{BME680\_TMP\_BUFFER\_LENGTH@{BME680\_TMP\_BUFFER\_LENGTH}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_TMP\_BUFFER\_LENGTH}{BME680\_TMP\_BUFFER\_LENGTH}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+T\+M\+P\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH~\mbox{\hyperlink{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}{U\+I\+N\+T8\+\_\+C}}(40)}
+
+Buffer length macro declaration 
+
+Definition at line 225 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga2ba5b50c969a788bf8c046b48ca9244e}\label{group___b_m_e680_ga2ba5b50c969a788bf8c046b48ca9244e}} 
+\index{SENSOR API@{SENSOR API}!BME680\_W\_DEFINE\_PWR\_MODE@{BME680\_W\_DEFINE\_PWR\_MODE}}
+\index{BME680\_W\_DEFINE\_PWR\_MODE@{BME680\_W\_DEFINE\_PWR\_MODE}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_W\_DEFINE\_PWR\_MODE}{BME680\_W\_DEFINE\_PWR\_MODE}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+W\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+P\+W\+R\+\_\+\+M\+O\+DE~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(1)}
+
+
+
+Definition at line 140 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga533eca7a4a75913b602b89f8793f71c4}\label{group___b_m_e680_ga533eca7a4a75913b602b89f8793f71c4}} 
+\index{SENSOR API@{SENSOR API}!BME680\_W\_NO\_NEW\_DATA@{BME680\_W\_NO\_NEW\_DATA}}
+\index{BME680\_W\_NO\_NEW\_DATA@{BME680\_W\_NO\_NEW\_DATA}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{BME680\_W\_NO\_NEW\_DATA}{BME680\_W\_NO\_NEW\_DATA}}
+{\footnotesize\ttfamily \#define B\+M\+E680\+\_\+\+W\+\_\+\+N\+O\+\_\+\+N\+E\+W\+\_\+\+D\+A\+TA~\mbox{\hyperlink{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}{I\+N\+T8\+\_\+C}}(2)}
+
+
+
+Definition at line 141 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga838b261fec725cb0f5d5b6769d3521e7}\label{group___b_m_e680_ga838b261fec725cb0f5d5b6769d3521e7}} 
+\index{SENSOR API@{SENSOR API}!INT16\_C@{INT16\_C}}
+\index{INT16\_C@{INT16\_C}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{INT16\_C}{INT16\_C}}
+{\footnotesize\ttfamily \#define I\+N\+T16\+\_\+C(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~S16\+\_\+C(x)}
+
+
+
+Definition at line 78 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gad78650fb7726f4e99205406569ef403d}\label{group___b_m_e680_gad78650fb7726f4e99205406569ef403d}} 
+\index{SENSOR API@{SENSOR API}!INT32\_C@{INT32\_C}}
+\index{INT32\_C@{INT32\_C}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{INT32\_C}{INT32\_C}}
+{\footnotesize\ttfamily \#define I\+N\+T32\+\_\+C(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~S32\+\_\+C(x)}
+
+
+
+Definition at line 83 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga93d102802b35d3b8abae9bbe7f0fed75}\label{group___b_m_e680_ga93d102802b35d3b8abae9bbe7f0fed75}} 
+\index{SENSOR API@{SENSOR API}!INT64\_C@{INT64\_C}}
+\index{INT64\_C@{INT64\_C}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{INT64\_C}{INT64\_C}}
+{\footnotesize\ttfamily \#define I\+N\+T64\+\_\+C(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~S64\+\_\+C(x)}
+
+
+
+Definition at line 88 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}\label{group___b_m_e680_ga1eaa7db37089dcdfb60227725c9c1585}} 
+\index{SENSOR API@{SENSOR API}!INT8\_C@{INT8\_C}}
+\index{INT8\_C@{INT8\_C}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{INT8\_C}{INT8\_C}}
+{\footnotesize\ttfamily \#define I\+N\+T8\+\_\+C(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~S8\+\_\+C(x)}
+
+
+
+Definition at line 73 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga070d2ce7b6bb7e5c05602aa8c308d0c4}\label{group___b_m_e680_ga070d2ce7b6bb7e5c05602aa8c308d0c4}} 
+\index{SENSOR API@{SENSOR API}!NULL@{NULL}}
+\index{NULL@{NULL}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{NULL}{NULL}}
+{\footnotesize\ttfamily \#define N\+U\+LL~((void $\ast$) 0)}
+
+
+
+Definition at line 99 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}\label{group___b_m_e680_ga1cb39a2cfaf899fd38730c7637807708}} 
+\index{SENSOR API@{SENSOR API}!UINT16\_C@{UINT16\_C}}
+\index{UINT16\_C@{UINT16\_C}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{UINT16\_C}{UINT16\_C}}
+{\footnotesize\ttfamily \#define U\+I\+N\+T16\+\_\+C(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~U16\+\_\+C(x)}
+
+
+
+Definition at line 79 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga2451a7ede7ebd810357f1503e9898ea6}\label{group___b_m_e680_ga2451a7ede7ebd810357f1503e9898ea6}} 
+\index{SENSOR API@{SENSOR API}!UINT32\_C@{UINT32\_C}}
+\index{UINT32\_C@{UINT32\_C}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{UINT32\_C}{UINT32\_C}}
+{\footnotesize\ttfamily \#define U\+I\+N\+T32\+\_\+C(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~U32\+\_\+C(x)}
+
+
+
+Definition at line 84 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga134ae84400d184ed2570e3270d5472c2}\label{group___b_m_e680_ga134ae84400d184ed2570e3270d5472c2}} 
+\index{SENSOR API@{SENSOR API}!UINT64\_C@{UINT64\_C}}
+\index{UINT64\_C@{UINT64\_C}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{UINT64\_C}{UINT64\_C}}
+{\footnotesize\ttfamily \#define U\+I\+N\+T64\+\_\+C(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~U64\+\_\+C(x)}
+
+
+
+Definition at line 89 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}\label{group___b_m_e680_gacd2aa09844a8a245cf7fdbb808e215e5}} 
+\index{SENSOR API@{SENSOR API}!UINT8\_C@{UINT8\_C}}
+\index{UINT8\_C@{UINT8\_C}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{UINT8\_C}{UINT8\_C}}
+{\footnotesize\ttfamily \#define U\+I\+N\+T8\+\_\+C(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~U8\+\_\+C(x)}
+
+
+
+Definition at line 74 of file bme680\+\_\+defs.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group___b_m_e680_gaa7d183195e66f1db50f64f3a3d4ede57}\label{group___b_m_e680_gaa7d183195e66f1db50f64f3a3d4ede57}} 
+\index{SENSOR API@{SENSOR API}!bme680\_com\_fptr\_t@{bme680\_com\_fptr\_t}}
+\index{bme680\_com\_fptr\_t@{bme680\_com\_fptr\_t}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_com\_fptr\_t}{bme680\_com\_fptr\_t}}
+{\footnotesize\ttfamily typedef int8\+\_\+t($\ast$ bme680\+\_\+com\+\_\+fptr\+\_\+t) (uint8\+\_\+t dev\+\_\+id, uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t $\ast$data, uint16\+\_\+t len)}
+
+Type definitions
+
+Generic communication function pointer 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dev\+\_\+id} & Place holder to store the id of the device structure Can be used to store the index of the Chip select or I2C address of the device. \\
+\hline
+\mbox{\texttt{ in}}  & {\em reg\+\_\+addr} & Used to select the register the where data needs to be read from or written to. \\
+\hline
+ & {\em \mbox{[}in/out\mbox{]}} & reg\+\_\+data\+: Data array to read/write \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & Length of the data array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 354 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{group___b_m_e680_ga596d17716255952ac5581c5217f895d4}\label{group___b_m_e680_ga596d17716255952ac5581c5217f895d4}} 
+\index{SENSOR API@{SENSOR API}!bme680\_delay\_fptr\_t@{bme680\_delay\_fptr\_t}}
+\index{bme680\_delay\_fptr\_t@{bme680\_delay\_fptr\_t}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_delay\_fptr\_t}{bme680\_delay\_fptr\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ bme680\+\_\+delay\+\_\+fptr\+\_\+t) (uint32\+\_\+t period)}
+
+Delay function pointer 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em period} & Time period in milliseconds \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 360 of file bme680\+\_\+defs.\+h.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___b_m_e680_ga2232c03d0c1282e976af41b39e1b87d6}\label{group___b_m_e680_ga2232c03d0c1282e976af41b39e1b87d6}} 
+\index{SENSOR API@{SENSOR API}!bme680\_intf@{bme680\_intf}}
+\index{bme680\_intf@{bme680\_intf}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_intf}{bme680\_intf}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___b_m_e680_ga2232c03d0c1282e976af41b39e1b87d6}{bme680\+\_\+intf}}}
+
+
+
+Interface selection Enumerations. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BME680\_SPI\_INTF@{BME680\_SPI\_INTF}!SENSOR API@{SENSOR API}}\index{SENSOR API@{SENSOR API}!BME680\_SPI\_INTF@{BME680\_SPI\_INTF}}}\mbox{\Hypertarget{group___b_m_e680_gga2232c03d0c1282e976af41b39e1b87d6a504bd691a4b57b0c914cc8c77bd696c3}\label{group___b_m_e680_gga2232c03d0c1282e976af41b39e1b87d6a504bd691a4b57b0c914cc8c77bd696c3}} 
+B\+M\+E680\+\_\+\+S\+P\+I\+\_\+\+I\+N\+TF&S\+PI interface \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BME680\_I2C\_INTF@{BME680\_I2C\_INTF}!SENSOR API@{SENSOR API}}\index{SENSOR API@{SENSOR API}!BME680\_I2C\_INTF@{BME680\_I2C\_INTF}}}\mbox{\Hypertarget{group___b_m_e680_gga2232c03d0c1282e976af41b39e1b87d6a8c5c46109186b1f476eafcb0fa608cf5}\label{group___b_m_e680_gga2232c03d0c1282e976af41b39e1b87d6a8c5c46109186b1f476eafcb0fa608cf5}} 
+B\+M\+E680\+\_\+\+I2\+C\+\_\+\+I\+N\+TF&I2C interface \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 365 of file bme680\+\_\+defs.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___b_m_e680_gae49a6f126c136fb16a8557a67e39d07c}\label{group___b_m_e680_gae49a6f126c136fb16a8557a67e39d07c}} 
+\index{SENSOR API@{SENSOR API}!bme680\_get\_profile\_dur@{bme680\_get\_profile\_dur}}
+\index{bme680\_get\_profile\_dur@{bme680\_get\_profile\_dur}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_get\_profile\_dur()}{bme680\_get\_profile\_dur()}}
+{\footnotesize\ttfamily void bme680\+\_\+get\+\_\+profile\+\_\+dur (\begin{DoxyParamCaption}\item[{uint16\+\_\+t $\ast$}]{duration,  }\item[{const struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+This A\+PI is used to get the profile duration of the sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dev} & \+: Structure instance of \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em duration} & \+: Duration of the measurement in ms.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 672 of file bme680.\+c.
+
+\mbox{\Hypertarget{group___b_m_e680_gaf5548cbdbf327e2c77bdb0afb1dde9e4}\label{group___b_m_e680_gaf5548cbdbf327e2c77bdb0afb1dde9e4}} 
+\index{SENSOR API@{SENSOR API}!bme680\_get\_regs@{bme680\_get\_regs}}
+\index{bme680\_get\_regs@{bme680\_get\_regs}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_get\_regs()}{bme680\_get\_regs()}}
+{\footnotesize\ttfamily int8\+\_\+t bme680\+\_\+get\+\_\+regs (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg\+\_\+addr,  }\item[{uint8\+\_\+t $\ast$}]{reg\+\_\+data,  }\item[{uint16\+\_\+t}]{len,  }\item[{struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+This A\+PI reads the data from the given register address of the sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reg\+\_\+addr} & \+: Register address from where the data to be read \\
+\hline
+\mbox{\texttt{ out}}  & {\em reg\+\_\+data} & \+: Pointer to data buffer to store the read data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & \+: No of bytes of data to be read. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dev} & \+: Structure instance of \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of A\+PI execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em zero} & -\/$>$ Success / +ve value -\/$>$ Warning / -\/ve value -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 315 of file bme680.\+c.
+
+\mbox{\Hypertarget{group___b_m_e680_ga1025301e420e1e21911044bebb62f940}\label{group___b_m_e680_ga1025301e420e1e21911044bebb62f940}} 
+\index{SENSOR API@{SENSOR API}!bme680\_get\_sensor\_data@{bme680\_get\_sensor\_data}}
+\index{bme680\_get\_sensor\_data@{bme680\_get\_sensor\_data}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_get\_sensor\_data()}{bme680\_get\_sensor\_data()}}
+{\footnotesize\ttfamily int8\+\_\+t bme680\+\_\+get\+\_\+sensor\+\_\+data (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbme680__field__data}{bme680\+\_\+field\+\_\+data}} $\ast$}]{data,  }\item[{struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+This A\+PI reads the pressure, temperature and humidity and gas data from the sensor, compensates the data and store it in the bme680\+\_\+data structure instance passed by the user. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em data} & Structure instance to hold the data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dev} & \+: Structure instance of \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of A\+PI execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em zero} & -\/$>$ Success / +ve value -\/$>$ Warning / -\/ve value -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 705 of file bme680.\+c.
+
+\mbox{\Hypertarget{group___b_m_e680_ga4e50492a1f4747868f7e9a826492f1e7}\label{group___b_m_e680_ga4e50492a1f4747868f7e9a826492f1e7}} 
+\index{SENSOR API@{SENSOR API}!bme680\_get\_sensor\_mode@{bme680\_get\_sensor\_mode}}
+\index{bme680\_get\_sensor\_mode@{bme680\_get\_sensor\_mode}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_get\_sensor\_mode()}{bme680\_get\_sensor\_mode()}}
+{\footnotesize\ttfamily int8\+\_\+t bme680\+\_\+get\+\_\+sensor\+\_\+mode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+This A\+PI is used to get the power mode of the sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dev} & \+: Structure instance of \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+\+: \mbox{\hyperlink{structbme680__dev_a5d7bfe9503c1c86a8a5d245129749b07}{bme680\+\_\+dev.\+power\+\_\+mode}} structure variable hold the power mode.
+\end{DoxyNote}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ value }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mode  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ value }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mode  }\\\cline{1-2}
+\endhead
+0x00 &B\+M\+E680\+\_\+\+S\+L\+E\+E\+P\+\_\+\+M\+O\+DE  \\\cline{1-2}
+0x01 &B\+M\+E680\+\_\+\+F\+O\+R\+C\+E\+D\+\_\+\+M\+O\+DE  \\\cline{1-2}
+\end{longtabu}
+
+
+\begin{DoxyReturn}{Returns}
+Result of A\+PI execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em zero} & -\/$>$ Success / +ve value -\/$>$ Warning / -\/ve value -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 628 of file bme680.\+c.
+
+\mbox{\Hypertarget{group___b_m_e680_ga7826b058b8eddcf05ccbb117fd9d41b7}\label{group___b_m_e680_ga7826b058b8eddcf05ccbb117fd9d41b7}} 
+\index{SENSOR API@{SENSOR API}!bme680\_get\_sensor\_settings@{bme680\_get\_sensor\_settings}}
+\index{bme680\_get\_sensor\_settings@{bme680\_get\_sensor\_settings}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_get\_sensor\_settings()}{bme680\_get\_sensor\_settings()}}
+{\footnotesize\ttfamily int8\+\_\+t bme680\+\_\+get\+\_\+sensor\+\_\+settings (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{desired\+\_\+settings,  }\item[{struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+This A\+PI is used to get the oversampling, filter and T,P,H, gas selection settings in the sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dev} & \+: Structure instance of \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em desired\+\_\+settings} & \+: Variable used to select the settings which are to be get from the sensor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of A\+PI execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em zero} & -\/$>$ Success / +ve value -\/$>$ Warning / -\/ve value -\/$>$ Error. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 537 of file bme680.\+c.
+
+\mbox{\Hypertarget{group___b_m_e680_gaee75ae524b7ca8f4a9b6dbb7f640c2e4}\label{group___b_m_e680_gaee75ae524b7ca8f4a9b6dbb7f640c2e4}} 
+\index{SENSOR API@{SENSOR API}!bme680\_init@{bme680\_init}}
+\index{bme680\_init@{bme680\_init}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_init()}{bme680\_init()}}
+{\footnotesize\ttfamily int8\+\_\+t bme680\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+This A\+PI is the entry point. It reads the chip-\/id and calibration data from the sensor. 
+
+C\+PP guard
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em dev} & \+: Structure instance of \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of A\+PI execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em zero} & -\/$>$ Success / +ve value -\/$>$ Warning / -\/ve value -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 287 of file bme680.\+c.
+
+\mbox{\Hypertarget{group___b_m_e680_ga192f772bc9cb619e5855e93d6ebd6128}\label{group___b_m_e680_ga192f772bc9cb619e5855e93d6ebd6128}} 
+\index{SENSOR API@{SENSOR API}!bme680\_set\_profile\_dur@{bme680\_set\_profile\_dur}}
+\index{bme680\_set\_profile\_dur@{bme680\_set\_profile\_dur}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_set\_profile\_dur()}{bme680\_set\_profile\_dur()}}
+{\footnotesize\ttfamily void bme680\+\_\+set\+\_\+profile\+\_\+dur (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{duration,  }\item[{struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+This A\+PI is used to set the profile duration of the sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dev} & \+: Structure instance of \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em duration} & \+: Duration of the measurement in ms.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 647 of file bme680.\+c.
+
+\mbox{\Hypertarget{group___b_m_e680_ga5d1bad74f7ac28e75aca9d7de66fd2b4}\label{group___b_m_e680_ga5d1bad74f7ac28e75aca9d7de66fd2b4}} 
+\index{SENSOR API@{SENSOR API}!bme680\_set\_regs@{bme680\_set\_regs}}
+\index{bme680\_set\_regs@{bme680\_set\_regs}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_set\_regs()}{bme680\_set\_regs()}}
+{\footnotesize\ttfamily int8\+\_\+t bme680\+\_\+set\+\_\+regs (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{reg\+\_\+addr,  }\item[{const uint8\+\_\+t $\ast$}]{reg\+\_\+data,  }\item[{uint8\+\_\+t}]{len,  }\item[{struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+This A\+PI writes the given data to the register address of the sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reg\+\_\+addr} & \+: Register address from where the data to be written. \\
+\hline
+\mbox{\texttt{ in}}  & {\em reg\+\_\+data} & \+: Pointer to data buffer which is to be written in the sensor. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & \+: No of bytes of data to write.. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dev} & \+: Structure instance of \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of A\+PI execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em zero} & -\/$>$ Success / +ve value -\/$>$ Warning / -\/ve value -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 340 of file bme680.\+c.
+
+\mbox{\Hypertarget{group___b_m_e680_ga5ca765226e758e71c862553c7cc0b371}\label{group___b_m_e680_ga5ca765226e758e71c862553c7cc0b371}} 
+\index{SENSOR API@{SENSOR API}!bme680\_set\_sensor\_mode@{bme680\_set\_sensor\_mode}}
+\index{bme680\_set\_sensor\_mode@{bme680\_set\_sensor\_mode}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_set\_sensor\_mode()}{bme680\_set\_sensor\_mode()}}
+{\footnotesize\ttfamily int8\+\_\+t bme680\+\_\+set\+\_\+sensor\+\_\+mode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+This A\+PI is used to set the power mode of the sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dev} & \+: Structure instance of \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+\+: Pass the value to \mbox{\hyperlink{structbme680__dev_a5d7bfe9503c1c86a8a5d245129749b07}{bme680\+\_\+dev.\+power\+\_\+mode}} structure variable.
+\end{DoxyNote}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ value }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mode  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ value }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mode  }\\\cline{1-2}
+\endhead
+0x00 &B\+M\+E680\+\_\+\+S\+L\+E\+E\+P\+\_\+\+M\+O\+DE  \\\cline{1-2}
+0x01 &B\+M\+E680\+\_\+\+F\+O\+R\+C\+E\+D\+\_\+\+M\+O\+DE  \\\cline{1-2}
+\end{longtabu}
+
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+Result of A\+PI execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em zero} & -\/$>$ Success / +ve value -\/$>$ Warning / -\/ve value -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}
+
+\end{DoxyItemize}
+
+Definition at line 589 of file bme680.\+c.
+
+\mbox{\Hypertarget{group___b_m_e680_ga2fea1365b4fa1d33eef434769b16e811}\label{group___b_m_e680_ga2fea1365b4fa1d33eef434769b16e811}} 
+\index{SENSOR API@{SENSOR API}!bme680\_set\_sensor\_settings@{bme680\_set\_sensor\_settings}}
+\index{bme680\_set\_sensor\_settings@{bme680\_set\_sensor\_settings}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_set\_sensor\_settings()}{bme680\_set\_sensor\_settings()}}
+{\footnotesize\ttfamily int8\+\_\+t bme680\+\_\+set\+\_\+sensor\+\_\+settings (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{desired\+\_\+settings,  }\item[{struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+This A\+PI is used to set the oversampling, filter and T,P,H, gas selection settings in the sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dev} & \+: Structure instance of \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em desired\+\_\+settings} & \+: Variable used to select the settings which are to be set in the sensor. \begin{DoxyVerb}Macros                    |  Functionality
+\end{DoxyVerb}
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---$\vert$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- B\+M\+E680\+\_\+\+O\+S\+T\+\_\+\+S\+EL $\vert$ To set temperature oversampling. B\+M\+E680\+\_\+\+O\+S\+P\+\_\+\+S\+EL $\vert$ To set pressure oversampling. B\+M\+E680\+\_\+\+O\+S\+H\+\_\+\+S\+EL $\vert$ To set humidity oversampling. B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+M\+E\+A\+S\+\_\+\+S\+EL $\vert$ To set gas measurement setting. B\+M\+E680\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+EL $\vert$ To set filter setting. B\+M\+E680\+\_\+\+H\+C\+N\+T\+R\+L\+\_\+\+S\+EL $\vert$ To set humidity control setting. B\+M\+E680\+\_\+\+R\+U\+N\+\_\+\+G\+A\+S\+\_\+\+S\+EL $\vert$ To set run gas setting. B\+M\+E680\+\_\+\+N\+B\+C\+O\+N\+V\+\_\+\+S\+EL $\vert$ To set NB conversion setting. B\+M\+E680\+\_\+\+G\+A\+S\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+S\+EL $\vert$ To set all gas sensor related settings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+\+: Below are the macros to be used by the user for selecting the desired settings. User can do OR operation of these macros for configuring multiple settings.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Result of A\+PI execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em zero} & -\/$>$ Success / +ve value -\/$>$ Warning / -\/ve value -\/$>$ Error. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 413 of file bme680.\+c.
+
+\mbox{\Hypertarget{group___b_m_e680_ga7f0f1a4378bc6cd0a34acf62509cdec7}\label{group___b_m_e680_ga7f0f1a4378bc6cd0a34acf62509cdec7}} 
+\index{SENSOR API@{SENSOR API}!bme680\_soft\_reset@{bme680\_soft\_reset}}
+\index{bme680\_soft\_reset@{bme680\_soft\_reset}!SENSOR API@{SENSOR API}}
+\doxysubsubsection{\texorpdfstring{bme680\_soft\_reset()}{bme680\_soft\_reset()}}
+{\footnotesize\ttfamily int8\+\_\+t bme680\+\_\+soft\+\_\+reset (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+This A\+PI performs the soft reset of the sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dev} & \+: Structure instance of \mbox{\hyperlink{structbme680__dev}{bme680\+\_\+dev}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of A\+PI execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em zero} & -\/$>$ Success / +ve value -\/$>$ Warning / -\/ve value -\/$>$ Error. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 379 of file bme680.\+c.
+

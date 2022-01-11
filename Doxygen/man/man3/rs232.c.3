@@ -1,0 +1,61 @@
+.TH "//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.c" 3 "Mon May 11 2020" "Lab10" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/rs232.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'saml21j18b\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBUART4_init\fP (void)"
+.br
+.ti -1c
+.RI "void \fBUART4_write\fP (char data)"
+.br
+.ti -1c
+.RI "char \fBUART4_read\fP (void)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "unsigned char * \fBARRAY_PORT_PINCFG1\fP = (unsigned char*)&REG_PORT_PINCFG1"
+.br
+.ti -1c
+.RI "unsigned char * \fBARRAY_PORT_PMUX1\fP = (unsigned char*)&REG_PORT_PMUX1"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void UART4_init (void)"
+
+.PP
+Definition at line 56 of file rs232\&.c\&.
+.SS "char UART4_read (void)"
+
+.PP
+Definition at line 121 of file rs232\&.c\&.
+.SS "void UART4_write (char data)"
+
+.PP
+Definition at line 95 of file rs232\&.c\&.
+.SH "Variable Documentation"
+.PP 
+.SS "unsigned char* ARRAY_PORT_PINCFG1 = (unsigned char*)&REG_PORT_PINCFG1"
+
+.PP
+Definition at line 33 of file rs232\&.h\&.
+.SS "unsigned char* ARRAY_PORT_PMUX1 = (unsigned char*)&REG_PORT_PMUX1"
+
+.PP
+Definition at line 34 of file rs232\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Lab10 from the source code\&.

@@ -1,0 +1,124 @@
+.TH "//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.h" 3 "Mon May 11 2020" "Lab10" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/lcd.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'saml21j18b\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdelay_30us\fP (void)"
+.br
+.ti -1c
+.RI "void \fBv_delay\fP (signed char inner, signed char outer)"
+.br
+.ti -1c
+.RI "void \fBdelay_40us\fP (void)"
+.br
+.ti -1c
+.RI "void \fBinit_spi_lcd\fP (void)"
+.br
+.ti -1c
+.RI "void \fBlcd_spi_transmit_CMD\fP (char CMD)"
+.br
+.ti -1c
+.RI "void \fBlcd_spi_transmit_DATA\fP (char data)"
+.br
+.ti -1c
+.RI "void \fBinit_lcd_dog\fP (void)"
+.br
+.ti -1c
+.RI "void \fBupdate_lcd_dog\fP (void)"
+.br
+.ti -1c
+.RI "void \fBclr_dsp_buff\fP (void)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "unsigned char * \fBARRAY_PORT_PINCFG0\fP"
+.br
+.ti -1c
+.RI "unsigned char * \fBARRAY_PORT_PMUX0\fP"
+.br
+.ti -1c
+.RI "char \fBdsp_buff_1\fP [17]"
+.br
+.ti -1c
+.RI "char \fBdsp_buff_2\fP [17]"
+.br
+.ti -1c
+.RI "char \fBdsp_buff_3\fP [17]"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void clr_dsp_buff (void)"
+
+.PP
+Definition at line 309 of file lcd\&.c\&.
+.SS "void delay_30us (void)"
+
+.PP
+Definition at line 42 of file lcd\&.c\&.
+.SS "void delay_40us (void)"
+
+.SS "void init_lcd_dog (void)"
+
+.PP
+Definition at line 193 of file lcd\&.c\&.
+.SS "void init_spi_lcd (void)"
+
+.PP
+Definition at line 95 of file lcd\&.c\&.
+.SS "void lcd_spi_transmit_CMD (char CMD)"
+
+.PP
+Definition at line 137 of file lcd\&.c\&.
+.SS "void lcd_spi_transmit_DATA (char data)"
+
+.PP
+Definition at line 165 of file lcd\&.c\&.
+.SS "void update_lcd_dog (void)"
+
+.PP
+Definition at line 256 of file lcd\&.c\&.
+.SS "void v_delay (signed char inner, signed char outer)"
+
+.PP
+Definition at line 49 of file lcd\&.c\&.
+.SH "Variable Documentation"
+.PP 
+.SS "unsigned char* ARRAY_PORT_PINCFG0"
+
+.PP
+Definition at line 35 of file lcd\&.h\&.
+.SS "unsigned char* ARRAY_PORT_PMUX0"
+
+.PP
+Definition at line 36 of file lcd\&.h\&.
+.SS "char dsp_buff_1[17]"
+
+.PP
+Definition at line 38 of file lcd\&.h\&.
+.SS "char dsp_buff_2[17]"
+
+.PP
+Definition at line 38 of file lcd\&.h\&.
+.SS "char dsp_buff_3[17]"
+
+.PP
+Definition at line 38 of file lcd\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Lab10 from the source code\&.

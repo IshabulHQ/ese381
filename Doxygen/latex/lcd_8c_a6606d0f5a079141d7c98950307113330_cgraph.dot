@@ -1,0 +1,18 @@
+digraph "clr_dsp_buff"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="clr_dsp_buff",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="update_lcd_dog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8c.html#a130db492e8cd5bb6382659d6279ba4bb",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="delay_30us",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8c.html#a945fcfddb2cd3089d44b3f0201f97519",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="init_spi_lcd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8c.html#a0f268347583db61f04a11de5afafb08b",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="lcd_spi_transmit_CMD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8c.html#a5a553c70392ad5ff03d55ea16c3d2c43",tooltip=" "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="lcd_spi_transmit_DATA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8c.html#a5545bb2f9b85842ca794d6009f767823",tooltip=" "];
+}

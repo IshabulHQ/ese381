@@ -1,0 +1,70 @@
+.TH "//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c" 3 "Mon May 11 2020" "Lab10" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/bme680.c \- Sensor driver for BME680 sensor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'bme680\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int8_t \fBbme680_init\fP (struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is the entry point\&. It reads the chip-id and calibration data from the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_get_regs\fP (uint8_t reg_addr, uint8_t *reg_data, uint16_t len, struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API reads the data from the given register address of the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_set_regs\fP (const uint8_t *reg_addr, const uint8_t *reg_data, uint8_t len, struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API writes the given data to the register address of the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_soft_reset\fP (struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API performs the soft reset of the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_set_sensor_settings\fP (uint16_t desired_settings, struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is used to set the oversampling, filter and T,P,H, gas selection settings in the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_get_sensor_settings\fP (uint16_t desired_settings, struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is used to get the oversampling, filter and T,P,H, gas selection settings in the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_set_sensor_mode\fP (struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is used to set the power mode of the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_get_sensor_mode\fP (struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is used to get the power mode of the sensor\&. "
+.ti -1c
+.RI "void \fBbme680_set_profile_dur\fP (uint16_t duration, struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is used to set the profile duration of the sensor\&. "
+.ti -1c
+.RI "void \fBbme680_get_profile_dur\fP (uint16_t *duration, const struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API is used to get the profile duration of the sensor\&. "
+.ti -1c
+.RI "int8_t \fBbme680_get_sensor_data\fP (struct \fBbme680_field_data\fP *data, struct \fBbme680_dev\fP *dev)"
+.br
+.RI "This API reads the pressure, temperature and humidity and gas data from the sensor, compensates the data and store it in the bme680_data structure instance passed by the user\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Sensor driver for BME680 sensor\&. 
+
+
+.PP
+Definition in file \fBbme680\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Lab10 from the source code\&.

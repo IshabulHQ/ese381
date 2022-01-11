@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="sys__support_8c" kind="file" language="C++">
+    <compoundname>sys_support.c</compoundname>
+    <includes local="yes">saml21j18b.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>saml21j18b.h</label>
+      </node>
+      <node id="1">
+        <label>//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c</label>
+        <link refid="sys__support_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sys__support_8c_1a76f11d9a0a47b94f72c2d0e77fb32240" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" line="19" column="12" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sys__support_8c_1aaa970ecb4bbdf1eeaf97691045aaf8b5" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char str[80]</definition>
+        <argsstring>[80]</argsstring>
+        <name>str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" line="20" column="13" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sys__support_8c_1a5f66b19f21f61eb1375f6b035ece5bc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _write</definition>
+        <argsstring>(FILE *f, char *buf, int n)</argsstring>
+        <name>_write</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" line="22" column="5" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="22" bodyend="27" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" declline="11" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sys__support_8c_1afb99756b9a148ae560f5d4ebed26d78c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _read</definition>
+        <argsstring>(FILE *f, char *buf, int n)</argsstring>
+        <name>_read</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" line="29" column="5" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="29" bodyend="37" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" declline="12" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sys__support_8c_1af837c0c7f2cb1ba687f24a8a1ac69abb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _close</definition>
+        <argsstring>(FILE *f)</argsstring>
+        <name>_close</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" line="39" column="5" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="39" bodyend="41" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" declline="13" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sys__support_8c_1ae9b6651bf9ce256ed7200d4f35682580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _fstat</definition>
+        <argsstring>(FILE *f, void *p)</argsstring>
+        <name>_fstat</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" line="43" column="5" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="43" bodyend="46" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" declline="14" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sys__support_8c_1a0cd32552b29e043abc227351764137a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _isatty</definition>
+        <argsstring>(FILE *f)</argsstring>
+        <name>_isatty</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" line="48" column="5" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="48" bodyend="50" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" declline="15" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sys__support_8c_1a4145da22170dd151b830a7a2743b7698" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _lseek</definition>
+        <argsstring>(FILE *f, int o, int w)</argsstring>
+        <name>_lseek</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" line="52" column="5" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="52" bodyend="54" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" declline="16" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sys__support_8c_1a9b14a0c617b4912995c65fa24bd62664" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * _sbrk</definition>
+        <argsstring>(int i)</argsstring>
+        <name>_sbrk</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" line="56" column="6" bodyfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" bodystart="56" bodyend="58" declfile="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c" declline="17" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>sys_support.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Created:<sp/>4/13/2020<sp/>2:43:44<sp/>PM</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/><sp/>Author:<sp/>kshort</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;saml21j18b.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8c_1a5f66b19f21f61eb1375f6b035ece5bc1" kindref="member">_write</ref>(FILE<sp/>*f,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8c_1afb99756b9a148ae560f5d4ebed26d78c" kindref="member">_read</ref>(FILE<sp/>*f,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8c_1af837c0c7f2cb1ba687f24a8a1ac69abb" kindref="member">_close</ref>(FILE<sp/>*f);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8c_1ae9b6651bf9ce256ed7200d4f35682580" kindref="member">_fstat</ref>(FILE<sp/>*f,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8c_1a0cd32552b29e043abc227351764137a6" kindref="member">_isatty</ref>(FILE<sp/>*f);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8c_1a4145da22170dd151b830a7a2743b7698" kindref="member">_lseek</ref>(FILE<sp/>*f,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>o,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="sys__support_8c_1a9b14a0c617b4912995c65fa24bd62664" kindref="member">_sbrk</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>str[80];</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="sys__support_8h_1a5f66b19f21f61eb1375f6b035ece5bc1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8c_1a5f66b19f21f61eb1375f6b035ece5bc1" kindref="member">_write</ref>(FILE<sp/>*f,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>n<sp/>&gt;<sp/>0;<sp/>n--)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rs232_8c_1af777cd39d3a6550da028f93826ddd1e2" kindref="member">UART4_write</ref>(*buf++);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="sys__support_8h_1afb99756b9a148ae560f5d4ebed26d78c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8c_1afb99756b9a148ae560f5d4ebed26d78c" kindref="member">_read</ref>(FILE<sp/>*f,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>*buf<sp/>=<sp/><ref refid="rs232_8c_1a26d9afa5f354889c89a3f53dcfbccfb9" kindref="member">UART4_read</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*buf<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\r&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*buf<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sys__support_8c_1a5f66b19f21f61eb1375f6b035ece5bc1" kindref="member">_write</ref>(f,</highlight><highlight class="stringliteral">&quot;\r&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sys__support_8c_1a5f66b19f21f61eb1375f6b035ece5bc1" kindref="member">_write</ref>(f,<sp/>buf,<sp/>1);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="sys__support_8h_1af837c0c7f2cb1ba687f24a8a1ac69abb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8c_1af837c0c7f2cb1ba687f24a8a1ac69abb" kindref="member">_close</ref>(FILE<sp/>*f)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="sys__support_8h_1ae9b6651bf9ce256ed7200d4f35682580" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8c_1ae9b6651bf9ce256ed7200d4f35682580" kindref="member">_fstat</ref>(FILE<sp/>*f,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>*((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)p<sp/>+<sp/>4)<sp/>=<sp/>0x81b6;<sp/></highlight><highlight class="comment">//<sp/>enable<sp/>read/write</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="sys__support_8h_1a0cd32552b29e043abc227351764137a6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8c_1a0cd32552b29e043abc227351764137a6" kindref="member">_isatty</ref>(FILE<sp/>*f)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="sys__support_8h_1a4145da22170dd151b830a7a2743b7698" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sys__support_8c_1a4145da22170dd151b830a7a2743b7698" kindref="member">_lseek</ref>(FILE<sp/>*f,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>o,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="sys__support_8h_1a12b60424727643778a849210d7511eb5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="sys__support_8c_1a9b14a0c617b4912995c65fa24bd62664" kindref="member">_sbrk</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)0x20006000;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>_fstat()<sp/>returns<sp/>with<sp/>permisson<sp/>666,<sp/>that<sp/>might<sp/>not<sp/>make<sp/>a<sp/>difference.</highlight></codeline>
+<codeline lineno="61"><highlight class="comment">*<sp/>_sbrk()<sp/>returns<sp/>an<sp/>address<sp/>of<sp/>RAM<sp/>that<sp/>might<sp/>be<sp/>free.</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">*<sp/>When<sp/>scanf()<sp/>is<sp/>called,<sp/>_read()<sp/>gets<sp/>a<sp/>size<sp/>of<sp/>400.</highlight></codeline>
+<codeline lineno="63"><highlight class="comment">*<sp/>When<sp/>prinft()<sp/>is<sp/>called,<sp/>an<sp/>extra<sp/>&apos;\n&apos;<sp/>at<sp/>the<sp/>end<sp/>of<sp/>format<sp/>is<sp/>required</highlight></codeline>
+<codeline lineno="64"><highlight class="comment">*<sp/>for<sp/>some<sp/>reason,<sp/>otherwise<sp/>the<sp/>last<sp/>char<sp/>is<sp/>truncated.</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">*/</highlight></codeline>
+    </programlisting>
+    <location file="//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10_task1/lab10_task1/sys_support.c"/>
+  </compounddef>
+</doxygen>

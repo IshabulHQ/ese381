@@ -1,0 +1,21 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="init_lcd_dog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8c.html#a4c0ca25c2b5e3649f7f1ba5e2af92746",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="delay_30us",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8c.html#a945fcfddb2cd3089d44b3f0201f97519",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="delay_40ms",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8c.html#a54dfe53179770995a964dd56ab7d1ad3",tooltip=" "];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="init_spi_lcd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8c.html#a0f268347583db61f04a11de5afafb08b",tooltip=" "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="lcd_spi_transmit_CMD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8c.html#a5a553c70392ad5ff03d55ea16c3d2c43",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UART4_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$rs232_8c.html#a0b207695e4757928cb8a88c33c730b83",tooltip=" "];
+}

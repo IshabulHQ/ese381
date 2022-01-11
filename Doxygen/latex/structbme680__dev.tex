@@ -1,0 +1,213 @@
+\hypertarget{structbme680__dev}{}\doxysection{bme680\+\_\+dev Struct Reference}
+\label{structbme680__dev}\index{bme680\_dev@{bme680\_dev}}
+
+
+B\+M\+E680 device structure.  
+
+
+
+
+{\ttfamily \#include $<$bme680\+\_\+defs.\+h$>$}
+
+
+
+Collaboration diagram for bme680\+\_\+dev\+:
+% FIG 0
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structbme680__dev_a88e300db221e7a0382f2a4c289b9557d}{chip\+\_\+id}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structbme680__dev_a360603720ae8b2c0e4931dd0f648c504}{dev\+\_\+id}}
+\item 
+enum \mbox{\hyperlink{group___b_m_e680_ga2232c03d0c1282e976af41b39e1b87d6}{bme680\+\_\+intf}} \mbox{\hyperlink{structbme680__dev_a704c987d019d06ba6641bb769545aae6}{intf}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structbme680__dev_aa686d4be91dd67b606593a76bb506303}{mem\+\_\+page}}
+\item 
+int8\+\_\+t \mbox{\hyperlink{structbme680__dev_a6d4444052a032e932b7e300415ba284c}{amb\+\_\+temp}}
+\item 
+struct \mbox{\hyperlink{structbme680__calib__data}{bme680\+\_\+calib\+\_\+data}} \mbox{\hyperlink{structbme680__dev_a2bf9047fe5625c12909c7f3810edac53}{calib}}
+\item 
+struct \mbox{\hyperlink{structbme680__tph__sett}{bme680\+\_\+tph\+\_\+sett}} \mbox{\hyperlink{structbme680__dev_a838270a634e397d99b838192bf0f2664}{tph\+\_\+sett}}
+\item 
+struct \mbox{\hyperlink{structbme680__gas__sett}{bme680\+\_\+gas\+\_\+sett}} \mbox{\hyperlink{structbme680__dev_ac3b142354292c55afff31109e18bc0ee}{gas\+\_\+sett}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structbme680__dev_a5d7bfe9503c1c86a8a5d245129749b07}{power\+\_\+mode}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structbme680__dev_a2b09d4f4cd7b32f9dac243e2e19d6c4e}{new\+\_\+fields}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structbme680__dev_a2ca706ef8f472b1c77a4d308c96fa887}{info\+\_\+msg}}
+\item 
+\mbox{\hyperlink{group___b_m_e680_gaa7d183195e66f1db50f64f3a3d4ede57}{bme680\+\_\+com\+\_\+fptr\+\_\+t}} \mbox{\hyperlink{structbme680__dev_aa8215525e98304c1037bef2f1407f8ee}{read}}
+\item 
+\mbox{\hyperlink{group___b_m_e680_gaa7d183195e66f1db50f64f3a3d4ede57}{bme680\+\_\+com\+\_\+fptr\+\_\+t}} \mbox{\hyperlink{structbme680__dev_a796d8ab19af12146a56567358ab6089c}{write}}
+\item 
+\mbox{\hyperlink{group___b_m_e680_ga596d17716255952ac5581c5217f895d4}{bme680\+\_\+delay\+\_\+fptr\+\_\+t}} \mbox{\hyperlink{structbme680__dev_acfd9f63e6ac639204678889c004d9a27}{delay\+\_\+ms}}
+\item 
+int8\+\_\+t \mbox{\hyperlink{structbme680__dev_a75f4f26417a14eeb41a677a1c3770a4d}{com\+\_\+rslt}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+B\+M\+E680 device structure. 
+
+Definition at line 508 of file bme680\+\_\+defs.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structbme680__dev_a6d4444052a032e932b7e300415ba284c}\label{structbme680__dev_a6d4444052a032e932b7e300415ba284c}} 
+\index{bme680\_dev@{bme680\_dev}!amb\_temp@{amb\_temp}}
+\index{amb\_temp@{amb\_temp}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{amb\_temp}{amb\_temp}}
+{\footnotesize\ttfamily int8\+\_\+t amb\+\_\+temp}
+
+Ambient temperature in Degree C 
+
+Definition at line 518 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_a2bf9047fe5625c12909c7f3810edac53}\label{structbme680__dev_a2bf9047fe5625c12909c7f3810edac53}} 
+\index{bme680\_dev@{bme680\_dev}!calib@{calib}}
+\index{calib@{calib}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{calib}{calib}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structbme680__calib__data}{bme680\+\_\+calib\+\_\+data}} calib}
+
+Sensor calibration data 
+
+Definition at line 520 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_a88e300db221e7a0382f2a4c289b9557d}\label{structbme680__dev_a88e300db221e7a0382f2a4c289b9557d}} 
+\index{bme680\_dev@{bme680\_dev}!chip\_id@{chip\_id}}
+\index{chip\_id@{chip\_id}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{chip\_id}{chip\_id}}
+{\footnotesize\ttfamily uint8\+\_\+t chip\+\_\+id}
+
+Chip Id 
+
+Definition at line 510 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_a75f4f26417a14eeb41a677a1c3770a4d}\label{structbme680__dev_a75f4f26417a14eeb41a677a1c3770a4d}} 
+\index{bme680\_dev@{bme680\_dev}!com\_rslt@{com\_rslt}}
+\index{com\_rslt@{com\_rslt}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{com\_rslt}{com\_rslt}}
+{\footnotesize\ttfamily int8\+\_\+t com\+\_\+rslt}
+
+Communication function result 
+
+Definition at line 538 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_acfd9f63e6ac639204678889c004d9a27}\label{structbme680__dev_acfd9f63e6ac639204678889c004d9a27}} 
+\index{bme680\_dev@{bme680\_dev}!delay\_ms@{delay\_ms}}
+\index{delay\_ms@{delay\_ms}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{delay\_ms}{delay\_ms}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___b_m_e680_ga596d17716255952ac5581c5217f895d4}{bme680\+\_\+delay\+\_\+fptr\+\_\+t}} delay\+\_\+ms}
+
+delay function pointer 
+
+Definition at line 536 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_a360603720ae8b2c0e4931dd0f648c504}\label{structbme680__dev_a360603720ae8b2c0e4931dd0f648c504}} 
+\index{bme680\_dev@{bme680\_dev}!dev\_id@{dev\_id}}
+\index{dev\_id@{dev\_id}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{dev\_id}{dev\_id}}
+{\footnotesize\ttfamily uint8\+\_\+t dev\+\_\+id}
+
+Device Id 
+
+Definition at line 512 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_ac3b142354292c55afff31109e18bc0ee}\label{structbme680__dev_ac3b142354292c55afff31109e18bc0ee}} 
+\index{bme680\_dev@{bme680\_dev}!gas\_sett@{gas\_sett}}
+\index{gas\_sett@{gas\_sett}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{gas\_sett}{gas\_sett}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structbme680__gas__sett}{bme680\+\_\+gas\+\_\+sett}} gas\+\_\+sett}
+
+Gas Sensor settings 
+
+Definition at line 524 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_a2ca706ef8f472b1c77a4d308c96fa887}\label{structbme680__dev_a2ca706ef8f472b1c77a4d308c96fa887}} 
+\index{bme680\_dev@{bme680\_dev}!info\_msg@{info\_msg}}
+\index{info\_msg@{info\_msg}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{info\_msg}{info\_msg}}
+{\footnotesize\ttfamily uint8\+\_\+t info\+\_\+msg}
+
+Store the info messages 
+
+Definition at line 530 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_a704c987d019d06ba6641bb769545aae6}\label{structbme680__dev_a704c987d019d06ba6641bb769545aae6}} 
+\index{bme680\_dev@{bme680\_dev}!intf@{intf}}
+\index{intf@{intf}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{intf}{intf}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___b_m_e680_ga2232c03d0c1282e976af41b39e1b87d6}{bme680\+\_\+intf}} intf}
+
+S\+P\+I/\+I2C interface 
+
+Definition at line 514 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_aa686d4be91dd67b606593a76bb506303}\label{structbme680__dev_aa686d4be91dd67b606593a76bb506303}} 
+\index{bme680\_dev@{bme680\_dev}!mem\_page@{mem\_page}}
+\index{mem\_page@{mem\_page}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{mem\_page}{mem\_page}}
+{\footnotesize\ttfamily uint8\+\_\+t mem\+\_\+page}
+
+Memory page used 
+
+Definition at line 516 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_a2b09d4f4cd7b32f9dac243e2e19d6c4e}\label{structbme680__dev_a2b09d4f4cd7b32f9dac243e2e19d6c4e}} 
+\index{bme680\_dev@{bme680\_dev}!new\_fields@{new\_fields}}
+\index{new\_fields@{new\_fields}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{new\_fields}{new\_fields}}
+{\footnotesize\ttfamily uint8\+\_\+t new\+\_\+fields}
+
+New sensor fields 
+
+Definition at line 528 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_a5d7bfe9503c1c86a8a5d245129749b07}\label{structbme680__dev_a5d7bfe9503c1c86a8a5d245129749b07}} 
+\index{bme680\_dev@{bme680\_dev}!power\_mode@{power\_mode}}
+\index{power\_mode@{power\_mode}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{power\_mode}{power\_mode}}
+{\footnotesize\ttfamily uint8\+\_\+t power\+\_\+mode}
+
+Sensor power modes 
+
+Definition at line 526 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_aa8215525e98304c1037bef2f1407f8ee}\label{structbme680__dev_aa8215525e98304c1037bef2f1407f8ee}} 
+\index{bme680\_dev@{bme680\_dev}!read@{read}}
+\index{read@{read}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___b_m_e680_gaa7d183195e66f1db50f64f3a3d4ede57}{bme680\+\_\+com\+\_\+fptr\+\_\+t}} read}
+
+Bus read function pointer 
+
+Definition at line 532 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_a838270a634e397d99b838192bf0f2664}\label{structbme680__dev_a838270a634e397d99b838192bf0f2664}} 
+\index{bme680\_dev@{bme680\_dev}!tph\_sett@{tph\_sett}}
+\index{tph\_sett@{tph\_sett}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{tph\_sett}{tph\_sett}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structbme680__tph__sett}{bme680\+\_\+tph\+\_\+sett}} tph\+\_\+sett}
+
+Sensor settings 
+
+Definition at line 522 of file bme680\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{structbme680__dev_a796d8ab19af12146a56567358ab6089c}\label{structbme680__dev_a796d8ab19af12146a56567358ab6089c}} 
+\index{bme680\_dev@{bme680\_dev}!write@{write}}
+\index{write@{write}!bme680\_dev@{bme680\_dev}}
+\doxysubsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___b_m_e680_gaa7d183195e66f1db50f64f3a3d4ede57}{bme680\+\_\+com\+\_\+fptr\+\_\+t}} write}
+
+Bus write function pointer 
+
+Definition at line 534 of file bme680\+\_\+defs.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+//\+Mac/\+Home/\+Desktop/\+E\+S\+E 381/\+Labs/\+Lab 10/lab10\+\_\+task1/lab10\+\_\+task1/\mbox{\hyperlink{bme680__defs_8h}{bme680\+\_\+defs.\+h}}\end{DoxyCompactItemize}

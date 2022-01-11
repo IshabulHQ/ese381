@@ -1,0 +1,94 @@
+\hypertarget{sys__support_8h}{}\doxysection{//\+Mac/\+Home/\+Desktop/\+E\+SE 381/\+Labs/\+Lab 10/lab10\+\_\+task1/lab10\+\_\+task1/sys\+\_\+support.h File Reference}
+\label{sys__support_8h}\index{//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10\_task1/lab10\_task1/sys\_support.h@{//Mac/Home/Desktop/ESE 381/Labs/Lab 10/lab10\_task1/lab10\_task1/sys\_support.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sys__support_8h_a5f66b19f21f61eb1375f6b035ece5bc1}{\+\_\+write}} (F\+I\+LE $\ast$f, char $\ast$buf, int n)
+\item 
+int \mbox{\hyperlink{sys__support_8h_afb99756b9a148ae560f5d4ebed26d78c}{\+\_\+read}} (F\+I\+LE $\ast$f, char $\ast$buf, int n)
+\item 
+int \mbox{\hyperlink{sys__support_8h_af837c0c7f2cb1ba687f24a8a1ac69abb}{\+\_\+close}} (F\+I\+LE $\ast$f)
+\item 
+int \mbox{\hyperlink{sys__support_8h_ae9b6651bf9ce256ed7200d4f35682580}{\+\_\+fstat}} (F\+I\+LE $\ast$f, void $\ast$p)
+\item 
+int \mbox{\hyperlink{sys__support_8h_a0cd32552b29e043abc227351764137a6}{\+\_\+isatty}} (F\+I\+LE $\ast$f)
+\item 
+int \mbox{\hyperlink{sys__support_8h_a4145da22170dd151b830a7a2743b7698}{\+\_\+lseek}} (F\+I\+LE $\ast$f, int o, int w)
+\item 
+void $\ast$ \mbox{\hyperlink{sys__support_8h_a12b60424727643778a849210d7511eb5}{\+\_\+sbrk}} (int i)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sys__support_8h_af837c0c7f2cb1ba687f24a8a1ac69abb}\label{sys__support_8h_af837c0c7f2cb1ba687f24a8a1ac69abb}} 
+\index{sys\_support.h@{sys\_support.h}!\_close@{\_close}}
+\index{\_close@{\_close}!sys\_support.h@{sys\_support.h}}
+\doxysubsubsection{\texorpdfstring{\_close()}{\_close()}}
+{\footnotesize\ttfamily int \+\_\+close (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file sys\+\_\+support.\+c.
+
+\mbox{\Hypertarget{sys__support_8h_ae9b6651bf9ce256ed7200d4f35682580}\label{sys__support_8h_ae9b6651bf9ce256ed7200d4f35682580}} 
+\index{sys\_support.h@{sys\_support.h}!\_fstat@{\_fstat}}
+\index{\_fstat@{\_fstat}!sys\_support.h@{sys\_support.h}}
+\doxysubsubsection{\texorpdfstring{\_fstat()}{\_fstat()}}
+{\footnotesize\ttfamily int \+\_\+fstat (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file sys\+\_\+support.\+c.
+
+\mbox{\Hypertarget{sys__support_8h_a0cd32552b29e043abc227351764137a6}\label{sys__support_8h_a0cd32552b29e043abc227351764137a6}} 
+\index{sys\_support.h@{sys\_support.h}!\_isatty@{\_isatty}}
+\index{\_isatty@{\_isatty}!sys\_support.h@{sys\_support.h}}
+\doxysubsubsection{\texorpdfstring{\_isatty()}{\_isatty()}}
+{\footnotesize\ttfamily int \+\_\+isatty (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file sys\+\_\+support.\+c.
+
+\mbox{\Hypertarget{sys__support_8h_a4145da22170dd151b830a7a2743b7698}\label{sys__support_8h_a4145da22170dd151b830a7a2743b7698}} 
+\index{sys\_support.h@{sys\_support.h}!\_lseek@{\_lseek}}
+\index{\_lseek@{\_lseek}!sys\_support.h@{sys\_support.h}}
+\doxysubsubsection{\texorpdfstring{\_lseek()}{\_lseek()}}
+{\footnotesize\ttfamily int \+\_\+lseek (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{int}]{o,  }\item[{int}]{w }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file sys\+\_\+support.\+c.
+
+\mbox{\Hypertarget{sys__support_8h_afb99756b9a148ae560f5d4ebed26d78c}\label{sys__support_8h_afb99756b9a148ae560f5d4ebed26d78c}} 
+\index{sys\_support.h@{sys\_support.h}!\_read@{\_read}}
+\index{\_read@{\_read}!sys\_support.h@{sys\_support.h}}
+\doxysubsubsection{\texorpdfstring{\_read()}{\_read()}}
+{\footnotesize\ttfamily int \+\_\+read (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{char $\ast$}]{buf,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file sys\+\_\+support.\+c.
+
+\mbox{\Hypertarget{sys__support_8h_a12b60424727643778a849210d7511eb5}\label{sys__support_8h_a12b60424727643778a849210d7511eb5}} 
+\index{sys\_support.h@{sys\_support.h}!\_sbrk@{\_sbrk}}
+\index{\_sbrk@{\_sbrk}!sys\_support.h@{sys\_support.h}}
+\doxysubsubsection{\texorpdfstring{\_sbrk()}{\_sbrk()}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+sbrk (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file sys\+\_\+support.\+c.
+
+\mbox{\Hypertarget{sys__support_8h_a5f66b19f21f61eb1375f6b035ece5bc1}\label{sys__support_8h_a5f66b19f21f61eb1375f6b035ece5bc1}} 
+\index{sys\_support.h@{sys\_support.h}!\_write@{\_write}}
+\index{\_write@{\_write}!sys\_support.h@{sys\_support.h}}
+\doxysubsubsection{\texorpdfstring{\_write()}{\_write()}}
+{\footnotesize\ttfamily int \+\_\+write (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{char $\ast$}]{buf,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file sys\+\_\+support.\+c.
+

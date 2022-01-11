@@ -1,0 +1,131 @@
+.TH "bme680_dev" 3 "Mon May 11 2020" "Lab10" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+bme680_dev \- BME680 device structure\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <bme680_defs\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBchip_id\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBdev_id\fP"
+.br
+.ti -1c
+.RI "enum \fBbme680_intf\fP \fBintf\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBmem_page\fP"
+.br
+.ti -1c
+.RI "int8_t \fBamb_temp\fP"
+.br
+.ti -1c
+.RI "struct \fBbme680_calib_data\fP \fBcalib\fP"
+.br
+.ti -1c
+.RI "struct \fBbme680_tph_sett\fP \fBtph_sett\fP"
+.br
+.ti -1c
+.RI "struct \fBbme680_gas_sett\fP \fBgas_sett\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBpower_mode\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBnew_fields\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBinfo_msg\fP"
+.br
+.ti -1c
+.RI "\fBbme680_com_fptr_t\fP \fBread\fP"
+.br
+.ti -1c
+.RI "\fBbme680_com_fptr_t\fP \fBwrite\fP"
+.br
+.ti -1c
+.RI "\fBbme680_delay_fptr_t\fP \fBdelay_ms\fP"
+.br
+.ti -1c
+.RI "int8_t \fBcom_rslt\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+BME680 device structure\&. 
+.PP
+Definition at line 508 of file bme680_defs\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "int8_t amb_temp"
+Ambient temperature in Degree C 
+.PP
+Definition at line 518 of file bme680_defs\&.h\&.
+.SS "struct \fBbme680_calib_data\fP calib"
+Sensor calibration data 
+.PP
+Definition at line 520 of file bme680_defs\&.h\&.
+.SS "uint8_t chip_id"
+Chip Id 
+.PP
+Definition at line 510 of file bme680_defs\&.h\&.
+.SS "int8_t com_rslt"
+Communication function result 
+.PP
+Definition at line 538 of file bme680_defs\&.h\&.
+.SS "\fBbme680_delay_fptr_t\fP delay_ms"
+delay function pointer 
+.PP
+Definition at line 536 of file bme680_defs\&.h\&.
+.SS "uint8_t dev_id"
+Device Id 
+.PP
+Definition at line 512 of file bme680_defs\&.h\&.
+.SS "struct \fBbme680_gas_sett\fP gas_sett"
+Gas Sensor settings 
+.PP
+Definition at line 524 of file bme680_defs\&.h\&.
+.SS "uint8_t info_msg"
+Store the info messages 
+.PP
+Definition at line 530 of file bme680_defs\&.h\&.
+.SS "enum \fBbme680_intf\fP intf"
+SPI/I2C interface 
+.PP
+Definition at line 514 of file bme680_defs\&.h\&.
+.SS "uint8_t mem_page"
+Memory page used 
+.PP
+Definition at line 516 of file bme680_defs\&.h\&.
+.SS "uint8_t new_fields"
+New sensor fields 
+.PP
+Definition at line 528 of file bme680_defs\&.h\&.
+.SS "uint8_t power_mode"
+Sensor power modes 
+.PP
+Definition at line 526 of file bme680_defs\&.h\&.
+.SS "\fBbme680_com_fptr_t\fP read"
+Bus read function pointer 
+.PP
+Definition at line 532 of file bme680_defs\&.h\&.
+.SS "struct \fBbme680_tph_sett\fP tph_sett"
+Sensor settings 
+.PP
+Definition at line 522 of file bme680_defs\&.h\&.
+.SS "\fBbme680_com_fptr_t\fP write"
+Bus write function pointer 
+.PP
+Definition at line 534 of file bme680_defs\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Lab10 from the source code\&.
